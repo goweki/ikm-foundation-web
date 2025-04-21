@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "lint": "next lint",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "postbuild": "npm run copy-static",
+    "start": "NODE_ENV=production node server.js",
+    "copy-static": "cp -r public .next/standalone/ && cp -r .next/static .next/standalone/.next/"
   },
   "dependencies": {
     "react": "^19.0.0",
