@@ -31,3 +31,5 @@ jobs:
           local-dir: ./.next/standalone/
           port: 21
           exclude: |
+            **/.git*
+            **/.git*/**
