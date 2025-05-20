@@ -102,15 +102,15 @@ const DonateModal = () => {
                       X
                     </button>
                   </div>
-                  <div className="py-8 lg:py-8 px-4 mx-auto max-w-screen-md">
-                    <div className="flex flex-shrink-0 items-center justify-center">
+                  <div className="py-2 lg:py-4 px-4 mx-auto max-w-screen-md">
+                    {/* <div className="flex flex-shrink-0 items-center justify-center">
                       <p className="text-2xl sm:text-4xl font-semibold text-black">
                         Support The Cause
                       </p>
-                    </div>
+                    </div> */}
                     <p className="mb-4 lg:mb-8 mt-2 font-light text-center sm:text-xl text-slate-600">
-                      Every contribution helps us continue our mission and
-                      support those who need it most
+                      Donate to support our cause and help us make a difference
+                      in the society.
                     </p>
                     <form className="space-y-2">
                       <Field>
