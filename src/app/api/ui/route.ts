@@ -1,21 +1,32 @@
+import { NextResponse } from "next/server";
+
 export const dynamic = "auto";
 export const revalidate = 3600;
+
+const airtableBaseID = process.env.AIRTABLE_BASE_ID;
+const airtablePAT_read = process.env.AIRTABLE_PAT_READ;
 
 // GET
 const getHandler = async () => {
   try {
     console.log(`GET REQUEST: api/ui: `);
 
+    if (!airtableBaseID) {
+      console.error("Missing AIRTABLE_BASE_ID environment variable");
+      return NextResponse.json({ message: "Server error" }, { status: 500 });
+    }
+    if (!airtablePAT_read) {
+      console.error("Missing AIRTABLE_PAT_READ environment variable");
+      return NextResponse.json({ message: "Server error" }, { status: 500 });
+    }
+
     const uiData: Record<string, Record<string, string>[]> = {};
 
     const myHeaders = new Headers();
-    myHeaders.append(
-      "Authorization",
-      `Bearer ${process.env.AIRTABLE_PERSONAL_ACCESS_TOKEN}`
-    );
+    myHeaders.append("Authorization", `Bearer ${airtablePAT_read}`);
 
     const impact_response_ = await fetch(
-      `https://api.airtable.com/v0/${process.env.AIRTABLE_APP_ID}/impact`,
+      `https://api.airtable.com/v0/${airtableBaseID}/impact`,
       {
         method: "GET",
         headers: myHeaders,
@@ -43,15 +54,15 @@ const getHandler = async () => {
     );
 
     // console.log("uiData: ", uiData);
-    return Response.json({
+    return NextResponse.json({
       message: "successful data fetch",
       data: {
         ...uiData,
       },
     });
   } catch (err: unknown) {
-    console.error("ERROR in route: api/ui - GET \n > ", err);
-    return Response.json({ error: "SERVER ERROR" });
+    console.error("ERROR in route: /api/ui - GET \n > ", err);
+    return NextResponse.json({ message: "Server error" }, { status: 500 });
   }
 };
 
