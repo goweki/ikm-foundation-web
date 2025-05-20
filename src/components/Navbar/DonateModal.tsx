@@ -40,7 +40,7 @@ const DonateModal = () => {
     publicKey,
     text: "DONATE",
     onSuccess: () => alert("Thanks for donating to the Foundation!"),
-    onClose: () => alert("THank you: It's the thought that counts!"),
+    onClose: () => alert("We appreciate the thought, it counts!"),
   };
 
   // const isDisabled = !email || !amount || !publicKey;
