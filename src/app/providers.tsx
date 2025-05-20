@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useState, useEffect } from "react";
+import { Bounce, ToastContainer } from "react-toastify";
 
 export interface Impact {
   label: string;
@@ -68,6 +69,19 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
   return uiData ? (
     <DataContext.Provider value={{ data: uiData, refreshData: fetchData }}>
       {children}
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Bounce}
+      />
     </DataContext.Provider>
   ) : UIstate?.error ? (
     <div>
