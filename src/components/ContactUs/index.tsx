@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { toast } from "react-toastify";
 
@@ -60,13 +61,17 @@ const ContactUs = () => {
             SEND US A MESSAGE
           </h3>
           <h2 className="text-4xl sm:text-6xl font-bold my-6 leading-12">
-            {" "}
-            Shoot us an <br /> email
+            We&apos;d love to hear from <br /> you
           </h2>
           <p className="text-slate-500 text-base font-normal">
-            Craven omni memoria patriae zombieland clairvius narcisse religionis
-            sunt diri undead <br /> historiarum. Golums, zombies unrelenting et
-            Raimi fascinati beheading.
+            Write as a message in the form below or
+            <br /> send us an email at{" "}
+            <Link
+              className="text-blue-600 hover:underline"
+              href="mailto:info@ikm-foundation.org"
+            >
+              info@ikm-foundation.org
+            </Link>
           </p>
         </div>
 
