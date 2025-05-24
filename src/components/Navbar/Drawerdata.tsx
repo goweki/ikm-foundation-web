@@ -32,9 +32,9 @@ const Data = () => {
                 href={item.href}
                 className={classNames(
                   item.current
-                    ? "bg-gray-900 text-purple"
-                    : "text-black hover:bg-gray-700 hover:text-purple",
-                  "block  py-2 rounded-md text-base font-medium"
+                    ? "bg-blue-800 text-slate-200"
+                    : "hover:bg-blue-800 hover:text-slate-200",
+                  "block py-2 px-2 rounded-md text-base font-medium"
                 )}
                 aria-current={item.current ? "page" : undefined}
               >
