@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 export const dynamic = "auto";
-export const revalidate = 3600;
+export const revalidate = 7200;
 
 const airtableBaseID = process.env.AIRTABLE_BASE_ID;
 const airtablePAT_read = process.env.AIRTABLE_PAT_READ;
