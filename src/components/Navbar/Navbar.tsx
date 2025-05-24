@@ -66,7 +66,7 @@ const Navbar = () => {
                 </div>
               </div>
               {/* <button className='hidden lg:flex justify-end text-xl font-semibold bg-transparent py-4 px-6 lg:px-12 navbutton rounded-full hover:bg-navyblue hover:text-white'>Donate</button> */}
-              <DonateModal />
+              <DonateModal buttonLocation="navbar" />
             </div>
 
             {/* DRAWER FOR MOBILE VIEW */}

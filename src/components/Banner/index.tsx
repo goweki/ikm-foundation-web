@@ -29,7 +29,7 @@ const Banner = () => {
                 </h1>
               </div>
               <div className="my-7 text-center lg:text-start">
-                <DonateModal buttonType="primary" />
+                <DonateModal />
               </div>
             </div>
           </div>
