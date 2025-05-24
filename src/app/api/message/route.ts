@@ -35,7 +35,7 @@ export async function POST(req: NextRequest) {
 
     // POST message to airtable
     const post_response_ = await fetch(
-      `https://api.airtable.com/v0/${airtableBaseID}/messages`,
+      `https://api.airtable.com/v0/${airtableBaseID}/tblMspYlTWkQuo4gn`,
       {
         method: "POST",
         headers: {

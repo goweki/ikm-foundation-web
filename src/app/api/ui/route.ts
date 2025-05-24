@@ -26,7 +26,7 @@ const getHandler = async () => {
     myHeaders.append("Authorization", `Bearer ${airtablePAT_read}`);
 
     const impact_response_ = await fetch(
-      `https://api.airtable.com/v0/${airtableBaseID}/impact`,
+      `https://api.airtable.com/v0/${airtableBaseID}/tblhubeP5Y1TVhRUm`,
       {
         method: "GET",
         headers: myHeaders,
