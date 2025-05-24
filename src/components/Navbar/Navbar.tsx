@@ -5,7 +5,7 @@ import React from "react";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import Drawer from "./Drawer";
 import Drawerdata from "./Drawerdata";
-import DonateModal from "./DonateModal";
+import DonateModal from "../atoms/DonateModal";
 
 interface NavigationItem {
   name: string;
