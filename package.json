@@ -5,7 +5,7 @@
   "scripts": {
     "lint": "next lint",
     "dev": "NODE_OPTIONS='--network-family-autoselection-attempt-timeout=500' NODE_ENV=development next dev",
-    "build": "NODE_ENV=production next build",
+    "build": "NODE_OPTIONS='--network-family-autoselection-attempt-timeout=500' NODE_ENV=production next build",
     "postbuild": "npm run copy-static",
     "copy-static": "cp -r public .next/standalone/ && cp -r .next/static .next/standalone/.next/",
     "start": "NODE_OPTIONS='--network-family-autoselection-attempt-timeout=500' NODE_ENV=production node server.js"
