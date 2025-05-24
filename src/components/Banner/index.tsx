@@ -29,10 +29,7 @@ const Banner = () => {
                 </h1>
               </div>
               <div className="my-7 text-center lg:text-start">
-                <button className="btn-primary text-sm md:text-xl font-semibold hover:shadow-xl hover:scale-105 transition duration-200 py-3 px-6 md:py-5 md:px-14 rounded-full">
-                  Donate
-                </button>
-                <DonateModal />
+                <DonateModal buttonType="primary" />
               </div>
             </div>
           </div>

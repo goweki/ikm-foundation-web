@@ -10,7 +10,7 @@ import clsx from "clsx";
 import { Fragment, useState } from "react";
 import { PaystackButton } from "react-paystack";
 
-const DonateModal = () => {
+const DonateModal = ({ buttonType = "outline" }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const publicKey = process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY as string;
@@ -59,7 +59,11 @@ const DonateModal = () => {
         <div className="hidden lg:block">
           <button
             type="button"
-            className="justify-end text-xl font-semibold bg-transparent py-4 px-6 lg:px-12 navbutton rounded-full hover:bg-blue-800 hover:text-white hover:scale-105 transition duration-300"
+            className={`${
+              buttonType == "outline"
+                ? "text-xl hover:bg-blue-800 hover:text-slate-200"
+                : "btn-primary text-sm"
+            } justify-end lg:px-12 navbutton md:text-xl font-semibold hover:shadow-xl hover:scale-105 transition duration-200 py-3 px-6 md:py-5 md:px-14 rounded-full`}
             onClick={openModal}
           >
             Donate
