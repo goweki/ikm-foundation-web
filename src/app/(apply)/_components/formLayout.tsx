@@ -24,10 +24,10 @@ export default function FormLayout({
         <div className="p-3 pl-0 md:p-4 md:pl-0 lg:pr-8 mx-auto max-w-7xl flex flex-row flex-1 items-start px-4">
           <Link
             href={"/" + page}
-            className="flex flex-row text-gray-400 hover:text-white text-2xl font-bold"
+            className="flex flex-row text-gray-400 hover:text-white text-xl font-bold"
           >
-            <ChevronLeftIcon height={48} />
-            <h1 className="my-auto">BACK</h1>
+            <ChevronLeftIcon height={26} />
+            <h1 className="my-auto">Back</h1>
           </Link>
         </div>
       </nav>
