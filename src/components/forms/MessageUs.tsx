@@ -101,7 +101,7 @@ const MessageUsForm = () => {
               name="email"
               id="email"
               className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base placeholder:text-slate-500 focus:outline-none sm:text-sm/6"
-              placeholder="your email"
+              placeholder="Email address"
               required
             />
           </div>
@@ -126,7 +126,7 @@ const MessageUsForm = () => {
 
       <button
         type="submit"
-        className="btn-primary text-sm font-semibold hover:shadow-xl hover:scale-105 transition duration-200 py-2 md:py-3 w-full rounded-full mt-6"
+        className="btn-primary font-bold hover:shadow-xl hover:scale-105 transition duration-200 py-2 md:py-3 w-full rounded-full my-6 uppercase"
         disabled={isLoading}
       >
         {isLoading ? (

@@ -12,7 +12,7 @@ const MessageUs = () => {
           <h2 className="text-4xl sm:text-6xl font-bold my-6 leading-12">
             We&apos;d love to hear from <br /> you
           </h2>
-          <p className="text-slate-500 text-base font-normal">
+          <p className="text-slate-700 text-base font-normal">
             Write us a message in the form below or
             <br /> send us an email at{" "}
             <Link
