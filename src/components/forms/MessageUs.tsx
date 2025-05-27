@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
 
-const MessageUs = () => {
+const MessageUsForm = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -63,12 +63,12 @@ const MessageUs = () => {
           Name
         </label>
         <div className="mt-2">
-          <div className="flex items-center rounded-md bg-slate-800 pl-3 outline-1 -outline-offset-1 outline-gray-300 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
+          <div className="flex items-center rounded-md bg-slate-200 pl-3 outline-1 -outline-offset-1 outline-slate-500 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
             <input
               type="text"
               name="name"
               id="name"
-              className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-white placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+              className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base placeholder:text-slate-500 focus:outline-none sm:text-sm/6"
               placeholder="Your name (optional)"
             />
           </div>
@@ -79,12 +79,12 @@ const MessageUs = () => {
           Phone No.
         </label>
         <div className="mt-2">
-          <div className="flex items-center rounded-md bg-slate-800 pl-3 outline-1 -outline-offset-1 outline-gray-300 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
+          <div className="flex items-center rounded-md bg-slate-200 pl-3 outline-1 -outline-offset-1 outline-slate-500 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
             <input
               type="tel"
               name="phone"
               id="phone"
-              className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-white placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+              className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base placeholder:text-slate-500 focus:outline-none sm:text-sm/6"
               placeholder="Phone No. (optional)"
             />
           </div>
@@ -92,15 +92,15 @@ const MessageUs = () => {
       </div>
       <div className="sm:col-span-4 mb-4">
         <label htmlFor="email" className="block text-sm/6 font-medium">
-          Email
+          Email <span className="text-red-500">*</span>
         </label>
         <div className="mt-2">
-          <div className="flex items-center rounded-md bg-slate-800 pl-3 outline-1 -outline-offset-1 outline-gray-300 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
+          <div className="flex items-center rounded-md bg-slate-200 pl-3 outline-1 -outline-offset-1 outline-slate-500 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
             <input
               type="email"
               name="email"
               id="email"
-              className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-white placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+              className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base placeholder:text-slate-500 focus:outline-none sm:text-sm/6"
               placeholder="your email"
               required
             />
@@ -109,11 +109,8 @@ const MessageUs = () => {
       </div>
 
       <div className="col-span-full">
-        <label
-          htmlFor="message"
-          className="block text-sm/6 font-medium text-gray-900"
-        >
-          Message
+        <label htmlFor="message" className="block text-sm/6 font-medium">
+          Message <span className="text-red-500">*</span>
         </label>
         <div className="mt-2">
           <textarea
@@ -121,7 +118,7 @@ const MessageUs = () => {
             id="message"
             placeholder="Write your message..."
             rows={3}
-            className="block w-full rounded-md bg-slate-800 px-3 py-1.5 text-base text-gray-200 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+            className="block w-full rounded-md bg-slate-200 px-3 py-1.5 text-base outline-1 -outline-offset-1 outline-slate-500 placeholder:text-slate-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
             required
           />
         </div>
@@ -167,4 +164,4 @@ const MessageUs = () => {
   );
 };
 
-export default MessageUs;
+export default MessageUsForm;

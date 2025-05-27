@@ -9,7 +9,7 @@ import Statistics from "@/components/Statistics/index";
 import FAQ from "@/components/FAQ/index";
 import Testimonials from "@/components/Testimonials/index";
 import Articles from "@/components/Articles/index";
-import ContactUs from "@/components/ContactUs/index";
+import MessageUs from "@/components/MessageUs/index";
 import Insta from "@/components/Insta/index";
 
 export default function Home() {
@@ -26,7 +26,7 @@ export default function Home() {
       <FAQ />
       <Testimonials />
       <Articles />
-      <ContactUs />
+      <MessageUs />
       <Insta />
     </main>
   );
