@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Navbar from "@/components/Navbar/index";
-import Footer from "@/components/Footer/index";
 import "./globals.css";
 import { DataProvider } from "./providers";
 
@@ -30,11 +28,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <DataProvider>
-          <Navbar />
-          {children}
-          <Footer />
-        </DataProvider>
+        <DataProvider>{children}</DataProvider>
       </body>
     </html>
   );

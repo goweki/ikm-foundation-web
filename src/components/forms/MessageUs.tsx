@@ -32,7 +32,7 @@ const MessageUsForm = () => {
         const errorData = await _postResponse.json();
         const error_message_ = errorData.message || "Message not sent";
 
-        console.log("Authentication failed: ", error_message_);
+        console.log("Message submission failed: ", error_message_);
         toast.error(error_message_);
 
         return;

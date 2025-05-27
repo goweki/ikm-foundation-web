@@ -148,8 +148,29 @@ html {
   padding-bottom: 18rem;
 }
 
-.bg-beliefs {
-  background-image: url("/images/beliefs/swirls.svg");
+.bg-scholarship {
+  background-image: url("/images/apply/scholarship_bg.svg");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: contain;
+}
+
+.bg-mentorship {
+  background-image: url("/images/apply/mentorship_bg.svg");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: contain;
+}
+
+.bg-healthcare {
+  background-image: url("/images/apply/healthcare_bg.svg");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: contain;
+}
+
+.bg-group {
+  background-image: url("/images/apply/group_bg.svg");
   background-repeat: no-repeat;
   background-position: left bottom;
   background-size: contain;
@@ -227,7 +248,7 @@ html {
 }
 
 .article-img {
-  top: 225px;
+  top: 30px;
   right: 30px;
 }
 

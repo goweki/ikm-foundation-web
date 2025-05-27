@@ -54,8 +54,7 @@ const Aboutus = () => {
           creating a platform to run IKM Advocates&#39; Corporate Social
           Responsibility (CSR) activities. Our mission is to transform lives
           through impactful partnerships and sustainable programmes by working
-          to establish lasting, community-driven change. We facilitate access
-          to:
+          to establish lasting, community-driven change.
         </h4>
         {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 my-16 gap-x-16 lg:gap-x-32">
           {Aboutdata.map((item, i) => (

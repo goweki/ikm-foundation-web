@@ -10,10 +10,9 @@ interface NavigationItem {
 
 const navigation: NavigationItem[] = [
   { name: "About Us", href: "#aboutus-section", current: false },
-  { name: "Services", href: "#services-section", current: false },
+  { name: "Apply", href: "#applications-section", current: false },
   { name: "FAQ", href: "#faq-section", current: false },
-  { name: "Blog", href: "#blog-section", current: false },
-  { name: "Testimonial", href: "#testimonial-section", current: false },
+  { name: "Contacts", href: "#contactus-section", current: false },
 ];
 
 function classNames(...classes: string[]) {
