@@ -43,7 +43,7 @@ export default function ApplyLayout({
                   href={"/" + page + "/apply"}
                   className="btn-primary text-sm uppercase py-2 px-4 rounded-full ml-8 hover:scale-105 transition-all duration-200"
                 >
-                  Apply
+                  Apply Now
                 </Link>
               </h2>
               {children}
@@ -60,9 +60,9 @@ export default function ApplyLayout({
                       <li key={index} className="my-4">
                         <Link
                           href={`/${option}`}
-                          className="w-min flex items-center hover:underline bg-white px-1 py-1 rounded-md text-black transition hover:translate-x-2"
+                          className="w-40 flex items-center hover:underline bg-white px-1 py-1 rounded-md text-black transition hover:translate-x-2"
                         >
-                          <span className="ml-2">{option}</span>
+                          <span className="mx-2">{option}</span>
                         </Link>
                       </li>
                     );

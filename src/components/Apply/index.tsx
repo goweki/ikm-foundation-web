@@ -21,7 +21,7 @@ const Apply = () => {
 
           <Link
             href="/scholarship"
-            className="bg-blue-800 hover:bg-blue-600 hover:shadow-lg text-white bg-scholarship pt-16 px-10 sm:px-24 pb-52 md:pb-70 rounded-3xl cursor-pointer"
+            className="bg-blue-800 hover:bg-blue-600 hover:shadow-lg text-white bg-scholarship pt-16 px-10 sm:px-24 pb-52 md:pb-70 rounded-3xl cursor-pointer transition-all duration-200"
           >
             <h2 className="text-xl font-normal tracking-widest mb-5 text-center sm:text-start">
               IKMF Scholarship
@@ -46,7 +46,7 @@ const Apply = () => {
 
           <Link
             href="/headstart"
-            className="bg-mentorship bg-teal-100 hover:bg-teal-300 hover:shadow-lg pt-16 px-10 sm:px-24 pb-52 md:pb-70 rounded-3xl cursor-pointer"
+            className="bg-mentorship bg-teal-100 hover:bg-teal-300 hover:shadow-lg pt-16 px-10 sm:px-24 pb-52 md:pb-70 rounded-3xl cursor-pointer transition-all duration-200"
           >
             <h2 className="text-xl font-normal text-blue tracking-widest mb-5 text-center sm:text-start">
               Head Start Africa
@@ -71,7 +71,7 @@ const Apply = () => {
 
           <Link
             href="/healthcare"
-            className="bg-healthcare bg-teal-100 hover:bg-teal-300 hover:shadow-lg pt-16 px-10 sm:px-24 pb-52 md:pb-70 rounded-3xl cursor-pointer"
+            className="bg-healthcare bg-teal-100 hover:bg-teal-300 hover:shadow-lg pt-16 px-10 sm:px-24 pb-52 md:pb-70 rounded-3xl cursor-pointer transition-all duration-200"
           >
             <h2 className="text-xl font-normal text-blue tracking-widest mb-5 text-center sm:text-start">
               Healthcare
@@ -95,7 +95,7 @@ const Apply = () => {
 
           <Link
             href="/vulnerable-group"
-            className="bg-group bg-blue-800 hover:bg-blue-600 hover:shadow-lg text-white pt-16 px-10 sm:px-24 pb-52 md:pb-70 rounded-3xl cursor-pointer"
+            className="bg-group bg-blue-800 hover:bg-blue-600 hover:shadow-lg text-white pt-16 px-10 sm:px-24 pb-52 md:pb-70 rounded-3xl cursor-pointer transition-all duration-200"
           >
             <h2 className="text-xl font-normal tracking-widest mb-5 text-center sm:text-start">
               Vulnerable Groups
