@@ -6,7 +6,6 @@ import {
   DisclosurePanel,
 } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/20/solid";
-import Link from "next/link";
 
 interface FAQ {
   question: string;
@@ -34,7 +33,7 @@ export default function FAQcomponent({ FAQs }: { FAQs: FAQ[] }) {
                 </DisclosureButton>
                 <DisclosurePanel className="px-4 pt-4 pb-2 text-base font-normal opacity-75">
                   {FAQitem.answer} <br />
-                  {FAQitem.answer.includes("donate") && (
+                  {/* {FAQitem.answer.includes("donate") && (
                     <span>
                       Do it via the{" "}
                       <Link href="#donate" className="text-blue-500">
@@ -50,7 +49,7 @@ export default function FAQcomponent({ FAQs }: { FAQs: FAQ[] }) {
                       </Link>{" "}
                       and choose a suitable partnership
                     </span>
-                  )}
+                  )} */}
                 </DisclosurePanel>
               </div>
             )}

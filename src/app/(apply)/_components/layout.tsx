@@ -15,7 +15,12 @@ export default function ApplyLayout({
   page,
 }: {
   children: React.ReactNode;
-  page: "scholarship" | "headstart" | "healthcare" | "vulnerable-group";
+  page:
+    | "scholarship"
+    | "headstart"
+    | "healthcare"
+    | "vulnerable-group"
+    | "special-project";
 }) {
   const texts = textConfig.pages[page as keyof typeof textConfig.pages];
 

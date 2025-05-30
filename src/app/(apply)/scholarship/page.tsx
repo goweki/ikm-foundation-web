@@ -1,5 +1,8 @@
+// "use client";
+
 import FAQcomponent from "@/components/atoms/faqComponent";
 import ApplyLayout from "../_components/layout";
+// import { useSearchParams } from "next/navigation";
 
 const FAQs = [
   {
@@ -35,16 +38,13 @@ const FAQs = [
 ];
 
 export default function Scholarship() {
+  // const searchParams = useSearchParams();
+  // const section = searchParams.get("section");
+  // if (section=='faq-section') {}
+
   return (
     <ApplyLayout page="scholarship">
       <>
-        <p>
-          The IKMF Scholarship programme supports bright students from lower
-          socio-economic backgrounds access secondary school education
-          increasing opportunities for 100% transition. We identify students
-          with strong academic potential and significant financial need, with a
-          focus on those from vulnerable households and orphans.
-        </p>
         <p>
           The IKMF Scholarship programme supports bright students from lower
           socio-economic backgrounds access secondary school education
@@ -93,8 +93,10 @@ export default function Scholarship() {
           <li>Have a high school admission letter</li>
         </ul>
         <br />
-        <h3 className="font-semibold text-xl mb-2">FAQs</h3>
-        <FAQcomponent FAQs={FAQs} />
+        <section id="faq-section">
+          <h3 className="font-semibold text-xl mb-2">FAQs</h3>
+          <FAQcomponent FAQs={FAQs} />
+        </section>
       </>
     </ApplyLayout>
   );

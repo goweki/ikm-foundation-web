@@ -53,7 +53,7 @@ const Apply = () => {
             </h2>
             <h3 className="text-4xl sm:text-65xl font-bold text-black leading-snug mb-5 text-center sm:text-start">
               <span className="text-blue-700">Apply</span>{" "}
-              <span className="text-slate-700">for legal mentorship!</span>
+              <span className="text-slate-700">for mentorship!</span>
             </h3>
             <h5 className="text-lg bluish pt-2 mb-5 text-center sm:text-start">
               Part of DLA Piper&apos;s global Head Start initiative, Head Start
@@ -73,7 +73,7 @@ const Apply = () => {
             href="/healthcare"
             className="bg-healthcare bg-teal-100 hover:bg-teal-300 hover:shadow-lg pt-16 px-10 sm:px-24 pb-52 md:pb-70 rounded-3xl cursor-pointer transition-all duration-200"
           >
-            <h2 className="text-xl font-normal text-blue tracking-widest mb-5 text-center sm:text-start">
+            <h2 className="text-xl font-normal tracking-widest mb-5 text-center sm:text-start">
               Healthcare
             </h2>
             <h3 className="text-4xl sm:text-65xl font-bold text-black leading-snug mb-5 text-center sm:text-start">
@@ -112,6 +112,30 @@ const Apply = () => {
             {/* <div className="text-center sm:text-start">
             <button className="text-xl py-5 px-14 mt-5 font-semibold text-white rounded-full bg-blue border border-blue hover:bg-blue-400">
               Get Started
+            </button>
+          </div> */}
+          </Link>
+
+          {/* CARD-5 */}
+
+          <Link
+            href="/special-project"
+            className="bg-group bg-teal-100 hover:bg-teal-300 hover:shadow-lg pt-16 px-10 sm:px-24 pb-52 md:pb-70 rounded-3xl cursor-pointer transition-all duration-200"
+          >
+            <h2 className="text-xl font-normal tracking-widest mb-5 text-center sm:text-start">
+              Special Project
+            </h2>
+            <h3 className="text-4xl sm:text-65xl font-bold text-black leading-snug mb-5 text-center sm:text-start">
+              <span className="text-blue-700">Recommend</span>{" "}
+              <span className="text-slate-700">Special Project</span>
+            </h3>
+            <h5 className="text-lg bluish pt-2 mb-5 text-center sm:text-start">
+              Supporting initiatives that do not fall under our main cartegories
+              and have significant community benefits
+            </h5>
+            {/* <div className="text-center sm:text-start">
+            <button className="text-xl py-5 px-14 mt-5 font-semibold text-white rounded-full bg-blue-500 border border-blue hover:bg-blue-400">
+              Learn more
             </button>
           </div> */}
           </Link>
