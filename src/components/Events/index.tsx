@@ -1,68 +1,18 @@
 "use client";
 import Slider from "react-slick";
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
 import Image from "next/image";
+import { DataContext, Event as EventType } from "@/app/providers";
 
-// CAROUSEL DATA
+type Props = {
+  events: EventType[];
+};
 
-interface DataType {
-  time: string;
-  title: string;
-  description: string;
-  date: string;
-  imgSrc: string;
-}
-
-const postData: DataType[] = [
-  {
-    time: "5 min",
-    title: "We Launch One Two Three Four",
-    description: "Published on Startupon",
-    date: "August 19, 2021",
-    imgSrc: "/images/articles/article.png",
-  },
-  {
-    time: "5 min",
-    title: "We Launch Two Three Four Five Six Secen",
-    description: "Published on Startupon",
-    date: "August 19, 2021",
-    imgSrc: "/images/articles/article2.png",
-  },
-  {
-    time: "5 min",
-    title: "We Launch Three Four Five Six Seven Eight Nine",
-    description: "Published on Startupon",
-    date: "August 19, 2021",
-    imgSrc: "/images/articles/article3.png",
-  },
-  {
-    time: "5 min",
-    title: "We Launch Four Five Six Seven Eight Nine Ten",
-    description: "Published on Startupon",
-    date: "August 19, 2021",
-    imgSrc: "/images/articles/article.png",
-  },
-  {
-    time: "5 min",
-    title: "We Launch Five Six Seven Eight Nine Ten Eleven",
-    description: "Published on Startupon",
-    date: "August 19, 2021",
-    imgSrc: "/images/articles/article2.png",
-  },
-  {
-    time: "5 min",
-    title: "We Launch Six Seven Eight Nine Ten Eleven Twelve",
-    description: "Published on Startupon",
-    date: "August 19, 2021",
-    imgSrc: "/images/articles/article3.png",
-  },
-];
-
-// CAROUSEL SETTINGS
-
-export default class MultipleItems extends Component {
+class MultipleItems extends Component<Props> {
   render() {
-    const settings = {
+    const { events } = this.props;
+
+    const carouselSettings = {
       dots: false,
       infinite: true,
       slidesToShow: 3,
@@ -106,35 +56,42 @@ export default class MultipleItems extends Component {
             </h3>
           </div>
 
-          <Slider {...settings}>
-            {postData.map((items, i) => (
+          <Slider {...carouselSettings}>
+            {events.map((event, i) => (
               <div key={i}>
                 <div className="bg-white m-3 px-3 pt-3 pb-12 my-10 shadow-lg rounded-3xl relative">
                   <Image
-                    src={items.imgSrc}
-                    alt="gaby"
+                    src={
+                      event.image &&
+                      Array.isArray(event.image) &&
+                      event.image.length > 0 &&
+                      event.image[0]?.url
+                        ? (event.image[0].url as string)
+                        : "/images/events/calendar.webp"
+                    }
+                    alt="event-image"
                     width={389}
                     height={262}
                     className="inline-block m-auto"
                   />
 
                   <h3 className="absolute bg-blue-800 text-white py-3 px-6 rounded-full article-img">
-                    {items.date}
+                    {event.date}
                   </h3>
                   <h4 className="text-2xl font-bold pt-6 text-black">
-                    {items.title}
+                    {event.name}
                   </h4>
                   {/* <h4 className="text-2xl font-bold pt-1 text-black">
                     {items.description}
                   </h4> */}
 
                   <div>
-                    <h3 className="text-base font-normal pt-6 pb-2 opacity-75">
-                      {items.description}
+                    <h3 className="text-base font-normal py-2 opacity-75">
+                      {event.description}
                     </h3>
-                    <h3 className="text-base font-normal pb-1 opacity-75">
-                      {items.time}
-                    </h3>
+                    {/* <h3 className="text-base font-normal pb-1 opacity-75">
+                      {items.date}
+                    </h3> */}
                   </div>
                 </div>
               </div>
@@ -144,4 +101,11 @@ export default class MultipleItems extends Component {
       </div>
     );
   }
+}
+
+export default function MultipleItemsWrapper() {
+  const dataContext = useContext(DataContext);
+  const events: EventType[] = dataContext?.data?.events || [];
+
+  return <MultipleItems events={events} />;
 }

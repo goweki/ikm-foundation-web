@@ -7,12 +7,12 @@ import Apply from "@/components/Apply";
 import OurInitiatives from "@/components/Initiatives";
 // import Map from "@/components/MapWrapper";
 import FeaturedWorks from "@/components/Featured";
-import Statistics from "@/components/Statistics";
+import Impact from "@/components/Impact";
 import FAQ from "@/components/FAQ";
 import Testimonials from "@/components/Testimonials";
 import Events from "@/components/Events";
 import MessageUs from "@/components/MessageUs";
-import Insta from "@/components/Insta";
+// import Insta from "@/components/Insta";
 
 export default function Home() {
   return (
@@ -24,14 +24,14 @@ export default function Home() {
         <Quote />
         <OurInitiatives />
         <FeaturedWorks />
-        <Statistics />
+        <Impact />
         <Apply />
         {/* <Map /> */}
         <FAQ />
         <Testimonials />
         <Events />
         <MessageUs />
-        <Insta />
+        {/* <Insta /> */}
       </main>
       <Footer />
     </>

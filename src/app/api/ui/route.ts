@@ -33,12 +33,24 @@ const getHandler = async () => {
         redirect: "follow",
       }
     );
+    const events_response_ = await fetch(
+      `https://api.airtable.com/v0/${airtableBaseID}/tblUFcgPPGtOPzEOT`,
+      {
+        method: "GET",
+        headers: myHeaders,
+        redirect: "follow",
+      }
+    );
     // if response !ok
-    if (!impact_response_.ok) {
+    if (!impact_response_.ok || !events_response_.ok) {
+      console.warn(
+        "FAILED: in routeHandler GET:/api/ui: impact_.status, events_.status: ",
+        impact_response_.status,
+        events_response_.status
+      );
       const error = await impact_response_.json();
       const errorMessage =
         error.message || "status - " + impact_response_.status;
-      console.warn("FAILED: in routeHandler POST:/auth/login: ", errorMessage);
 
       return Response.json(
         { message: errorMessage },
@@ -48,8 +60,13 @@ const getHandler = async () => {
 
     // response ok
     const impactResponse = await impact_response_.json();
+    const eventsResponse = await events_response_.json();
     // console.log("impactResponse.records:", impactResponse.records);
+    // console.log("eventsResponse.records:", eventsResponse.records);
     uiData.impact = impactResponse.records.map(
+      (record: Record<string, unknown>) => record.fields
+    );
+    uiData.events = eventsResponse.records.map(
       (record: Record<string, unknown>) => record.fields
     );
 

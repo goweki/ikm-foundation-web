@@ -56,7 +56,7 @@ const MessageUsForm = () => {
     <form
       id="contactForm"
       onSubmit={handleSubmit}
-      className="mx-auto max-w-md pt-5"
+      className="mx-auto max-w-md pt-5 px-4"
     >
       <div className="sm:col-span-4 mb-4">
         <label htmlFor="name" className="block text-sm/6 font-medium">

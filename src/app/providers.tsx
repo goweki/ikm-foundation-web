@@ -8,9 +8,15 @@ export interface Impact {
   quantity: number;
   unit: string;
 }
+export interface Event {
+  name: string;
+  date: string;
+  description: string;
+  image?: Record<string, unknown>[];
+}
 // Define the type for the context data
 interface DataContext {
-  data: { impact: Impact[] };
+  data: { impact: Impact[]; events?: Event[] };
   refreshData: () => Promise<void>;
 }
 export const DataContext = createContext<DataContext | undefined>(undefined);

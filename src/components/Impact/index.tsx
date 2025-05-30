@@ -4,8 +4,7 @@ import { DataContext, Impact } from "@/app/providers";
 import Image from "next/image";
 import { useContext } from "react";
 
-const Manage = () => {
-  // const statistics = data;
+const ImpactSection = () => {
   const dataContext = useContext(DataContext);
   const impact: Impact[] = dataContext?.data?.impact || [];
 
@@ -42,4 +41,4 @@ const Manage = () => {
   );
 };
 
-export default Manage;
+export default ImpactSection;
