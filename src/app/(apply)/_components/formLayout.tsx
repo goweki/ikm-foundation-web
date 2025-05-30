@@ -10,7 +10,12 @@ export default function FormLayout({
   descLink,
 }: {
   children: React.ReactNode;
-  page: "scholarship" | "headstart" | "healthcare" | "vulnerable-group";
+  page:
+    | "scholarship"
+    | "headstart"
+    | "healthcare"
+    | "vulnerable-group"
+    | "special-project";
   descLink?: {
     label: string;
     link: string;

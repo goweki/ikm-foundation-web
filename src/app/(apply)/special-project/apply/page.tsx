@@ -1,10 +1,10 @@
 import ApplyEducationForm from "@/components/forms/ApplyEducation";
-import ApplyLayout from "../../_components/layout";
+import FormLayout from "../../_components/formLayout";
 
-export default function VulnerableGroup() {
+export default function SpecialProject() {
   return (
-    <ApplyLayout
-      page="vulnerable-group"
+    <FormLayout
+      page="special-project"
       // descLink={{ label: "Learn more", link: "/apply/scholarship" }}
     >
       <ApplyEducationForm />
@@ -15,6 +15,6 @@ export default function VulnerableGroup() {
           <span className="h-px w-16 bg-slate-500" />
         </div>
       </div> */}
-    </ApplyLayout>
+    </FormLayout>
   );
 }
