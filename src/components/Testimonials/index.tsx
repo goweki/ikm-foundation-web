@@ -1,8 +1,8 @@
 "use client";
 import Slider from "react-slick";
 import React, { Component } from "react";
-import { StarIcon } from "@heroicons/react/24/solid";
-import Image from "next/image";
+// import { StarIcon } from "@heroicons/react/24/solid";
+// import Image from "next/image";
 
 // CAROUSEL DATA
 
