@@ -15,46 +15,25 @@ interface DataType {
 
 const postData: DataType[] = [
   {
-    name: "Robert Fox",
-    profession: "CEO, Parkview Int.Ltd",
+    name: "Kelvin",
+    profession: "Alumni, Head Start Africa",
     comment:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
-    imgSrc: "/images/testimonial/user1.svg",
+      "The Head Start Program transformed how I see myself and my future. I left with courage, clarity, and a whole new support system.",
+    imgSrc: "/images/testimonial/user1.png",
   },
   {
-    name: "Leslie Alexander",
-    profession: "CEO, Parkview Int.Ltd",
+    name: "Kelvin",
+    profession: "Alumni, Head Start Africa",
     comment:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
-    imgSrc: "/images/testimonial/user2.svg",
+      "The Head Start Program transformed how I see myself and my future. I left with courage, clarity, and a whole new support system.",
+    imgSrc: "/images/testimonial/user1.png",
   },
   {
-    name: "Cody Fisher",
-    profession: "CEO, Parkview Int.Ltd",
+    name: "Kelvin",
+    profession: "Alumni, Head Start Africa",
     comment:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
-    imgSrc: "/images/testimonial/user3.svg",
-  },
-  {
-    name: "Robert Fox",
-    profession: "CEO, Parkview Int.Ltd",
-    comment:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
-    imgSrc: "/images/testimonial/user1.svg",
-  },
-  {
-    name: "Leslie Alexander",
-    profession: "CEO, Parkview Int.Ltd",
-    comment:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
-    imgSrc: "/images/testimonial/user2.svg",
-  },
-  {
-    name: "Cody Fisher",
-    profession: "CEO, Parkview Int.Ltd",
-    comment:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
-    imgSrc: "/images/testimonial/user3.svg",
+      "The Head Start Program transformed how I see myself and my future. I left with courage, clarity, and a whole new support system.",
+    imgSrc: "/images/testimonial/user1.png",
   },
 ];
 
@@ -126,13 +105,13 @@ export default class MultipleItems extends Component {
             {postData.map((items, i) => (
               <div key={i} className="relative">
                 <div className="bg-white test-sha m-3 p-10 my-20 rounded-3xl">
-                  <Image
+                  {/* <Image
                     src={items.imgSrc}
                     alt={items.imgSrc}
                     width={71}
                     height={71}
                     className="inline-block m-auto absolute test-pos"
-                  />
+                  /> */}
                   <h4 className="text-base font-medium text-testColor my-4">
                     {items.comment}
                   </h4>
@@ -146,13 +125,13 @@ export default class MultipleItems extends Component {
                         {items.profession}
                       </h3>
                     </div>
-                    <div className="flex">
+                    {/* <div className="flex">
                       <StarIcon width={20} className="star" />
                       <StarIcon width={20} className="star" />
                       <StarIcon width={20} className="star" />
                       <StarIcon width={20} className="star" />
                       <StarIcon width={20} className="star" />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
