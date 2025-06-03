@@ -9,7 +9,7 @@ const FAQ = () => {
       <h3 className="text-xl font-normal text-white text-center mb-6">FAQ</h3>
       <h2 className="text-4xl lg:text-6xl font-semibold text-center text-white">
         Frequently asked questions
-        <br /> by cartegory.
+        <br /> by cartegory
       </h2>
       <div className="w-full px-4 pt-16 flex flex-col items-center text-xl font-semibold">
         <Link

@@ -16,8 +16,8 @@ const Quote = () => {
           {/* COLUMN-1 */}
           <div>
             <Image
-              src="/images/quote/legal_symbol.jpg"
-              alt="legal_symbol"
+              src="/images/quote/boat-ride.JPG"
+              alt="image"
               width={416}
               height={530}
               className="mx-auto md:mx-0 rounded-xl"
