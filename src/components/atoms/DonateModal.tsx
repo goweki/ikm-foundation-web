@@ -21,7 +21,7 @@ const DonateModal = ({ buttonLocation = "default" }) => {
 
   const paystackProps = {
     email,
-    amount,
+    amount: amount * 100,
     currency: "KES",
     metadata: {
       custom_fields: [
