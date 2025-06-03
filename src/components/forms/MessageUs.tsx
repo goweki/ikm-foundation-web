@@ -10,7 +10,9 @@ const MessageUsForm = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    const formData = new FormData(e.currentTarget);
+    const formElement = e.currentTarget;
+    const formData = new FormData(formElement);
+
     const name = formData.get("name");
     const email = formData.get("email");
     const phone = formData.get("phone");
@@ -39,6 +41,7 @@ const MessageUsForm = () => {
       }
 
       const postResponse = await _postResponse.json();
+      formElement.reset();
       toast.info(postResponse.message);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
