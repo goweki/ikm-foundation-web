@@ -7,7 +7,7 @@ export default function HeadStart() {
       page="headstart"
       // descLink={{ label: "Learn more", link: "/apply/scholarship" }}
     >
-      <ApplyEducationForm />
+      <ApplyEducationForm applicationFor="headstart" />
       {/* <div className="mt-6 text-center">
         <div className="flex items-center justify-center space-x-2">
           <span className="h-px w-16 bg-slate-500" />

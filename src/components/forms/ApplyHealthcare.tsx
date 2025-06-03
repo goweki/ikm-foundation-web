@@ -3,11 +3,7 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
 
-const ApplyEducationForm = ({
-  applicationFor = "scholarship",
-}: {
-  applicationFor: "scholarship" | "headstart";
-}) => {
+const ApplyHealthcareForm = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -16,10 +12,9 @@ const ApplyEducationForm = ({
 
     const formElement = e.currentTarget;
     const formData = new FormData(formElement);
-    formData.append("applicationFor", applicationFor);
 
     try {
-      const _postResponse = await fetch("/api/apply/education", {
+      const _postResponse = await fetch("/api/apply/healthcare", {
         method: "POST",
         body: formData,
       });
@@ -40,7 +35,7 @@ const ApplyEducationForm = ({
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       console.error(
-        "ERROR in ApplyEducation form: ",
+        "ERROR in ApplyHealtcare form: ",
         error.message || error || "UNKNOWN ERROR"
       );
       toast.error(error.message || error || "UNKNOWN ERROR");
@@ -51,7 +46,7 @@ const ApplyEducationForm = ({
 
   return (
     <form
-      id="applyEducation"
+      id="applyHealthcare"
       onSubmit={handleSubmit}
       className="mx-auto max-w-md pt-5"
     >
@@ -111,7 +106,8 @@ const ApplyEducationForm = ({
 
       <div className="sm:col-span-4 mb-4">
         <label htmlFor="email" className="block text-sm/6 font-medium">
-          Upload CV or portfolio to Google Drive and share the link below:
+          Upload supporting document to Google Drive (or other online storage)
+          and share the link below:
           <span className="text-red-500"> *</span>
           <br />
           <span className="italic font-thin">
@@ -126,7 +122,7 @@ const ApplyEducationForm = ({
               name="attachmentLink"
               id="attachmentLink"
               className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base placeholder:text-slate-500 focus:outline-none sm:text-sm/6"
-              placeholder="CV link"
+              placeholder="Supporting documents link"
               required
             />
           </div>
@@ -173,4 +169,4 @@ const ApplyEducationForm = ({
   );
 };
 
-export default ApplyEducationForm;
+export default ApplyHealthcareForm;

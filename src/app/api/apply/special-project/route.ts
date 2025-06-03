@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 
-interface Message {
-  name?: string;
-  email: string;
-  tel?: string;
-  message: string;
-}
+// interface ApplicationSpecialProject {
+//   email: string;
+//   phone: string;
+//   name: string;
+//   attachmentLink: string;
+// }
 
 const airtableBaseID = process.env.AIRTABLE_BASE_ID;
 const airtablePAT_write = process.env.AIRTABLE_PAT_WRITE;
@@ -22,20 +22,22 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: "Server error" }, { status: 500 });
     }
 
-    const messageObj: Message = await req.json();
-    const { email, message, name, tel } = messageObj;
-    if (!email || !message) {
+    const formData = await req.formData();
+    const body = Object.fromEntries(formData);
+
+    const { email, phone, name, attachmentLink } = body;
+
+    if (!email || !phone || !name || !attachmentLink) {
+      console.log("Invalid application object", formData);
       return NextResponse.json(
-        { message: "Email and message are required" },
+        { message: "Invalid application object" },
         { status: 400 }
       );
     }
 
-    console.log("saving message: ", messageObj);
-
-    // POST message to airtable
+    // POST application to airtable
     const post_response_ = await fetch(
-      `https://api.airtable.com/v0/${airtableBaseID}/tblMspYlTWkQuo4gn`,
+      `https://api.airtable.com/v0/${airtableBaseID}/tblcVxoDvARmlDXQx`,
       {
         method: "POST",
         headers: {
@@ -45,9 +47,9 @@ export async function POST(req: NextRequest) {
         body: JSON.stringify({
           fields: {
             email,
-            message,
+            phone,
             name,
-            tel,
+            attachment_link: attachmentLink,
           },
         }),
       }
@@ -57,8 +59,8 @@ export async function POST(req: NextRequest) {
     if (!post_response_.ok) {
       const error = await post_response_.json();
       const errorMessage = error.message || "status - " + post_response_.status;
-      console.error(
-        "FAILED: in routeHandler POST: /api/message: ",
+      console.warn(
+        "FAILED: in routeHandler POST: /api/apply/special-project: ",
         errorMessage
       );
 
@@ -68,19 +70,21 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // response ok
     const post_response = await post_response_.json();
+
+    // http response
+    console.log("response - ", post_response);
     return NextResponse.json(
-      { message: "Message sent successfully", data: post_response },
+      { message: "Application sent successfully", data: post_response },
       { status: 200 }
     );
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
-    console.error("ERROR in POST: /api/message", error);
+    console.error("ERROR in POST: /api/apply/special-project", error);
 
     return NextResponse.json(
       {
-        message: "Error sending message",
+        message: "Error sending special-project application",
         error: error.message,
       },
       { status: 500 }

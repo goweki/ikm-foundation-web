@@ -72,7 +72,7 @@ class MultipleItems extends Component<Props> {
                     alt="event-image"
                     width={389}
                     height={262}
-                    className="inline-block m-auto"
+                    className="inline-block m-auto rounded-2xl"
                   />
 
                   <h3 className="absolute bg-blue-800 text-white py-3 px-6 rounded-full article-img">

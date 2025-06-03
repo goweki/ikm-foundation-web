@@ -8,6 +8,7 @@ const applyOptions = [
   "headstart",
   "healthcare",
   "vulnerable-group",
+  "special-project",
 ];
 
 export default function ApplyLayout({
