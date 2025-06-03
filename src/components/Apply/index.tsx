@@ -46,7 +46,7 @@ const Apply = () => {
 
           <Link
             href="/headstart"
-            className="bg-mentorship bg-teal-100 hover:bg-teal-300 hover:shadow-lg pt-16 px-10 sm:px-24 pb-52 md:pb-70 rounded-3xl cursor-pointer transition-all duration-200"
+            className="bg-mentorship bg-blue-100 hover:bg-blue-300 hover:shadow-lg pt-16 px-10 sm:px-24 pb-52 md:pb-70 rounded-3xl cursor-pointer transition-all duration-200"
           >
             <h2 className="text-xl font-normal text-blue tracking-widest mb-5 text-center sm:text-start">
               Head Start Africa
@@ -71,7 +71,7 @@ const Apply = () => {
 
           <Link
             href="/healthcare"
-            className="bg-healthcare bg-teal-100 hover:bg-teal-300 hover:shadow-lg pt-16 px-10 sm:px-24 pb-52 md:pb-70 rounded-3xl cursor-pointer transition-all duration-200"
+            className="bg-healthcare bg-blue-100 hover:bg-blue-300 hover:shadow-lg pt-16 px-10 sm:px-24 pb-52 md:pb-70 rounded-3xl cursor-pointer transition-all duration-200"
           >
             <h2 className="text-xl font-normal tracking-widest mb-5 text-center sm:text-start">
               Healthcare
@@ -120,14 +120,14 @@ const Apply = () => {
 
           <Link
             href="/special-project"
-            className="bg-group bg-teal-100 hover:bg-teal-300 hover:shadow-lg pt-16 px-10 sm:px-24 pb-52 md:pb-70 rounded-3xl cursor-pointer transition-all duration-200"
+            className="bg-group bg-blue-800 hover:bg-blue-600 text-white hover:shadow-lg pt-16 px-10 sm:px-24 pb-52 md:pb-70 rounded-3xl cursor-pointer transition-all duration-200"
           >
             <h2 className="text-xl font-normal tracking-widest mb-5 text-center sm:text-start">
-              Special Project
+              Special Projects
             </h2>
             <h3 className="text-4xl sm:text-65xl font-bold text-black leading-snug mb-5 text-center sm:text-start">
-              <span className="text-blue-700">Recommend</span>{" "}
-              <span className="text-slate-700">Special Project</span>
+              <span className="text-white">Recommend</span>{" "}
+              <span className="text-slate-200">Special Project</span>
             </h3>
             <h5 className="text-lg bluish pt-2 mb-5 text-center sm:text-start">
               Supporting initiatives that do not fall under our main cartegories
