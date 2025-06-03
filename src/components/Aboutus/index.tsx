@@ -1,39 +1,51 @@
 import Image from "next/image";
-// import Link from "next/link";
-// import { ChevronRightIcon } from "@heroicons/react/20/solid";
+import Link from "next/link";
+import { ChevronRightIcon } from "@heroicons/react/20/solid";
 
-// interface datatype {
-//   heading: string;
-//   imgSrc: string;
-//   paragraph: string;
-//   link: string;
-// }
+interface datatype {
+  heading: string;
+  imgSrc: string;
+  paragraph: string;
+  href: string;
+}
 
-// education, healthcare,
-// and inclusive opportunities for vulnerable groups.
-
-// const Aboutdata: datatype[] = [
-//   {
-//     heading: "Education",
-//     imgSrc: "/images/aboutus/imgOne.svg",
-//     paragraph: "Nurturing future professionals & Increasing access to learning",
-//     link: "Learn more",
-//   },
-//   {
-//     heading: "healthcare",
-//     imgSrc: "/images/aboutus/imgTwo.svg",
-//     paragraph:
-//       "Improving access to life-saving therapies and medications in our communities",
-//     link: "Learn more",
-//   },
-//   {
-//     heading: "Inclusivity & Special Projects",
-//     imgSrc: "/images/aboutus/imgThree.svg",
-//     paragraph:
-//       "Protecting dignity and stability of vulnerable persons and investing in community resilience and infrastructure ",
-//     link: "Learn more",
-//   },
-// ];
+const Aboutdata: datatype[] = [
+  {
+    heading: "IKMF Scholarship",
+    imgSrc: "/images/aboutus/initiative1.svg",
+    paragraph:
+      "Increasing access to learning for children from disadvantages environments",
+    href: "/scholarship",
+  },
+  {
+    heading: "Head Start Africa",
+    imgSrc: "/images/aboutus/initiative2.svg",
+    paragraph:
+      "Nurturing future professionals within the legal field and beyond",
+    href: "/headstart",
+  },
+  {
+    heading: "Healthcare",
+    imgSrc: "/images/aboutus/initiative3.svg",
+    paragraph:
+      "Improving access to life-saving therapies and medications in our communities",
+    href: "/healthcare",
+  },
+  {
+    heading: "Vulnerable Groups",
+    imgSrc: "/images/aboutus/initiative4.svg",
+    paragraph:
+      "Protecting dignity and stability of vulnerable persons and groups in communities",
+    href: "/vulnerable-group",
+  },
+  {
+    heading: "Special projects",
+    imgSrc: "/images/aboutus/initiative5.svg",
+    paragraph:
+      "Building community resilience by supporting long term sustainability projects.",
+    href: "/special-project",
+  },
+];
 
 const Aboutus = () => {
   return (
@@ -56,13 +68,13 @@ const Aboutus = () => {
           through impactful partnerships and sustainable programmes by working
           to establish lasting, community-driven change.
         </h4>
-        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 my-16 gap-x-16 lg:gap-x-32">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 my-16 gap-x-16 lg:gap-x-32">
           {Aboutdata.map((item, i) => (
             <div
               key={i}
-              className="hover:bg-blue-200 bg-white rounded-3xl mt-16 pt-10 pl-8 pb-10 pr-6 shadow-xl cursor-pointer"
+              className="hover:bg-blue-200 bg-white rounded-3xl mt-16 pt-10 pl-8 pb-10 pr-6 shadow-xl group transition-all duration-200"
             >
-              <h4 className="text-4xl font-semibold  text-black mb-5">
+              <h4 className="text-4xl font-semibold  text-black mb-5 h-20">
                 {item.heading}
               </h4>
               <Image
@@ -72,19 +84,19 @@ const Aboutus = () => {
                 height={100}
                 className="mb-5"
               />
-              <h4 className="text-lg font-normal text-black mb-5">
+              <h4 className="text-lg font-normal text-black mb-5 min-h-20">
                 {item.paragraph}
               </h4>
               <Link
-                href="#"
-                className="text-lg font-semibold group-hover:text-white text-blue hover-underline"
+                href={item.href}
+                className="text-lg font-semibold text-blue-800 hover-underline hover:scale-105"
               >
-                {item.link}
+                Learn more
                 <ChevronRightIcon width={20} height={20} />
               </Link>
             </div>
           ))}
-        </div> */}
+        </div>
       </div>
     </div>
   );
