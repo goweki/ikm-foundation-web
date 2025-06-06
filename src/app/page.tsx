@@ -5,7 +5,7 @@ import Aboutus from "@/components/Aboutus";
 import Quote from "@/components/Quote";
 import Apply from "@/components/Apply";
 import OurInitiatives from "@/components/Initiatives";
-// import Map from "@/components/MapWrapper";
+import Map from "@/components/MapWrapper";
 import Impact from "@/components/Impact";
 import FAQ from "@/components/FAQ";
 import Testimonials from "@/components/Testimonials";
@@ -23,7 +23,7 @@ export default function Home() {
         <OurInitiatives />
         <Impact />
         <Apply />
-        {/* <Map /> */}
+        <Map />
         <FAQ />
         <Testimonials />
         <Events />
