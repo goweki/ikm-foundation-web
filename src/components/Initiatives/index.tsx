@@ -6,41 +6,34 @@ import Image from "next/image";
 // CAROUSEL DATA
 
 interface DataType {
-  profession: string;
-  name: string;
+  description: string;
   imgSrc: string;
 }
 
 const initiativesData: DataType[] = [
   {
-    profession: "Fees & Resources",
-    name: "Education",
-    imgSrc: "/images/placeholder/200.svg",
+    description: "Education",
+    imgSrc: "/images/initiatives/talk_students.jpg",
   },
   {
-    profession: "Permanent & temporary",
-    name: "Shelter",
-    imgSrc: "/images/placeholder/200.svg",
+    description: "Infastructure",
+    imgSrc: "/images/initiatives/water_use.jpg",
   },
   {
-    profession: "Food & Medicine",
-    name: "Health",
-    imgSrc: "/images/placeholder/200.svg",
+    description: "Community",
+    imgSrc: "/images/initiatives/mentorship_indoor.jpg",
   },
   {
-    profession: "Wearables",
-    name: "Clothes",
-    imgSrc: "/images/placeholder/200.svg",
+    description: "Sustainability",
+    imgSrc: "/images/initiatives/water_project_launch.jpg",
   },
   {
-    profession: "Training and Support",
-    name: "Mentorships",
-    imgSrc: "/images/placeholder/200.svg",
+    description: "Mentorship",
+    imgSrc: "/images/initiatives/mentorship_outdoor.jpg",
   },
   {
-    profession: "Help Centers",
-    name: "Mental Health",
-    imgSrc: "/images/placeholder/200.svg",
+    description: "Health",
+    imgSrc: "/images/initiatives/health_walk.jpg",
   },
 ];
 
@@ -52,7 +45,7 @@ export default class MultipleItems extends Component {
       dots: false,
       infinite: true,
       slidesToShow: 5,
-      // centerMode: true,
+      centerMode: true,
       slidesToScroll: 1,
       arrows: false,
       autoplay: true,
@@ -91,7 +84,7 @@ export default class MultipleItems extends Component {
     };
 
     return (
-      <div className="bg-wework">
+      <div className="bg-initiatives sm:py-10">
         <div className="mx-auto max-w-2xl lg:max-w-7xl sm:py-4 lg:px-8 ">
           <div className="text-center">
             <h3 className="text-4xl sm:text-6xl font-bold text-black my-2">
@@ -109,26 +102,16 @@ export default class MultipleItems extends Component {
         <Slider {...settings}>
           {initiativesData.map((items, i) => (
             <div key={i}>
-              <div className="bg-white m-3 py-14 my-10 text-center shadow-xl rounded-3xl">
-                <div className="relative">
-                  <Image
-                    src={items.imgSrc}
-                    alt="initiative"
-                    width={182}
-                    height={182}
-                    className="inline-block m-auto"
-                  />
-                  {/* <Image
-                    src={"/images/wework/linkedin.svg"}
-                    alt="greenbg"
-                    width={120}
-                    height={120}
-                    className=" absolute inline-block position-linkedin"
-                  /> */}
-                </div>
-                <h4 className="text-4xl font-bold pt-14">{items.name}</h4>
-                <h3 className="text-2xl font-normal pt-4 pb-2 opacity-50">
-                  {items.profession}
+              <div className="bg-blue-100 m-3 text-center shadow-xl rounded-3xl">
+                <Image
+                  className="rounded-2xl rounded-b-none"
+                  src={items.imgSrc}
+                  alt="initiative_img"
+                  width={800}
+                  height={533}
+                />
+                <h3 className="text-xl lg:text-2xl font-bold py-4 lg:py-6">
+                  {items.description}
                 </h3>
               </div>
             </div>

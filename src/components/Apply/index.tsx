@@ -4,7 +4,7 @@ const Apply = () => {
   return (
     <div
       id="applications-section"
-      className="mx-auto max-w-7xl sm:py-4 lg:px-8 mt-32"
+      className="mx-auto max-w-7xl sm:py-4 lg:px-8 mt-14"
     >
       <h2 className="text-4xl lg:text-6xl pt-4 font-bold sm:leading-tight mt-5 text-center">
         Apply to our programs & <br /> initiatives
