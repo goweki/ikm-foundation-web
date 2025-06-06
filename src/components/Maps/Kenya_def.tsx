@@ -189,7 +189,7 @@ const KenyaMap = () => {
                 const cy = parseFloat(cyAttr);
                 // popupElement.style.left = `${cx}px`;
                 // popupElement.style.top = `${cy}px`;
-                console.log(`County center X: ${cx}, Numeric Y: ${cy}`);
+                console.log(`County center X: ${cx}, Y: ${cy}`);
               }
             });
 
