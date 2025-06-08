@@ -7,60 +7,19 @@ import PopUp from "../atoms/popup";
 interface CountyData {
   [key: string]: {
     name: string;
-    capital?: string;
-    population?: string;
-    area?: string;
+    [key: string]: unknown;
   };
 }
 
-const countyData: CountyData = {
-  KE01: { name: "Mombasa" },
-  KE02: { name: "Kwale" },
-  KE03: { name: "Kilifi" },
-  KE04: { name: "Tana River" },
-  KE05: { name: "Lamu" },
-  KE06: { name: "Taita Taveta" },
-  KE07: { name: "Garissa" },
-  KE08: { name: "Wajir" },
-  KE09: { name: "Mandera" },
-  KE10: { name: "Marsabit" },
-  KE11: { name: "Isiolo" },
-  KE12: { name: "Meru" },
-  KE13: { name: "Tharaka-Nithi" },
-  KE14: { name: "Embu" },
-  KE15: { name: "Kitui" },
-  KE16: { name: "Machakos" },
-  KE17: { name: "Makueni" },
-  KE18: { name: "Nyandarua" },
-  KE19: { name: "Nyeri" },
-  KE20: { name: "Kirinyaga" },
-  KE21: { name: "Murang'a" },
-  KE22: { name: "Kiambu" },
-  KE23: { name: "Turkana" },
-  KE24: { name: "West Pokot" },
-  KE25: { name: "Samburu" },
-  KE26: { name: "Trans Nzoia" },
-  KE27: { name: "Uasin Gishu" },
-  KE28: { name: "Elgeyo-Marakwet" },
-  KE29: { name: "Nandi" },
-  KE30: { name: "Baringo" },
-  KE31: { name: "Laikipia" },
-  KE32: { name: "Nakuru" },
-  KE33: { name: "Narok" },
-  KE34: { name: "Kajiado" },
-  KE35: { name: "Kericho" },
-  KE36: { name: "Bomet" },
-  KE37: { name: "Kakamega" },
-  KE38: { name: "Vihiga" },
-  KE39: { name: "Bungoma" },
-  KE40: { name: "Busia" },
-  KE41: { name: "Siaya" },
-  KE42: { name: "Kisumu" },
-  KE43: { name: "Homa Bay" },
-  KE44: { name: "Migori" },
-  KE45: { name: "Kisii" },
-  KE46: { name: "Nyamira" },
-  KE47: { name: "Nairobi" },
+const regionData: RegionData = {
+  western: { name: "western", scholarships: 30 },
+  nyanza: { name: "nyanza", projects: 30 },
+  "rift-valley": { name: "rift-valley", projects: 30 },
+  central: { name: "central", scholarships: 30 },
+  nairobi: { name: "nairobi", projects: 30 },
+  coast: { name: "coast", scholarships: 30 },
+  eastern: { name: "eastern", projects: 30 },
+  "north-eastern": { name: "north-eastern", scholarships: 30 },
 };
 
 const KenyaMap = () => {

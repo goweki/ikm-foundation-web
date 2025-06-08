@@ -23,7 +23,7 @@ html:not([data-scroll="0"]) .navbar {
   transition: 0.4s linear;
   padding: 0px !important;
   /* height: 20px; */
-  z-index: 3;
+  z-index: 30;
 }
 
 html:not([data-scroll="0"]) .navbar > div > div {
