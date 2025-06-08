@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
-import { fetcher } from "@/utils/fetcher"; // Assuming you have a fetcher utility
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import { fetcher } from "@/utils/fetcher";
 import PopUp from "../atoms/popup";
 
-interface CountyData {
+interface RegionData {
   [key: string]: {
     name: string;
     [key: string]: unknown;
@@ -23,19 +23,22 @@ const regionData: RegionData = {
 };
 
 const KenyaMap = () => {
-  const [countyInfo, setCountyInfo] = useState<{
+  const [regionInfo, setRegionInfo] = useState<{
     name: string;
-    capital?: string;
-    population?: string;
-    area?: string;
-    popupCordinate?: Record<string, number>;
+    [key: string]: unknown;
   } | null>(null);
   const mapRef = useRef<HTMLDivElement>(null);
+  const popupRef = useRef<HTMLDivElement>(null);
 
-  // Reset selected county and info on unmount
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [clientX, setClientX] = useState(0);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [clientY, setClientY] = useState(0);
+
+  // Reset selected region and info on unmount
   useEffect(() => {
     return () => {
-      setCountyInfo(null);
+      setRegionInfo(null);
     };
   }, []);
 
@@ -43,63 +46,40 @@ const KenyaMap = () => {
   useEffect(() => {
     const loadMap = async () => {
       try {
-        const response = await fetcher("/maps/map_ke.svg");
+        const response = await fetcher("/maps/map_ke_regions.svg");
         const svgText = await response.text();
         if (mapRef.current) {
           mapRef.current.innerHTML = svgText; //insert svg
-          // Select all county <path> elements inside the <g id="features"> group
-          const featuresGroup = document.getElementById("features");
-          const countyPaths = featuresGroup?.querySelectorAll("path");
-
-          const pointsGroup = document.getElementById(
-            "points"
-          ) as HTMLDivElement;
-
-          // map center : x,y
-          let centerXNum = 0;
-          let centerYNum = 0;
-          const centerCircle = pointsGroup.querySelector(
-            "#c"
-          ) as SVGCircleElement;
-
-          if (centerCircle) {
-            const centerX = centerCircle.getAttribute("cx");
-            const centerY = centerCircle.getAttribute("cy");
-
-            centerXNum = parseFloat(centerX || "0");
-            centerYNum = parseFloat(centerY || "0");
-          } else {
-            console.warn("Circle with ID 'c' not found.");
+          const svg = mapRef.current.querySelector("svg");
+          if (!svg) {
+            console.error(
+              "Failed to load or parse the SVG element from the inserted markup."
+            );
+            return;
           }
 
-          const popupElement = document.getElementById(
-            "county-popup"
-          ) as HTMLDivElement;
-          popupElement.style.left = `${centerXNum}px`;
-          popupElement.style.top = `${centerYNum}px`;
+          const regionsGroup = document.getElementById("regions");
+          const regionsPaths = regionsGroup?.querySelectorAll("path");
 
-          const labelsGroup = document.getElementById(
-            "label_points"
+          const centersGroup = document.getElementById(
+            "centers"
           ) as HTMLDivElement;
 
-          if (!countyPaths || !pointsGroup || !labelsGroup || !popupElement) {
+          if (!regionsPaths || !centersGroup) {
             console.warn(
-              "Failed to parse map: missing - " + !countyPaths
-                ? "county svg paths"
-                : !pointsGroup
-                ? "pointsGroup element"
-                : !labelsGroup
-                ? "labelsGroup element"
-                : !popupElement
-                ? "popupElement"
+              "Failed to parse map: missing - ",
+              !regionsPaths
+                ? "regions group"
+                : !centersGroup
+                ? "centers group"
                 : null
             );
             return;
-          } else {
-            console.log("county paths - ", countyPaths);
           }
 
-          countyPaths.forEach((county) => {
+          svg.addEventListener("mousemove", handleMouseMove);
+
+          regionsPaths.forEach((county) => {
             county.addEventListener("mouseenter", (event) => {
               const target = event.target as SVGPathElement;
               if (target) {
@@ -117,38 +97,56 @@ const KenyaMap = () => {
                 // target.style.fill = 'blue';    // Sets a specific CSS color
 
                 // Check target
-                const countyId = target.getAttribute("id");
-                if (!countyId) {
-                  console.warn("countyId could not be extracted from target");
+                const regionId = target.getAttribute("id");
+                if (!regionId) {
+                  console.warn("regionId could not be extracted from target");
                   return;
                 } else {
-                  setCountyInfo(countyData[countyId]);
+                  setRegionInfo(regionData[regionId]);
                 }
-                const labelElement = labelsGroup.querySelector("#" + countyId);
-                if (!labelElement) {
+                const labelCircle = centersGroup.querySelector("#" + regionId);
+                if (!labelCircle) {
                   console.warn(
                     "points could not be extracted from labelElement using countyId - " +
                       "#" +
-                      countyId
-                  );
-                  return;
-                }
-                // Extract the cx and cy values as numbers
-                const cxAttr = labelElement.getAttribute("cx");
-                const cyAttr = labelElement.getAttribute("cy");
-                if (cxAttr === null || cyAttr === null) {
-                  console.warn(
-                    "Missing 'cx' or 'cy' attributes on the element with id: " +
-                      countyId
+                      regionId
                   );
                   return;
                 }
 
+                // Extract the cx and cy values
+                const cxAttr = labelCircle.getAttribute("cx");
+                const cyAttr = labelCircle.getAttribute("cy");
+                if (cxAttr === null || cyAttr === null) {
+                  console.warn(
+                    "Missing 'cx' or 'cy' attributes on the element with id: " +
+                      regionId
+                  );
+                  return;
+                }
                 const cx = parseFloat(cxAttr);
                 const cy = parseFloat(cyAttr);
+
+                // Create a point in SVG space
+                const pt = svg.createSVGPoint();
+                pt.x = cx;
+                pt.y = cy;
+                const ctm = svg.getScreenCTM();
+                if (!ctm) {
+                  console.error("Failed to get screen CTM from SVG.");
+                  return;
+                }
+                const screenPoint = pt.matrixTransform(ctm);
+
+                // popupElement.style.position = "absolute";
+                // popupElement.style.left = `${screenPoint.x}px`;
+                // popupElement.style.top = `${screenPoint.y}px`;
+
                 // popupElement.style.left = `${cx}px`;
                 // popupElement.style.top = `${cy}px`;
-                console.log(`County center X: ${cx}, Y: ${cy}`);
+                console.log(
+                  `Region center X: ${cx}, Y: ${cy} , scrrenpoint: ${screenPoint}`
+                );
               }
             });
 
@@ -167,7 +165,7 @@ const KenyaMap = () => {
               // or remove the attribute if the default is handled by CSS.
               // county.setAttribute("fill", "originalColorValue"); // Replace originalColorValue
 
-              setCountyInfo(null);
+              setRegionInfo(null);
             });
           });
         }
@@ -179,10 +177,50 @@ const KenyaMap = () => {
     loadMap();
   }, []);
 
+  // Callback for mouse move on SVG
+  const handleMouseMove = useCallback(
+    (evt: MouseEvent) => {
+      // Client coordinates from the event
+      const _clientX: number = evt.clientX;
+      const _clientY: number = evt.clientY;
+      setClientX(_clientX);
+      setClientY(_clientY);
+
+      if (!mapRef.current) return;
+      const svg = mapRef.current.querySelector("svg");
+      if (svg) {
+        // const rect = svg.getBoundingClientRect();
+        // const x = evt.clientX - rect.left;
+        // const y = evt.clientY - rect.top;
+
+        let point = svg.createSVGPoint();
+        // point.x = x;
+        // point.y = y;
+        point.x = _clientX;
+        point.y = _clientY;
+
+        try {
+          const ctm = svg.getScreenCTM();
+          if (ctm) {
+            point = point.matrixTransform(ctm.inverse());
+          }
+        } catch (e) {
+          console.error("Error getting or inverting CTM:", e);
+        }
+
+        if (!popupRef.current) return;
+
+        popupRef.current.style.left = `${Math.floor(point.x)}px`;
+        popupRef.current.style.top = `${Math.floor(point.y)}px`;
+      }
+    },
+    [setClientX, setClientY]
+  );
+
   return (
     <div id="map-container" className="flex relative overflow-hidden">
-      <PopUp title={countyInfo?.name}></PopUp>
-      <div ref={mapRef} id="kenya-map" className="w-full" />
+      <PopUp popupRef={popupRef} data={regionInfo ?? undefined}></PopUp>
+      <div ref={mapRef} id="kenya-map" className="w-full text-blue-500" />
     </div>
   );
 };
