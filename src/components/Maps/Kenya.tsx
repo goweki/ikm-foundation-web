@@ -42,6 +42,46 @@ const KenyaMap = () => {
     };
   }, []);
 
+  // Callback for mouse move on SVG
+  const handleMouseMove = useCallback(
+    (evt: MouseEvent) => {
+      // Client coordinates from the event
+      const _clientX: number = evt.clientX;
+      const _clientY: number = evt.clientY;
+      setClientX(_clientX);
+      setClientY(_clientY);
+
+      if (!mapRef.current) return;
+      const svg = mapRef.current.querySelector("svg");
+      if (svg) {
+        // const rect = svg.getBoundingClientRect();
+        // const x = evt.clientX - rect.left;
+        // const y = evt.clientY - rect.top;
+
+        let point = svg.createSVGPoint();
+        // point.x = x;
+        // point.y = y;
+        point.x = _clientX;
+        point.y = _clientY;
+
+        try {
+          const ctm = svg.getScreenCTM();
+          if (ctm) {
+            point = point.matrixTransform(ctm.inverse());
+          }
+        } catch (e) {
+          console.error("Error getting or inverting CTM:", e);
+        }
+
+        if (!popupRef.current) return;
+
+        popupRef.current.style.left = `${Math.floor(point.x)}px`;
+        popupRef.current.style.top = `${Math.floor(point.y)}px`;
+      }
+    },
+    [setClientX, setClientY]
+  );
+
   //load map
   useEffect(() => {
     const loadMap = async () => {
@@ -175,47 +215,7 @@ const KenyaMap = () => {
     };
 
     loadMap();
-  }, []);
-
-  // Callback for mouse move on SVG
-  const handleMouseMove = useCallback(
-    (evt: MouseEvent) => {
-      // Client coordinates from the event
-      const _clientX: number = evt.clientX;
-      const _clientY: number = evt.clientY;
-      setClientX(_clientX);
-      setClientY(_clientY);
-
-      if (!mapRef.current) return;
-      const svg = mapRef.current.querySelector("svg");
-      if (svg) {
-        // const rect = svg.getBoundingClientRect();
-        // const x = evt.clientX - rect.left;
-        // const y = evt.clientY - rect.top;
-
-        let point = svg.createSVGPoint();
-        // point.x = x;
-        // point.y = y;
-        point.x = _clientX;
-        point.y = _clientY;
-
-        try {
-          const ctm = svg.getScreenCTM();
-          if (ctm) {
-            point = point.matrixTransform(ctm.inverse());
-          }
-        } catch (e) {
-          console.error("Error getting or inverting CTM:", e);
-        }
-
-        if (!popupRef.current) return;
-
-        popupRef.current.style.left = `${Math.floor(point.x)}px`;
-        popupRef.current.style.top = `${Math.floor(point.y)}px`;
-      }
-    },
-    [setClientX, setClientY]
-  );
+  }, [handleMouseMove]);
 
   return (
     <div id="map-container" className="flex relative overflow-hidden">

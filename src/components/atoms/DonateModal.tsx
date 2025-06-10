@@ -68,6 +68,8 @@ const DonateModal = ({ buttonLocation = "default" }) => {
             className={`${
               buttonLocation == "navbar"
                 ? " hover:bg-blue-800 hover:text-slate-200 navbutton justify-end"
+                : buttonLocation == "banner"
+                ? "bg-blue-200 text-black"
                 : "btn-primary"
             } px-6 md:px-8 lg:px-12 py-3 md:py-5 md:text-xl font-semibold hover:shadow-xl hover:scale-105 transition duration-200 rounded-full`}
             onClick={openModal}

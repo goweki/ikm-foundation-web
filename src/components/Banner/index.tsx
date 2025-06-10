@@ -3,51 +3,146 @@ import DonateModal from "../atoms/DonateModal";
 
 const Banner = () => {
   return (
-    <div className="mx-auto max-w-7xl sm:py-10 px-6 lg:px-8">
-      <div className="grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
-        {/* COLUMN-1 */}
-
-        <div className="flex">
-          <div className="m-auto h-fit">
-            <div className="py-3 text-center lg:text-start">
-              <button className="text-blue-800 bg-blue-100 shadow-xl text-sm md:text-lg font-bold px-6 py-1 rounded-3xl tracking-wider">
-                Social Responsibility
-              </button>
-            </div>
-            {/* Improving Lives Through Responsible Business */}
-            <div className="">
-              <div className="py-3 text-center lg:text-start">
-                <h1 className="text-3xl font-bold text-darkpurple">
-                  Improving <span className="text-purple-500">lives</span>,
-                  <br />
-                  <span className="text-5xl">
-                    through
-                    <br />
-                    <span> Responsible</span> <br />
-                    <span className="text-blue-500 text-6xl">Business.</span>
-                  </span>
-                </h1>
+    <section className="py-24 gradient-banner text-white">
+      <div className="shapes-container">
+        <div
+          className="shape"
+          data-aos="fade-down-left"
+          data-aos-duration="1500"
+          data-aos-delay="100"
+        ></div>
+        <div
+          className="shape"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          data-aos-delay="100"
+        ></div>
+        <div
+          className="shape"
+          data-aos="fade-up-right"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+        ></div>
+        <div
+          className="shape"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+        ></div>
+        <div
+          className="shape"
+          data-aos="fade-down-left"
+          data-aos-duration="1000"
+          data-aos-delay="100"
+        ></div>
+        <div
+          className="shape"
+          data-aos="fade-down-left"
+          data-aos-duration="1000"
+          data-aos-delay="100"
+        ></div>
+        <div
+          className="shape"
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          data-aos-delay="300"
+        ></div>
+        <div
+          className="shape"
+          data-aos="fade-down-right"
+          data-aos-duration="500"
+          data-aos-delay="200"
+        ></div>
+        <div
+          className="shape"
+          data-aos="fade-down-right"
+          data-aos-duration="500"
+          data-aos-delay="100"
+        ></div>
+        <div
+          className="shape"
+          data-aos="zoom-out"
+          data-aos-duration="2000"
+          data-aos-delay="500"
+        ></div>
+        <div
+          className="shape"
+          data-aos="fade-up-right"
+          data-aos-duration="500"
+          data-aos-delay="200"
+        ></div>
+        <div
+          className="shape"
+          data-aos="fade-down-left"
+          data-aos-duration="500"
+          data-aos-delay="100"
+        ></div>
+        <div
+          className="shape"
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-delay="0"
+        ></div>
+        <div
+          className="shape"
+          data-aos="fade-down"
+          data-aos-duration="500"
+          data-aos-delay="0"
+        ></div>
+        <div
+          className="shape"
+          data-aos="fade-up-right"
+          data-aos-duration="500"
+          data-aos-delay="100"
+        ></div>
+        <div
+          className="shape"
+          data-aos="fade-down-left"
+          data-aos-duration="500"
+          data-aos-delay="0"
+        ></div>
+      </div>
+      <div className="max-w-7xl mx-auto px-4 flex">
+        <div className="flex flex-row items-center mx-auto">
+          <div className="order-1">
+            <div className="p-4 md:px-8 xl:px-16">
+              <div className="mx-auto py-3 text-center lg:text-start">
+                <button className="text-blue-800 bg-blue-100 shadow-xl text-sm md:text-lg font-bold px-6 py-1 rounded-3xl tracking-wider">
+                  Social Responsibility
+                </button>
               </div>
-              <div className="my-7 text-center lg:text-start">
-                <DonateModal />
+              {/* Improving Lives Through Responsible Business */}
+              <div className="">
+                <div className="py-3 text-center lg:text-start">
+                  <h1 className="text-3xl font-bold text-darkpurple">
+                    Improving <span className="text-purple-300">lives</span>,
+                    <br />
+                    <span className="text-5xl">
+                      through
+                      <br />
+                      <span> Responsible</span> <br />
+                      <span className="text-blue-300 text-6xl">Business.</span>
+                    </span>
+                  </h1>
+                </div>
+                <div className="my-7 text-center lg:text-start rounded-lg">
+                  <DonateModal buttonLocation="banner" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        {/* COLUMN-2 */}
-
-        <div className="lg:-m-24 lg:pt-20 hidden lg:block">
-          <Image
-            className="overflow-hidden"
-            src="/images/banner/banner.jpg"
-            alt="hero-image"
-            width={800}
-            height={642}
-          />
+          <div className="order-2 hidden md:block">
+            <Image
+              src="/images/banner/induction_03_cropped.jpg"
+              width={378}
+              height={500}
+              className="banner-img rounded-2xl border-blue-500 border"
+              alt="banner-img"
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

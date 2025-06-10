@@ -2,6 +2,8 @@
 
 import { createContext, useState, useEffect } from "react";
 import { Bounce, ToastContainer } from "react-toastify";
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export interface Impact {
   label: string;
@@ -111,4 +113,15 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
   ) : (
     <div className="min-h-[calc(100vh-64px)]"></div>
   );
+}
+
+export function AOSInit() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    })
+  }, [])
+
+  return null
 }

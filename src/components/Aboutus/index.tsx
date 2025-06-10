@@ -49,7 +49,12 @@ const Aboutdata: datatype[] = [
 
 const Aboutus = () => {
   return (
-    <div id="aboutus-section">
+    <div
+      id="aboutus-section"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-center"
+      data-aos-duration="1000"
+    >
       <div className="mx-auto max-w-7xl px-4 py-24 my-32 lg:px-10 bg-slate-200 rounded-3xl relative">
         <Image
           src="/images/aboutus/dots.svg"
