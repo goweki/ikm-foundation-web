@@ -203,7 +203,8 @@ html {
 
 .bg-testimonial {
   background-image: url("/images/initiatives/elipse.svg"),
-    url("/images/testimonial/boy.svg"), url("/images/testimonial/girl.svg");
+    url("/images/testimonial/boy_ill.png"),
+    url("/images/testimonial/gal_ill.png");
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: 55%, 84% 26%, 12% 18%;
 }
@@ -243,11 +244,11 @@ html {
   width: 400px;
 }
 
-.bg-joinus {
-  background-image: url("/images/joinus/horn.svg"),
-    url("/images/joinus/paint.svg");
+.bg-messageus {
+  background-image: url("/images/messageus/mail_notification.png"),
+    url("/images/messageus/mail_paper_plane.png");
   background-repeat: no-repeat, no-repeat;
-  background-position: 84% 109%, 12% 18%;
+  background-position: 84% 100%, 12% 18%;
 }
 
 .footer-icons {
