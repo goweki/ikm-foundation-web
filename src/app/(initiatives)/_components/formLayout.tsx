@@ -7,7 +7,6 @@ import Link from "next/link";
 export default function FormLayout({
   children,
   page,
-  descLink,
 }: {
   children: React.ReactNode;
   page:
@@ -16,10 +15,6 @@ export default function FormLayout({
     | "healthcare"
     | "vulnerable-group"
     | "special-project";
-  descLink?: {
-    label: string;
-    link: string;
-  };
 }) {
   const texts = textConfig.pages[page as keyof typeof textConfig.pages];
 
@@ -67,9 +62,9 @@ export default function FormLayout({
         </div>
 
         {/* <!-- Right Section --> */}
-        <div className="w-full md:w-1/2 p-6 md:p-12 flex justify-center items-center bg-purple-100">
-          <div className="max-w-md w-full">
-            <h1 className="text-2xl md:text-4xl font-semibold mb-2">
+        <div className="w-full md:w-1/2 flex justify-center items-center bg-purple-200">
+          <div className="w-full">
+            {/* <h1 className="text-2xl md:text-4xl font-semibold mb-2">
               {texts.title}
             </h1>
             <p className="text-foreground-500 mb-8">
@@ -79,7 +74,7 @@ export default function FormLayout({
                   {descLink.label}
                 </Link>
               )}
-            </p>
+            </p> */}
 
             {children}
           </div>

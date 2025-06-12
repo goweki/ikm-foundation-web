@@ -1,20 +1,16 @@
-import ApplyEducationForm from "@/components/forms/ApplyEducation";
 import FormLayout from "../../_components/formLayout";
 
 export default function ScholarshipApply() {
   return (
-    <FormLayout
-      page="scholarship"
-      // descLink={{ label: "Learn more", link: "/apply/scholarship" }}
-    >
-      <ApplyEducationForm applicationFor="headstart" />
-      {/* <div className="mt-6 text-center">
-        <div className="flex items-center justify-center space-x-2">
-          <span className="h-px w-16 bg-slate-500" />
-          <span className="text-default-500 text-sm">Learn more</span>
-          <span className="h-px w-16 bg-slate-500" />
-        </div>
-      </div> */}
+    <FormLayout page="scholarship">
+      {/* <ApplyEducationForm applicationFor="scholarship" /> */}
+      <iframe
+        className="airtable-embed"
+        src="https://airtable.com/embed/appGQZtROtfry9TUl/pagADGDGnXlDAT25a/form"
+        width="100%"
+        height="533"
+        style={{ background: "transparent", border: "1px solid #ccc" }}
+      />
     </FormLayout>
   );
 }
