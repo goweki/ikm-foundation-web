@@ -12,14 +12,14 @@ interface RegionData {
 }
 
 const regionData: RegionData = {
-  western: { name: "western", scholarships: 30 },
-  nyanza: { name: "nyanza", projects: 30 },
-  "rift-valley": { name: "rift-valley", projects: 30 },
-  central: { name: "central", scholarships: 30 },
-  nairobi: { name: "nairobi", projects: 30 },
-  coast: { name: "coast", scholarships: 30 },
-  eastern: { name: "eastern", projects: 30 },
-  "north-eastern": { name: "north-eastern", scholarships: 30 },
+  western: { name: "western region" },
+  nyanza: { name: "nyanza region" },
+  "rift-valley": { name: "rift-valley region" },
+  central: { name: "central region" },
+  nairobi: { name: "nairobi region" },
+  coast: { name: "coast region" },
+  eastern: { name: "eastern region" },
+  "north-eastern": { name: "north-eastern region" },
 };
 
 const KenyaMap = () => {

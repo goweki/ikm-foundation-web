@@ -21,7 +21,9 @@ export default function FormLayout({
   const texts = textConfig.pages[page as keyof typeof textConfig.pages];
   // pages that should resolve to the root “/”
   const LEVEL_1_PAGES = new Set(["grant", "fap"]);
-  const backLink = LEVEL_1_PAGES.has(page) ? "/" : `/${page}`;
+  const backLink = LEVEL_1_PAGES.has(page)
+    ? "/#applications-section"
+    : `/${page}`;
 
   return (
     <>
