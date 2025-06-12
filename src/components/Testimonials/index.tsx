@@ -22,17 +22,18 @@ const postData: DataType[] = [
     imgSrc: "/images/testimonial/user1.png",
   },
   {
-    name: "Kelvin",
-    profession: "Alumni, Head Start Africa",
+    name: "Jackie",
+    profession: "Benefitiary, Health Financial Assistance Program",
     comment:
-      "The Head Start Program transformed how I see myself and my future. I left with courage, clarity, and a whole new support system.",
+      "The Health Financial Assistance Program was a lifesaver. I received that cruscial care I needed, just when I needed it and I am forever grateful.",
     imgSrc: "/images/testimonial/user1.png",
   },
+
   {
-    name: "Kelvin",
-    profession: "Alumni, Head Start Africa",
+    name: "Mwangi",
+    profession: "Benefitiary, IKMF Scholarship",
     comment:
-      "The Head Start Program transformed how I see myself and my future. I left with courage, clarity, and a whole new support system.",
+      "The world is a better place when we step up for help each other. I am greatful to IKMF scholarship for stepping up for me",
     imgSrc: "/images/testimonial/user1.png",
   },
 ];
