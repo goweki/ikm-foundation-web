@@ -7,23 +7,23 @@ import React, { Component } from "react";
 // CAROUSEL DATA
 
 interface DataType {
-  profession: string;
+  name: string;
+  title: string;
   comment: string;
   imgSrc: string;
-  name: string;
 }
 
 const postData: DataType[] = [
   {
     name: "Kelvin",
-    profession: "Alumni, Head Start Africa",
+    title: "Alumni, Head Start Africa",
     comment:
       "The Head Start Program transformed how I see myself and my future. I left with courage, clarity, and a whole new support system.",
     imgSrc: "/images/testimonial/user1.png",
   },
   {
     name: "Jackie",
-    profession: "Benefitiary, Health Financial Assistance Program",
+    title: "Benefitiary, Health Financial Assistance Program",
     comment:
       "The Health Financial Assistance Program was a lifesaver. I received that cruscial care I needed, just when I needed it and I am forever grateful.",
     imgSrc: "/images/testimonial/user1.png",
@@ -31,7 +31,7 @@ const postData: DataType[] = [
 
   {
     name: "Mwangi",
-    profession: "Benefitiary, IKMF Scholarship",
+    title: "Benefitiary, IKMF Scholarship",
     comment:
       "The world is a better place when we step up for help each other. I am greatful to IKMF scholarship for stepping up for me",
     imgSrc: "/images/testimonial/user1.png",
@@ -116,7 +116,7 @@ export default class MultipleItems extends Component {
                         {items.name}
                       </h3>
                       <h3 className="text-xs font-medium  pb-2 opacity-50">
-                        {items.profession}
+                        {items.title}
                       </h3>
                     </div>
                   </div>
