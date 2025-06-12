@@ -1,66 +1,68 @@
 {
   "pages": {
     "scholarship": {
-      "title": "Apply for IKMF Scholarship",
-      "description": "Fill the application form below:",
-      "subtitle1": "IKMF Scholarship",
-      "subtitle2": "Supporting bright students from lower/vulnerable socio-economic backgrounds access secondary school education."
+      "title": "IKMF Scholarship",
+      "CTA": {
+        "action": "Apply",
+        "desc": "for IKMF Scholarship"
+      },
+      "description": "Supporting bright students from lower/vulnerable socio-economic backgrounds access secondary school education.",
+      "FAQ": []
     },
     "headstart": {
-      "title": "Apply for Head-Start Africa",
-      "description": "Fill the application form below:",
-      "subtitle1": "Head Start Africa",
-      "subtitle2": "Part of DLA Piper’s global Head Start Initiative supporting talented young people from low-income backgrounds succeed within legal careers through structured, long-term support."
+      "title": "Head Start Africa",
+      "CTA": {
+        "action": "Apply",
+        "desc": "for Head Start Africa"
+      },
+      "description": "Part of DLA Piper’s global Head Start Initiative supporting talented young people from low-income backgrounds succeed within legal careers through structured, long-term support.",
+      "FAQ": []
     },
     "healthcare": {
-      "title": "Apply for Medical Assistance",
-      "description": "Fill the application form below:",
-      "subtitle1": "Medical Assistance",
-      "subtitle2": "Improving access to quality healthcare through raising funds for medical fees and donation of medical equipment.",
-      "FAQ": [
-        {
-          "question": "Who can apply for the IKMF Scholarship?",
-          "answer": "Students who have completed their Kenya Junior Secondary Education Assessment (KJSEA) and are transitioning to senior secondary school. We prioritise academically promising students from low-income households, orphans, vulnerable children, and students with disabilities."
-        },
-        {
-          "question": "What does the scholarship cover?",
-          "answer": "The scholarship covers tuition fees, school supplies, and other educational expenses."
-        },
-        {
-          "question": "When do applications open and close?",
-          "answer": "Applications open in late December and close around the first or second week of January, depending on the release of national exam results."
-        },
-        {
-          "question": "How does the selection process work?",
-          "answer": "Applications are reviewed based on financial need, academic merit, and supporting documents. Shortlisted applicants are invited for interviews and home visits before final decisions are made."
-        },
-        {
-          "question": "How long does the scholarship cover?",
-          "answer": "Yes, the scholarship covers the entire three years at senior secondary, subject to academic performance, discipline, and participation in mentorship activities."
-        },
-        {
-          "question": "How do I apply?",
-          "answer": "Visit our website in December to access the application form. Make sure to complete it and submit all required documents before the deadline."
-        }
-      ],
-      "requirements": [
-        "Completed Kenya Junior Secondary Education Assessment (KJSEA)",
-        "Demonstrated financial need",
-        "Academic merit",
-        "Supporting documents as specified in the application form"
-      ]
+      "title": "Medical Assistance",
+      "CTA": {
+        "action": "Apply",
+        "desc": "for Medical Assistance"
+      },
+      "description": "Improving access to quality healthcare through raising funds for medical fees and donation of medical equipment.",
+      "FAQ": []
     },
     "vulnerable-group": {
-      "title": "Partner to improve the lives of vulnerable groups",
-      "description": "Fill the application form below:",
-      "subtitle1": "Vulnerable Groups",
-      "subtitle2": "Supporting persons living in vulnerable conditions through partnering with care homes, schools, and shelters to improve living conditions and restore dignity."
+      "title": "Vulnerable Groups",
+      "CTA": {
+        "action": "Partner",
+        "desc": "to improve lives"
+      },
+      "description": "Supporting persons living in vulnerable conditions through partnering with care homes, schools, and shelters to improve living conditions and restore dignity.",
+      "FAQ": []
     },
     "special-project": {
-      "title": "Apply as a Special Project",
-      "description": "Fill the application form below:",
-      "subtitle1": "Special Projects",
-      "subtitle2": "Supporting special projects that improve the lives of vulnerable groups in Kenya through partnerships with local organisations and communities."
+      "title": "Special Projects",
+      "CTA": {
+        "action": "Apply",
+        "desc": "as a Special Project"
+      },
+      "description": "Supporting special projects that improve the lives of vulnerable groups in Kenya through partnerships with local organisations and communities.",
+      "FAQ": []
+    },
+    "grant": {
+      "title": "Grant Funding",
+      "CTA": {
+        "action": "Apply",
+        "desc": "for Grant Funding"
+      },
+      "description": "Supporting projects that improve the resilience of communities in Kenya through partnerships with individuals, organisations and communities",
+      "FAQ": []
+    },
+    "fap": {
+      "title": "Financial Assistance",
+      "CTA": {
+        "action": "Apply",
+        "desc": "for Financial Assistance Program"
+      },
+      "description": "Supporting initiatives that improve the lives of vulnerable persons in Kenya",
+
+      "FAQ": []
     }
   }
 }

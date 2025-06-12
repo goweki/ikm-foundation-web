@@ -1,6 +1,9 @@
 import Link from "next/link";
+import textConfig from "@/config/copy.json";
 
 const Apply = () => {
+  const PageConfigs = textConfig.pages;
+
   return (
     <div
       id="applications-section"
@@ -19,126 +22,36 @@ const Apply = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 my-16 mx-5 gap-12">
           {/* CARD-1 */}
 
-          <Link
-            href="/scholarship"
-            className="bg-blue-800 hover:bg-blue-600 hover:shadow-lg text-white bg-scholarship pt-16 px-10 sm:px-24 pb-52 md:pb-70 rounded-3xl cursor-pointer transition-all duration-200"
-          >
-            <h2 className="text-xl font-normal tracking-widest mb-5 text-center sm:text-start">
-              IKMF Scholarship
-            </h2>
-            <h3 className="text-4xl sm:text-65xl font-bold leading-snug mb-5 text-center sm:text-start">
-              <span className="text-white">Apply </span>
-              <span className="text-slate-200">for education support.</span>
-            </h3>
-            <h5 className="text-lg pt-2 mb-5 text-center sm:text-start">
-              The IKMF Scholarship programme supports bright students from lower
-              socio-economic backgrounds access secondary school education, with
-              a focus on those from vulnerable households and orphans.
-            </h5>
-            {/* <div className="text-center sm:text-start">
-            <button className="text-xl py-5 px-14 mt-5 font-semibold text-white rounded-full bg-blue border border-blue hover:bg-blue-400">
-              Get Started
-            </button>
-          </div> */}
-          </Link>
+          {Object.entries(PageConfigs).map(([key, props], index) => {
+            // Determine the background color based on the index
+            const backgroundColorClass =
+              index % 2 === 0 ? "bg-blue-900" : "bg-blue-100";
+            const hoverBackgroundColorClass =
+              index % 2 === 0 ? "hover:bg-blue-700" : "hover:bg-blue-200";
+            const textColorClass =
+              index % 2 === 0 ? "text-white" : "text-gray-800";
+            const ascentColorClass =
+              index % 2 === 0 ? "text-purple-300" : "text-purple-800";
 
-          {/* CARD-2 */}
-
-          <Link
-            href="/headstart"
-            className="bg-mentorship bg-blue-100 hover:bg-blue-300 hover:shadow-lg pt-16 px-10 sm:px-24 pb-52 md:pb-70 rounded-3xl cursor-pointer transition-all duration-200"
-          >
-            <h2 className="text-xl font-normal text-blue tracking-widest mb-5 text-center sm:text-start">
-              Head Start Africa
-            </h2>
-            <h3 className="text-4xl sm:text-65xl font-bold text-black leading-snug mb-5 text-center sm:text-start">
-              <span className="text-blue-700">Apply</span>{" "}
-              <span className="text-slate-700">for mentorship!</span>
-            </h3>
-            <h5 className="text-lg bluish pt-2 mb-5 text-center sm:text-start">
-              Part of DLA Piper&apos;s global Head Start initiative, Head Start
-              Africa supports talented young people from low-income backgrounds
-              to succeed in legal careers through structured, long-term support.
-            </h5>
-            {/* <div className="text-center sm:text-start">
-            <button className="text-xl py-5 px-14 mt-5 font-semibold text-white rounded-full bg-blue-500 border border-blue hover:bg-blue-400">
-              Learn more
-            </button>
-          </div> */}
-          </Link>
-
-          {/* CARD-3 */}
-
-          <Link
-            href="/healthcare"
-            className="bg-healthcare bg-blue-100 hover:bg-blue-300 hover:shadow-lg pt-16 px-10 sm:px-24 pb-52 md:pb-70 rounded-3xl cursor-pointer transition-all duration-200"
-          >
-            <h2 className="text-xl font-normal tracking-widest mb-5 text-center sm:text-start">
-              Healthcare
-            </h2>
-            <h3 className="text-4xl sm:text-65xl font-bold text-black leading-snug mb-5 text-center sm:text-start">
-              <span className="text-blue-700">Request</span>{" "}
-              <span className="text-slate-700">Medical Assistance</span>
-            </h3>
-            <h5 className="text-lg bluish pt-2 mb-5 text-center sm:text-start">
-              Improving access to quality healthcare through raising funds for
-              medical fees and donation of medical equipment.
-            </h5>
-            {/* <div className="text-center sm:text-start">
-            <button className="text-xl py-5 px-14 mt-5 font-semibold text-white rounded-full bg-blue-500 border border-blue hover:bg-blue-400">
-              Learn more
-            </button>
-          </div> */}
-          </Link>
-
-          {/* CARD-4 */}
-
-          <Link
-            href="/vulnerable-group"
-            className="bg-group bg-blue-800 hover:bg-blue-600 hover:shadow-lg text-white pt-16 px-10 sm:px-24 pb-52 md:pb-70 rounded-3xl cursor-pointer transition-all duration-200"
-          >
-            <h2 className="text-xl font-normal tracking-widest mb-5 text-center sm:text-start">
-              Vulnerable Groups
-            </h2>
-            <h3 className="text-4xl sm:text-65xl font-bold leading-snug mb-5 text-center sm:text-start">
-              <span className="text-white">Partner </span>
-              <span className="text-slate-200">to improve lives</span>
-            </h3>
-            <h5 className="text-lg pt-2 mb-5 text-center sm:text-start">
-              Supporting persons living in vulnerable conditions through
-              partnering with care homes, schools, and shelters to improve
-              living conditions and restore dignity.
-            </h5>
-            {/* <div className="text-center sm:text-start">
-            <button className="text-xl py-5 px-14 mt-5 font-semibold text-white rounded-full bg-blue border border-blue hover:bg-blue-400">
-              Get Started
-            </button>
-          </div> */}
-          </Link>
-
-          {/* CARD-5 */}
-
-          <Link
-            href="/special-project"
-            className="bg-group bg-blue-800 hover:bg-blue-600 text-white hover:shadow-lg pt-16 px-10 sm:px-24 pb-52 md:pb-70 rounded-3xl cursor-pointer transition-all duration-200"
-          >
-            <h2 className="text-xl font-normal tracking-widest mb-5 text-center sm:text-start">
-              Special Projects
-            </h2>
-            <h3 className="text-4xl sm:text-65xl font-bold text-black leading-snug mb-5 text-center sm:text-start">
-              <span className="text-white">Recommend</span>{" "}
-              <span className="text-slate-200">Special Project</span>
-            </h3>
-            <h5 className="text-lg bluish pt-2 mb-5 text-center sm:text-start">
-              Supporting initiatives that do not fall under our main cartegories
-              and have significant community benefits
-            </h5>
-            {/* <div className="text-center sm:text-start">
-            <button className="text-xl py-5 px-14 mt-5 font-semibold text-white rounded-full bg-blue-500 border border-blue hover:bg-blue-400">
-              Learn more
-            </button>
-          </div> */}
-          </Link>
+            return (
+              <Link
+                key={key}
+                href={`/${key}`}
+                className={`bg-${key} ${backgroundColorClass} ${hoverBackgroundColorClass} ${textColorClass} hover:shadow-lg pt-16 px-10 sm:px-24 pb-52 md:pb-70 rounded-3xl cursor-pointer transition-all duration-200`}
+              >
+                <h2 className="text-xl font-normal tracking-widest mb-5 text-center sm:text-start">
+                  {props.title}
+                </h2>
+                <h3 className="text-4xl sm:text-65xl font-bold leading-snug mb-5 text-center sm:text-start">
+                  <span className={ascentColorClass}>{props.CTA.action} </span>
+                  {props.CTA.desc}
+                </h3>
+                <h5 className="text-lg pt-2 mb-5 text-center sm:text-start">
+                  {props.description}
+                </h5>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </div>

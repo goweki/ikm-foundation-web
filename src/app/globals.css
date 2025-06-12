@@ -155,7 +155,7 @@ html {
   background-size: contain;
 }
 
-.bg-mentorship {
+.bg-headstart {
   background-image: url("/images/apply/mentorship_bg.svg");
   background-repeat: no-repeat;
   background-position: left bottom;
@@ -169,8 +169,29 @@ html {
   background-size: contain;
 }
 
-.bg-group {
+.bg-vulnerable-group {
   background-image: url("/images/apply/group_bg.svg");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: contain;
+}
+
+.bg-special-project {
+  background-image: url("/images/apply/group_bg.svg");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: contain;
+}
+
+.bg-grant {
+  background-image: url("/images/apply/mentorship_bg.svg");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: contain;
+}
+
+.bg-fap {
+  background-image: url("/images/apply/help_bg.svg");
   background-repeat: no-repeat;
   background-position: left bottom;
   background-size: contain;

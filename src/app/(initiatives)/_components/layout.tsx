@@ -3,7 +3,7 @@ import { ChevronLeftIcon } from "@heroicons/react/20/solid";
 import textConfig from "@/config/copy.json";
 import Link from "next/link";
 
-const applyOptions = [
+const applications = [
   "scholarship",
   "headstart",
   "healthcare",
@@ -16,12 +16,7 @@ export default function ApplyLayout({
   page,
 }: {
   children: React.ReactNode;
-  page:
-    | "scholarship"
-    | "headstart"
-    | "healthcare"
-    | "vulnerable-group"
-    | "special-project";
+  page: (typeof applications)[number];
 }) {
   const texts = textConfig.pages[page as keyof typeof textConfig.pages];
 
@@ -34,7 +29,7 @@ export default function ApplyLayout({
             className="flex flex-row text-gray-400 hover:text-white text-xl font-bold"
           >
             <ChevronLeftIcon height={26} />
-            <h1 className="my-auto">Homepage</h1>
+            <h1 className="ml-2 my-auto">Homepage</h1>
           </Link>
         </div>
       </nav>
@@ -42,15 +37,9 @@ export default function ApplyLayout({
       <main className="w-full max-w-7xl bg-card border-y-0 border-x-0 lg:border-x-1 border-slate-400/50 overflow-hidden shadow-md flex flex-col md:flex-row m-auto">
         <div className="grid grid-cols-3 gap-4 w-full my-4">
           <div className="col-span-3 md:col-span-2">
-            <div className="md:flex-1 px-4">
+            <div className="md:flex-1 px-4 md:pt-4">
               <h2 className="text-2xl font-bold mb-2 flex flex-row items-center">
-                {texts.subtitle1}{" "}
-                <Link
-                  href={"/" + page + "/apply"}
-                  className="btn-primary text-sm uppercase py-2 px-4 rounded-full ml-8 hover:scale-105 transition-all duration-200"
-                >
-                  Apply Now
-                </Link>
+                {texts.title} {renderApplyLinks(page)}
               </h2>
               {children}
             </div>
@@ -59,7 +48,7 @@ export default function ApplyLayout({
             <div className="p-4">
               <p className="md:text-2xl">Other Applications</p>
               <ul className="ml-3">
-                {applyOptions
+                {applications
                   .filter((option) => option !== page)
                   .map((option, index) => {
                     return (
@@ -82,3 +71,32 @@ export default function ApplyLayout({
     </>
   );
 }
+
+const renderApplyLinks = (page: string) => {
+  if (page == "scholarship" || page === "headstart")
+    return (
+      <Link
+        href={"/" + page + "/apply"}
+        className="btn-primary text-sm uppercase py-2 px-4 rounded-full ml-8 hover:scale-105 transition-all duration-200"
+      >
+        Apply Now
+      </Link>
+    );
+  else
+    return (
+      <>
+        <Link
+          href={"/grant"}
+          className="btn-primary text-center text-sm uppercase py-2 px-4 rounded-full ml-8 hover:scale-105 transition-all duration-200"
+        >
+          Apply As Grant
+        </Link>
+        <Link
+          href={"/fap"}
+          className="btn-primary text-center text-sm uppercase py-2 px-4 rounded-full ml-8 hover:scale-105 transition-all duration-200"
+        >
+          Apply As Financial Assistance below 200k
+        </Link>
+      </>
+    );
+};

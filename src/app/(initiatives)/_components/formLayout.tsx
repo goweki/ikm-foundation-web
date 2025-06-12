@@ -14,20 +14,25 @@ export default function FormLayout({
     | "headstart"
     | "healthcare"
     | "vulnerable-group"
-    | "special-project";
+    | "special-project"
+    | "grant"
+    | "fap";
 }) {
   const texts = textConfig.pages[page as keyof typeof textConfig.pages];
+  // pages that should resolve to the root “/”
+  const LEVEL_1_PAGES = new Set(["grant", "fap"]);
+  const backLink = LEVEL_1_PAGES.has(page) ? "/" : `/${page}`;
 
   return (
     <>
       <nav className="w-full bg-slate-800">
         <div className="p-3 pl-0 md:p-4 md:pl-0 lg:pr-8 mx-auto max-w-7xl flex flex-row flex-1 items-start px-4">
           <Link
-            href={"/" + page}
+            href={backLink}
             className="flex flex-row text-gray-400 hover:text-white text-xl font-bold"
           >
             <ChevronLeftIcon height={26} />
-            <h1 className="my-auto">Back</h1>
+            <h1 className="ml-2 my-auto">Back</h1>
           </Link>
         </div>
       </nav>
@@ -47,10 +52,10 @@ export default function FormLayout({
             <div className="absolute inset-0 bg-purple-800/60" />
             <div className="absolute top-6 left-6 m-4">
               <h2 className="text-2xl md:text-4xl font-semibold mb-2">
-                {texts.subtitle1}
+                {texts.title}
               </h2>
               <h2 className="text-xl md:text-2xl font-semibold">
-                {texts.subtitle2}
+                {texts.description}
               </h2>
               <div className="flex gap-2 mt-6">
                 <div className="w-4 h-1 bg-white/30 rounded" />
@@ -63,21 +68,7 @@ export default function FormLayout({
 
         {/* <!-- Right Section --> */}
         <div className="w-full md:w-1/2 flex justify-center items-center bg-purple-200">
-          <div className="w-full">
-            {/* <h1 className="text-2xl md:text-4xl font-semibold mb-2">
-              {texts.title}
-            </h1>
-            <p className="text-foreground-500 mb-8">
-              <span className="mr-2 italic">{texts.description}</span>
-              {descLink && (
-                <Link className="hover:underline" href={descLink.link}>
-                  {descLink.label}
-                </Link>
-              )}
-            </p> */}
-
-            {children}
-          </div>
+          <div className="w-full">{children}</div>
         </div>
       </main>
       <Footer />

@@ -1,15 +1,12 @@
+import AirtableForm from "@/components/forms/AirtableForm";
 import FormLayout from "../../_components/formLayout";
 
-export default function HeadStart() {
+const page = "headstart";
+
+export default function HeadStartApply() {
   return (
-    <FormLayout page="headstart">
-      <iframe
-        className="airtable-embed"
-        src="https://airtable.com/embed/appGQZtROtfry9TUl/pagO48MkzMYYF6y2B/form"
-        width="100%"
-        height="533"
-        style={{ background: "transparent", border: "1px solid #ccc" }}
-      />
+    <FormLayout page={page}>
+      <AirtableForm form={page} />
     </FormLayout>
   );
 }
