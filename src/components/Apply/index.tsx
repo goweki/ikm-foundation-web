@@ -23,9 +23,10 @@ const Apply = () => {
           {/* CARD-1 */}
 
           {Object.entries(PageConfigs)
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
             .filter(([key, props]) => key !== "grant" && key !== "fap")
             .map(([key, props], index) => {
-              // Determine the background color based on the index
+              // Determine the card colors based on the index
               const backgroundColorClass =
                 index % 2 === 0 ? "bg-blue-900" : "bg-blue-100";
               const hoverBackgroundColorClass =
