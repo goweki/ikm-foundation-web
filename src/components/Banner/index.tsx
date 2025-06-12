@@ -107,7 +107,7 @@ const Banner = () => {
           <div className="order-1">
             <div className="p-4 md:px-8 xl:px-16">
               <div className="mx-auto py-3 text-center lg:text-start">
-                <button className="text-blue-800 bg-blue-100 shadow-xl text-sm md:text-lg font-bold px-6 py-1 rounded-3xl tracking-wider">
+                <button className="italic border text-blue-100 shadow-xl text-sm md:text-lg font-bold px-6 py-1 rounded-3xl tracking-wider">
                   Social Responsibility
                 </button>
               </div>
