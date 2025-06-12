@@ -224,8 +224,7 @@ html {
 
 .bg-testimonial {
   background-image: url("/images/initiatives/elipse.svg"),
-    url("/images/testimonial/boy_ill.png"),
-    url("/images/testimonial/gal_ill.png");
+    url("/images/testimonial/boy.svg"), url("/images/testimonial/girl.svg");
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: 55%, 84% 26%, 12% 18%;
 }

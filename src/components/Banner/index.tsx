@@ -133,7 +133,8 @@ const Banner = () => {
           </div>
           <div className="order-2 hidden md:block">
             <Image
-              src="/images/banner/induction_03_cropped.jpg"
+              // src="/images/banner/induction_03_cropped.jpg"
+              src="/images/banner/headstart_03_cropped.jpg"
               width={378}
               height={500}
               className="banner-img rounded-2xl border-blue-500 border"
