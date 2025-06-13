@@ -6,7 +6,7 @@ const FormLinks = {
   scholarship:
     "https://airtable.com/embed/appGQZtROtfry9TUl/pagADGDGnXlDAT25a/form",
   headstart:
-    "https://airtable.com/embed/appGQZtROtfry9TUl/pagO48MkzMYYF6y2B/form",
+    "https://airtable.com/embed/appGQZtROtfry9TUl/pagBE3y0ukLwXalmg/form",
   grant: "https://airtable.com/embed/appGQZtROtfry9TUl/pagHOBkSBYpgJvoek/form",
   fap: "https://airtable.com/embed/appGQZtROtfry9TUl/pageMDhCm9IAhZc4N/form",
 };
