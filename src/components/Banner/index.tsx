@@ -1,4 +1,3 @@
-import Image from "next/image";
 import DonateModal from "../atoms/DonateModal";
 
 const Banner = () => {
