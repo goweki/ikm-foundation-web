@@ -2,7 +2,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 import Aboutus from "@/components/Aboutus";
-import Quote from "@/components/Quote";
 import Apply from "@/components/Apply";
 import OurInitiatives from "@/components/Initiatives";
 import Map from "@/components/MapWrapper";
@@ -19,7 +18,6 @@ export default function Home() {
       <main>
         <Banner />
         <Aboutus />
-        <Quote />
         <OurInitiatives />
         <Impact />
         <Apply />

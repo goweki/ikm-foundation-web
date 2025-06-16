@@ -55,7 +55,7 @@ const Aboutus = () => {
       data-aos-anchor-placement="top-center"
       data-aos-duration="1000"
     >
-      <div className="mx-auto max-w-7xl px-4 py-24 my-32 lg:px-10 bg-slate-200 rounded-3xl relative">
+      <div className="mx-auto max-w-7xl px-4 my-32 rounded-3xl relative">
         <Image
           src="/images/aboutus/dots.svg"
           width={100}
@@ -63,16 +63,78 @@ const Aboutus = () => {
           alt="dots-image"
           className="absolute bottom-1 -left-20"
         />
-        <h3 className="text-center text-blue text-lg tracking-widest">
-          ABOUT US
-        </h3>
-        <h4 className="text-center text-2xl lg:text-65xl font-bold mx-4 my-8">
-          The IKM Foundation (IKMF) was founded in 2011 with the objective of
-          creating a platform to run IKM Advocates&#39; Corporate Social
-          Responsibility (CSR) activities. Our mission is to transform lives
-          through impactful partnerships and sustainable programmes by working
-          to establish lasting, community-driven change.
-        </h4>
+        <div className="we-are-block rounded-3xl overflow-hidden">
+          <div id="about-us-section">
+            <div className="about-us-image">
+              <Image
+                className="h-full object-cover"
+                src="/images/initiatives/mentorship_indoor.jpg"
+                width="808"
+                height="458"
+                alt="about-us-image"
+              />
+            </div>
+
+            <div className="who-we-are">
+              <h2>Who We Are</h2>
+
+              <p>
+                Founded in 2011, The IKM Foundation (IKMF) has the objective of
+                creating a platform to run IKM Advocates&#39; Corporate Social
+                Responsibility (CSR) activities. Our mission is to transform
+                lives through impactful partnerships and sustainable programmes
+                by working to establish lasting, community-driven change.
+              </p>
+
+              <Link href="#" className="px-2 py-1 transitions-all duration-200">
+                MORE ABOUT US
+              </Link>
+            </div>
+          </div>
+
+          <div id="what-we-do-section">
+            <div className="our-programs-image">
+              {/* bg-[url(https://digitalupgrade.com/images/building_pic.jpg)] bg-cover */}
+              <Image
+                className="h-full"
+                src="/images/initiatives/talk_students.jpg"
+                width="951"
+                height="471"
+                alt="our-programs-image"
+              />
+            </div>
+
+            <div className="our-programs-info">
+              <h2>What We Do</h2>
+
+              <div>
+                <p>We support four key areas:</p>
+                <ul className="list-disc pl-5 mt-4">
+                  <li>
+                    <strong>Education:</strong> Nurturing talent and increasing
+                    access to learning.
+                  </li>
+                  <li>
+                    <strong>Healthcare:</strong> Improving accessibility of
+                    healthcare in our communities.
+                  </li>
+                  <li>
+                    <strong>Vulnerable Groups:</strong> Promoting the dignity
+                    and stability of vulnerable children and the elderly.
+                  </li>
+                  <li>
+                    <strong>Special Projects:</strong> Investing in community
+                    resilience and infrastructure.
+                  </li>
+                </ul>
+              </div>
+
+              {/* <Link href="#" className="px-2 py-1 transitions-all duration-200">
+                OUR PROGRAMMES
+              </Link> */}
+            </div>
+          </div>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 my-16 gap-x-16 lg:gap-x-32">
           {Aboutdata.map((item, i) => (
             <div

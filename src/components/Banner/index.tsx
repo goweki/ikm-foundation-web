@@ -102,32 +102,17 @@ const Banner = () => {
           data-aos-delay="0"
         ></div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 flex">
+      {/* <div className="max-w-7xl mx-auto px-4 flex">
         <div className="flex flex-row items-center mx-auto">
           <div className="order-1">
             <div className="p-4 md:px-8 xl:px-16">
               <div className="mx-auto py-3 text-center lg:text-start">
-                <button className="italic border text-blue-100 shadow-xl text-sm md:text-lg font-bold px-6 py-1 rounded-3xl tracking-wider">
-                  Social Responsibility
-                </button>
+
               </div>
-              {/* Improving Lives Through Responsible Business */}
+             
               <div className="">
-                <div className="py-3 text-center lg:text-start">
-                  <h1 className="text-3xl font-bold text-darkpurple">
-                    Improving <span className="text-purple-300">lives</span>,
-                    <br />
-                    <span className="text-5xl">
-                      through
-                      <br />
-                      <span> Responsible</span> <br />
-                      <span className="text-blue-300 text-6xl">Business.</span>
-                    </span>
-                  </h1>
-                </div>
-                <div className="my-7 text-center lg:text-start rounded-lg">
-                  <DonateModal buttonLocation="banner" />
-                </div>
+                
+                
               </div>
             </div>
           </div>
@@ -140,6 +125,58 @@ const Banner = () => {
               className="banner-img rounded-2xl border-blue-500 border"
               alt="banner-img"
             />
+          </div>
+        </div>
+      </div> */}
+      <div className="banner-container flex flex-col lg:flex-row items-center justify-center mx-auto px-16">
+        <div className="banner-contentRight w-fit">
+          <div className="content w-fit">
+            <button className="italic border text-purple-300 shadow-xl text-sm md:text-lg font-bold px-6 py-1 rounded-3xl tracking-wider">
+              Social Responsibility
+            </button>
+            <div className="py-3 text-center lg:text-start">
+              <h1 className="text-3xl font-bold">
+                Improving <span className="text-purple-300">lives</span>,
+                <br />
+                <span className="text-5xl">
+                  through
+                  <br />
+                  <span> Responsible</span> <br />
+                  <span className="text-blue-300 text-6xl">Business.</span>
+                </span>
+              </h1>
+            </div>
+            <div className="text-center lg:text-start rounded-lg">
+              <DonateModal buttonLocation="banner" />
+            </div>
+          </div>
+        </div>
+        <div className="banner-contentLeft hidden lg:block ml-16 max-w-72">
+          <div className="row">
+            <div className="imgWrapper">
+              <img
+                src="https://images.unsplash.com/photo-1687579521048-217e24217d53?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODg5ODcxNzl8&ixlib=rb-4.0.3&q=85"
+                alt=""
+              />
+            </div>
+            <div className="imgWrapper">
+              <img
+                src="https://images.unsplash.com/photo-1686580546412-80e80519abd7?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODg5ODcyMDN8&ixlib=rb-4.0.3&q=85"
+                alt=""
+              />
+            </div>
+            <div className="imgWrapper">
+              <img
+                src="https://images.unsplash.com/photo-1688133338995-a394ce7314e4?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODg5ODcyMDN8&ixlib=rb-4.0.3&q=85"
+                alt=""
+              />
+            </div>
+            <div className="imgWrapper">
+              <img
+                src="https://images.unsplash.com/photo-1686354715732-7e4685269a25?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODg5ODcyNzN8&ixlib=rb-4.0.3&q=85"
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </div>
