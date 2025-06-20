@@ -4,7 +4,7 @@ import Banner from "@/components/Banner";
 import Aboutus from "@/components/Aboutus";
 import Apply from "@/components/Apply";
 import OurInitiatives from "@/components/Initiatives";
-import Map from "@/components/MapWrapper";
+import OurReach from "@/components/OurReach";
 import Impact from "@/components/Impact";
 import FAQ from "@/components/FAQ";
 import Testimonials from "@/components/Testimonials";
@@ -21,12 +21,11 @@ export default function Home() {
         <OurInitiatives />
         <Impact />
         <Apply />
-        <Map />
+        <OurReach />
         <FAQ />
         <Testimonials />
         <Events />
         <MessageUs />
-        {/* <Insta /> */}
       </main>
       <Footer />
     </>

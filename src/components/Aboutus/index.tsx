@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronRightIcon } from "@heroicons/react/20/solid";
 
 interface datatype {
   heading: string;
@@ -135,33 +134,25 @@ const Aboutus = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 my-16 gap-x-16 lg:gap-x-32">
+        <div className="flex flex-wrap items-center justify-center mt-10 lg:mt-16 gap-4 lg:gap-8">
           {Aboutdata.map((item, i) => (
-            <div
+            <a
               key={i}
-              className="hover:bg-blue-200 bg-white rounded-3xl mt-16 pt-10 pl-8 pb-10 pr-6 shadow-xl group transition-all duration-200"
+              href={item.href}
+              className="flex flex-col items-center border border-gray-200 rounded-lg shadow-sm hover:shadow-lg md:flex-row md:max-w-xl hover:bg-linear-to-r hover:from-cyan-100 hover:to-blue-200 hover:translate-y-1 transition-all duration-200 ease-in-out"
             >
-              <h4 className="text-4xl font-semibold  text-black mb-5 h-20">
-                {item.heading}
-              </h4>
-              <Image
+              <img
+                className="object-cover w-full rounded-t-lg h-full p-4 lg:p8 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
                 src={item.imgSrc}
-                alt={item.imgSrc}
-                width={100}
-                height={100}
-                className="mb-5"
+                alt="key-area-img"
               />
-              <h4 className="text-lg font-normal text-black mb-5 min-h-20">
-                {item.paragraph}
-              </h4>
-              <Link
-                href={item.href}
-                className="text-lg font-semibold text-blue-800 hover-underline hover:scale-105"
-              >
-                Learn more
-                <ChevronRightIcon width={20} height={20} />
-              </Link>
-            </div>
+              <div className="flex flex-col justify-between p-4 leading-normal">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight">
+                  {item.heading}
+                </h5>
+                <p className="mb-3 font-normal">{item.paragraph}</p>
+              </div>
+            </a>
           ))}
         </div>
       </div>

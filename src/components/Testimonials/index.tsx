@@ -92,20 +92,20 @@ export default class MultipleItems extends Component {
         <div className="mx-auto max-w-7xl sm:py-4 lg:px-8 ">
           <div className="text-center">
             <h3 className="text-4xl sm:text-6xl font-bold text-black my-3">
-              What people are saying.
+              Stories of Impact
             </h3>
             <h3 className="text-4xl sm:text-6xl font-bold text-black opacity-50 lg:mr-48 my-4">
-              What people are saying.
+              Stories of Impact
             </h3>
             <h3 className="text-4xl sm:text-6xl font-bold text-black opacity-25 lg:-mr-32 my-4">
-              What people are saying.
+              Stories of Impact
             </h3>
           </div>
 
           <Slider {...settings}>
             {postData.map((items, i) => (
               <div key={i} className="relative">
-                <div className="bg-white test-sha m-3 p-10 my-20 rounded-3xl">
+                {/* <div className="bg-white test-sha m-3 p-10 my-20 rounded-3xl">
                   <h4 className="text-base font-medium text-testColor my-4">
                     {items.comment}
                   </h4>
@@ -119,6 +119,12 @@ export default class MultipleItems extends Component {
                         {items.title}
                       </h3>
                     </div>
+                  </div>
+                </div> */}
+                <div className="group duration-300 hover:-skew-x-0 skew-x-6 hover:translate-x-2">
+                  <div className="group-hover:duration-200 relative rounded-2xl w-72 h-36 bg-blue-900 text-gray-50 flex flex-col justify-center items-center gap-1 before:-skew-x-12  before:rounded-2xl  before:absolute before:content['']  before:bg-teal-700 before:right-3 before:top-0 before:w-72 before:h-32 before:-z-10">
+                    <span className="text-5xl font-bold">{items.name}</span>
+                    <p className="text-amber-300 font-thin">{items.name}</p>
                   </div>
                 </div>
               </div>
