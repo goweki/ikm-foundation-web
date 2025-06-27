@@ -1,5 +1,12 @@
 import Link from "next/link";
 
+const faqData: { label: string; href: string }[] = [
+  { label: "IKMF Scholarship", href: "/scholarship#faq-section" },
+  { label: "Head Start Africa", href: "/headstart#faq-section" },
+  { label: "Healthcare Support", href: "/healthcare#faq-section" },
+  { label: "Vulnerable Groups", href: "/vulnerable-group#faq-section" },
+];
+
 const FAQ = () => {
   return (
     <div
@@ -12,32 +19,15 @@ const FAQ = () => {
         <br /> by cartegory
       </h2>
       <div className="w-full px-4 pt-16 flex flex-col items-center text-xl font-semibold">
-        <Link
-          href="/scholarship#faq-section"
-          className="mx-auto w-full max-w-5xl rounded-2xl bg-white hover:bg-slate-200 hover:text-2xl py-8 px-6 mb-5 text-center transition-all duration-200"
-        >
-          IKMF Scholarship
-        </Link>
-
-        <Link
-          href="/headstart#faq-section"
-          className="mx-auto w-full max-w-5xl rounded-2xl bg-white hover:bg-slate-200 hover:text-2xl py-8 px-6 mb-5 text-center transition-all duration-200"
-        >
-          Head Start Africa
-        </Link>
-
-        <Link
-          href="/healthcare#faq-section"
-          className="mx-auto w-full max-w-5xl rounded-2xl bg-white hover:bg-slate-200 hover:text-2xl py-8 px-6 mb-5 text-center transition-all duration-200"
-        >
-          Healthcare Support
-        </Link>
-        <Link
-          href="/vulnerable-group#faq-section"
-          className="mx-auto w-full max-w-5xl rounded-2xl bg-white hover:bg-slate-200 hover:text-2xl py-8 px-6 mb-5 text-center transition-all duration-200"
-        >
-          Vulnerable Groups
-        </Link>
+        {faqData.map((item, index) => (
+          <Link
+            key={index}
+            href={item.href}
+            className="mx-auto w-full max-w-5xl rounded-2xl bg-white py-8 px-6 mb-5 text-center hover:text-2xl hover:bg-linear-to-r hover:from-cyan-200 hover:to-blue-500 hover:translate-y-1 transition-all duration-200 ease-in-out"
+          >
+            {item.label}
+          </Link>
+        ))}
       </div>
     </div>
   );

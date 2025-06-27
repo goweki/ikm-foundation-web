@@ -67,11 +67,11 @@ const DonateModal = ({ buttonLocation = "default" }) => {
             type="button"
             className={`${
               buttonLocation == "navbar"
-                ? " hover:bg-blue-800 hover:text-slate-200 navbutton justify-end"
+                ? " hover:bg-purple-800 hover:text-white navbutton justify-end"
                 : buttonLocation == "banner"
-                ? "bg-blue-200 text-black"
+                ? "bg-purple-800 hover:bg-purple-900 text-white"
                 : "btn-primary"
-            } px-6 md:px-8 lg:px-12 py-3 md:py-5 md:text-xl font-semibold hover:shadow-xl hover:scale-105 transition duration-200 rounded-full`}
+            } px-6 md:px-8 lg:px-12 py-2 md:py-4 text-md md:text-lg font-semibold hover:shadow-xl hover:scale-105 transition-all duration-200 rounded-full cursor-pointer`}
             onClick={openModal}
           >
             Donate

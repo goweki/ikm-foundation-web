@@ -106,28 +106,23 @@ const Banner = () => {
         <div className="flex flex-row items-center mx-auto">
           <div className="order-1">
             <div className="p-4 md:px-8 xl:px-16">
-              <div className="mx-auto py-3 text-center lg:text-start">
-                <button className="italic border text-blue-100 shadow-xl text-sm md:text-lg font-bold px-6 py-1 rounded-3xl tracking-wider">
-                  Social Responsibility
-                </button>
-              </div>
-              {/* Improving Lives Through Responsible Business */}
-              <div className="">
-                <div className="py-3 text-center lg:text-start">
-                  <h1 className="text-3xl font-bold text-darkpurple">
-                    Improving <span className="text-purple-300">lives</span>,
+              <button className="italic border text-purple-300 shadow-xl text-sm md:text-lg font-bold px-6 py-1 rounded-3xl tracking-wider">
+                Social Responsibility
+              </button>
+              <div className="py-3 text-center lg:text-start">
+                <h1 className="text-3xl font-bold">
+                  Improving <span className="text-purple-300">lives</span>,
+                  <br />
+                  <span className="text-5xl">
+                    through
                     <br />
-                    <span className="text-5xl">
-                      through
-                      <br />
-                      <span> Responsible</span> <br />
-                      <span className="text-blue-300 text-6xl">Business.</span>
-                    </span>
-                  </h1>
-                </div>
-                <div className="my-7 text-center lg:text-start rounded-lg">
-                  <DonateModal buttonLocation="banner" />
-                </div>
+                    <span> Responsible</span> <br />
+                    <span className="text-blue-300 text-6xl">Business.</span>
+                  </span>
+                </h1>
+              </div>
+              <div className="text-center lg:text-start rounded-lg">
+                <DonateModal buttonLocation="banner" />
               </div>
             </div>
           </div>
