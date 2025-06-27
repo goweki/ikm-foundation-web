@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 import Aboutus from "@/components/Aboutus";
 import Apply from "@/components/Apply";
-import OurInitiatives from "@/components/Initiatives";
 import OurReach from "@/components/OurReach";
 import Impact from "@/components/Impact";
 import FAQ from "@/components/FAQ";
@@ -18,12 +17,16 @@ export default function Home() {
       <main>
         <Banner />
         <Aboutus />
-        <OurInitiatives />
-        <Impact />
+        {/* <OurInitiatives /> */}
+
+        <div className="bg-blue-800/20">
+          <Testimonials />
+          <Impact />
+        </div>
         <Apply />
         <OurReach />
         <FAQ />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Events />
         <MessageUs />
       </main>

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 interface datatype {
   heading: string;
@@ -85,9 +84,9 @@ const Aboutus = () => {
                 by working to establish lasting, community-driven change.
               </p>
 
-              <Link href="#" className="px-2 py-1 transitions-all duration-200">
+              {/* <Link href="#" className="px-2 py-1 transitions-all duration-200">
                 MORE ABOUT US
-              </Link>
+              </Link> */}
             </div>
           </div>
 

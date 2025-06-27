@@ -8,8 +8,16 @@ const Apply = () => {
     <div
       id="applications-section"
       className="mx-auto max-w-7xl sm:py-4 lg:px-8 mt-14"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-center"
+      data-aos-duration="1000"
     >
-      <h2 className="text-4xl lg:text-6xl pt-4 font-bold sm:leading-tight mt-5 text-center">
+      <h2
+        className="text-4xl lg:text-6xl pt-4 font-bold sm:leading-tight mt-5 text-center"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-center"
+        data-aos-duration="1000"
+      >
         Apply to our programs & <br /> initiatives
       </h2>
       <h3 className="text-2xl font-medium text-center pt-10 opacity-50">
