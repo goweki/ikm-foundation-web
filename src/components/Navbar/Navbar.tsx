@@ -1,95 +1,94 @@
 "use client";
 import { Disclosure } from "@headlessui/react";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import Drawer from "./Drawer";
 import Drawerdata from "./Drawerdata";
 import DonateModal from "../atoms/DonateModal";
+import { usePathname } from "next/navigation";
 
-interface NavigationItem {
-  name: string;
+interface NavItem {
+  label: string;
   href: string;
-  current: boolean;
 }
 
-const navigation: NavigationItem[] = [
-  { name: "About Us", href: "#aboutus-section", current: false },
-  { name: "Apply", href: "#applications-section", current: false },
-  { name: "FAQ", href: "#faq-section", current: false },
-  { name: "Contact Us", href: "#contactus-section", current: false },
+const navItems: NavItem[] = [
+  { label: "About Us", href: "#aboutus" },
+  { label: "Apply", href: "#applications" },
+  { label: "FAQ", href: "#faq" },
+  { label: "Contact Us", href: "#contact-us" },
 ];
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
-
 const Navbar = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isMobileMenuOpen, setMobileMenuIsOpen] = useState<boolean>(false);
+  const [isVisible, setIsVisible] = useState<boolean>(true);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    function controllNavBar() {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      lastScrollY = currentScrollY;
+    }
+
+    window.addEventListener("scroll", controllNavBar);
+
+    return () => {
+      window.removeEventListener("scroll", controllNavBar);
+    };
+  }, []);
 
   return (
-    <Disclosure as="nav" className="navbar">
-      <>
-        <div className="mx-auto max-w-7xl p-3 md:p-4 lg:px-8">
-          <div className="relative flex h-12 sm:h-20 items-center">
-            <div className="flex flex-1 items-center sm:justify-between">
-              {/* LOGO */}
+    <header
+      className={`w-full fixed z-30 bg-gray-800/80 text-white backdrop-blur-md lg:px-16 px-4 flex flex-wrap items-center py-4 shadow-sm transition-transform duration-300 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
+      <div className="flex-1 flex justify-between items-center mix-blend-screen">
+        <a href="#" className="text-4xl font-extrabold">
+          IKM Foundation
+        </a>
+      </div>
 
-              <div className="flex flex-shrink-0 items-center border-right">
-                <Link
-                  href="/"
-                  className="text-2xl sm:text-4xl font-semibold text-black"
-                >
-                  IKM Foundation
-                </Link>
-              </div>
+      <label htmlFor="menu-toggle" className="pointer-cursor md:hidden block">
+        <svg
+          className="fill-current"
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+        >
+          <title>menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+        </svg>
+      </label>
+      <input className="hidden" type="checkbox" id="menu-toggle" />
 
-              {/* LINKS */}
-
-              <div className="hidden lg:flex items-center border-right ">
-                <div className="flex justify-end space-x-4">
-                  {navigation.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className={classNames(
-                        item.current
-                          ? "bg-gray-900"
-                          : "navlinks hover:text-black",
-                        "px-3 py-4 rounded-md text-lg font-normal"
-                      )}
-                      aria-current={item.href ? "page" : undefined}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-              {/* <button className='hidden lg:flex justify-end text-xl font-semibold bg-transparent py-4 px-6 lg:px-12 navbutton rounded-full hover:bg-navyblue hover:text-white'>Donate</button> */}
-              <DonateModal buttonLocation="navbar" />
-            </div>
-
-            {/* DRAWER FOR MOBILE VIEW */}
-
-            {/* DRAWER ICON */}
-
-            <div className="block lg:hidden">
-              <Bars3Icon
-                className="block h-6 w-6"
-                aria-hidden="true"
-                onClick={() => setIsOpen(true)}
-              />
-            </div>
-
-            {/* DRAWER LINKS DATA */}
-
-            <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
-              <Drawerdata />
-            </Drawer>
-          </div>
-        </div>
-      </>
-    </Disclosure>
+      <div
+        className="hidden md:flex md:items-center md:w-auto w-full"
+        id="menu"
+      >
+        <nav>
+          <ul className="md:flex items-center justify-between text-base pt-4 md:pt-0">
+            {navItems.map((navItem_, i) => (
+              <li key={navItem_.label}>
+                <a className="md:p-4 py-3 px-0 block" href={navItem_.href}>
+                  {navItem_.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </header>
   );
 };
 

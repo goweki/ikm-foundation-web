@@ -14,23 +14,19 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main>
-        <Banner />
-        <Aboutus />
-        {/* <OurInitiatives /> */}
-
-        <div className="bg-blue-800/20">
-          <Testimonials />
-          <Impact />
-        </div>
-        <Apply />
-        <OurReach />
-        <FAQ />
-        {/* <Testimonials /> */}
-        <Events />
-        <MessageUs />
-      </main>
-      <Footer />
+      <Banner />
+      <Aboutus />
+      {/* <div className="bg-blue-800/20">
+        <Testimonials />
+        <Impact />
+      </div> */}
+      {/* <Apply />
+      <OurReach />
+      <FAQ /> */}
+      {/* <Testimonials /> */}
+      {/* <Events />
+      <MessageUs />
+      <Footer /> */}
     </>
   );
 }
