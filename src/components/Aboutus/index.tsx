@@ -11,35 +11,35 @@ interface datatype {
 const Aboutdata: datatype[] = [
   {
     heading: "IKMF Scholarship",
-    imgSrc: "/images/about-us/initiative1.svg",
+    imgSrc: "/images/about-us/academic_icon.svg",
     paragraph:
       "Increasing access to learning for children from disadvantages environments",
     href: "/scholarship",
   },
   {
     heading: "Head Start Africa",
-    imgSrc: "/images/about-us/initiative2.svg",
+    imgSrc: "/images/about-us/mentor_icon.svg",
     paragraph:
       "Nurturing future professionals within the legal field and beyond",
     href: "/headstart",
   },
   {
     heading: "Healthcare",
-    imgSrc: "/images/about-us/initiative3.svg",
+    imgSrc: "/images/about-us/health_icon.svg",
     paragraph:
       "Improving access to life-saving therapies and medications in our communities",
     href: "/healthcare",
   },
   {
     heading: "Vulnerable Groups",
-    imgSrc: "/images/about-us/initiative4.svg",
+    imgSrc: "/images/about-us/vulnerable_icon.svg",
     paragraph:
       "Protecting dignity and stability of vulnerable persons and groups in communities",
     href: "/vulnerable-group",
   },
   {
     heading: "Special projects",
-    imgSrc: "/images/about-us/initiative5.svg",
+    imgSrc: "/images/about-us/stars_icon.svg",
     paragraph:
       "Building community resilience by supporting long term sustainability projects.",
     href: "/special-project",
@@ -107,14 +107,11 @@ const Aboutus = () => {
 
           <div className="flex flex-wrap items-center justify-center mt-10 lg:mt-16 gap-4 lg:gap-8">
             {Aboutdata.map((item, i) => (
-              <div
-                key={i}
-                className="relative flex flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12"
-              >
-                <div className="group relative overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
-                  <span className="absolute top-10 z-0 h-20 w-20 rounded-full bg-sky-500 transition-all duration-300 group-hover:scale-[10]"></span>
+              <div key={i} className="relative">
+                <div className="group relative overflow-hidden bg-gray-300 px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-300 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
+                  <span className="absolute top-10 z-0 h-20 w-20 rounded-full bg-linear-to-r from-cyan-500 to-blue-800 transition-all duration-300 group-hover:scale-[10]"></span>
                   <div className="relative z-10 mx-auto max-w-md">
-                    <span className="grid h-20 w-20 place-items-center rounded-full bg-sky-500 transition-all duration-300 group-hover:bg-sky-400">
+                    <span className="grid h-20 w-20 place-items-center rounded-full bg-white transition-all duration-300 group-hover:bg-blue-200">
                       {/* <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
