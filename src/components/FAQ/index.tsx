@@ -9,27 +9,31 @@ const faqData: { label: string; href: string }[] = [
 
 const FAQ = () => {
   return (
-    <div
-      id="faq-section"
-      className="mx-auto max-w-7xl py-24 lg:px-8 bg-blue-800 rounded-2xl my-16 faq-bg"
-    >
-      <h3 className="text-xl font-normal text-white text-center mb-6">FAQ</h3>
-      <h2 className="text-4xl lg:text-6xl font-semibold text-center text-white">
+    <>
+      <h2 className="font-light text-4xl lg:text-6xl text-center text-moss mb-12">
         Frequently asked questions
-        <br /> by cartegory
       </h2>
-      <div className="w-full px-4 pt-16 flex flex-col items-center text-xl font-semibold">
-        {faqData.map((item, index) => (
-          <Link
-            key={index}
-            href={item.href}
-            className="mx-auto w-full max-w-5xl rounded-2xl bg-white py-8 px-6 mb-5 text-center hover:text-2xl hover:bg-linear-to-r hover:from-cyan-200 hover:to-blue-500 hover:translate-y-1 transition-all duration-200 ease-in-out"
-          >
-            {item.label}
-          </Link>
-        ))}
+      <div
+        id="faq-section"
+        className="mx-auto max-w-7xl py-24 lg:px-8 bg-blue-800 rounded-2xl my-16 faq-bg"
+      >
+        <h3 className="text-xl font-normal text-white text-center mb-6">
+          FAQs by cartegory{" "}
+        </h3>
+
+        <div className="w-full px-4 pt-16 flex flex-col items-center text-xl font-semibold">
+          {faqData.map((item, index) => (
+            <Link
+              key={index}
+              href={item.href}
+              className="mx-auto w-full max-w-5xl rounded-2xl bg-white py-8 px-6 mb-5 text-center hover:text-2xl hover:bg-linear-to-r hover:from-cyan-200 hover:to-blue-500 hover:translate-y-1 transition-all duration-200 ease-in-out"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
