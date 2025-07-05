@@ -22,10 +22,9 @@ export default function Home() {
       </div>
       <OurReach />
       <FAQ />
-      {/* <Testimonials /> */}
-      {/* <Events />
+      <Events />
       <MessageUs />
-      <Footer /> */}
+      <Footer />
     </>
   );
 }

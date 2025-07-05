@@ -54,14 +54,14 @@ const Index = () => {
   return (
     <div className="mx-auto max-w-7xl sm:py-4 lg:px-8 m-32">
       <h2
-        className="text-4xl sm:text-6xl font-bold text-center text-black my-3"
+        className="font-light text-4xl lg:text-6xl text-center text-moss mb-12"
         data-aos="fade-up"
         data-aos-anchor-placement="top-center"
         data-aos-duration="1000"
       >
         Our Reach
       </h2>
-      <div className="grid grid-cols-1 my-16">
+      <div className="grid grid-cols-1 mt-16">
         <div
           id="map-container"
           className=" flex relative overflow-hidden text-blue-700"
