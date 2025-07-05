@@ -1,7 +1,4 @@
-import Image from "next/image";
 import DonateModal from "../atoms/DonateModal";
-import { LuChevronRight } from "react-icons/lu";
-import Navbar from "@/components/Navbar";
 
 const Banner = () => {
   return (

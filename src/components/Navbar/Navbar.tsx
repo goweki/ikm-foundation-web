@@ -1,11 +1,6 @@
 "use client";
-import { Disclosure } from "@headlessui/react";
-import Link from "next/link";
+
 import React, { useEffect, useState } from "react";
-import { Bars3Icon } from "@heroicons/react/24/outline";
-import Drawer from "./Drawer";
-import Drawerdata from "./Drawerdata";
-import DonateModal from "../atoms/DonateModal";
 import { usePathname } from "next/navigation";
 
 interface NavItem {
@@ -21,8 +16,10 @@ const navItems: NavItem[] = [
 ];
 
 const Navbar = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isMobileMenuOpen, setMobileMenuIsOpen] = useState<boolean>(false);
   const [isVisible, setIsVisible] = useState<boolean>(true);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const pathname = usePathname();
 
   useEffect(() => {
@@ -78,7 +75,7 @@ const Navbar = () => {
       >
         <nav>
           <ul className="md:flex items-center justify-between text-base pt-4 md:pt-0">
-            {navItems.map((navItem_, i) => (
+            {navItems.map((navItem_) => (
               <li key={navItem_.label}>
                 <a className="md:p-4 py-3 px-0 block" href={navItem_.href}>
                   {navItem_.label}
