@@ -93,3 +93,13 @@ html {
   background-size: cover;
   background-attachment: fixed;
 }
+
+/* 
+* MESSAGES US
+*/
+.bg-messageus {
+  background-image: url("/images/messageus/mail_notification.png"),
+    url("/images/messageus/mail_paper_plane.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 84% 100%, 12% 18%;
+}
