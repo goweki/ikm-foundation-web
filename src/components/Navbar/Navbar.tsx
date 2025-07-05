@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 interface NavItem {
   label: string;
@@ -50,9 +51,9 @@ const Navbar = () => {
       }`}
     >
       <div className="flex-1 flex justify-between items-center mix-blend-screen">
-        <a href="#" className="text-4xl font-extrabold">
+        <Link href="/" className="text-4xl font-extrabold">
           IKM Foundation
-        </a>
+        </Link>
       </div>
 
       <label htmlFor="menu-toggle" className="pointer-cursor md:hidden block">
