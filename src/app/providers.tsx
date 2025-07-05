@@ -2,8 +2,8 @@
 
 import { createContext, useState, useEffect } from "react";
 import { Bounce, ToastContainer } from "react-toastify";
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export interface Impact {
   label: string;
@@ -44,9 +44,8 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
         errorData.message || `Error Status-${ui_data_.status}`;
       console.warn("FAILED: fetching ui data ", error_message_);
 
-      setUIstate({
-        loading: false,
-        error: error_message_,
+      setUIdata({
+        impact: [],
       });
 
       return;
@@ -74,24 +73,7 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
     fetchUIdata_();
   }, []);
 
-  return uiData ? (
-    <DataContext.Provider value={{ data: uiData, refreshData: fetchData }}>
-      {children}
-      <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick={false}
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-        transition={Bounce}
-      />
-    </DataContext.Provider>
-  ) : UIstate?.error ? (
+  return UIstate?.error ? (
     <div>
       <div className="flex flex-col items-center justify-center min-h-[calc(100vh-64px)]">
         <h1 className="font-bold text-red-500">Error</h1>
@@ -110,6 +92,23 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
         </button>
       </div>
     </div>
+  ) : uiData ? (
+    <DataContext.Provider value={{ data: uiData, refreshData: fetchData }}>
+      {children}
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Bounce}
+      />
+    </DataContext.Provider>
   ) : (
     <div className="min-h-[calc(100vh-64px)]"></div>
   );
@@ -120,8 +119,8 @@ export function AOSInit() {
     AOS.init({
       duration: 1000,
       once: true,
-    })
-  }, [])
+    });
+  }, []);
 
-  return null
+  return null;
 }

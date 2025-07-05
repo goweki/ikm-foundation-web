@@ -58,3 +58,14 @@ html {
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
+
+/* 
+* TESTIMONIALS
+*/
+.testimonials-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/testimonials/headstart_01_testimonials.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}

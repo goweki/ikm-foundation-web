@@ -16,13 +16,12 @@ export default function Home() {
       <Navbar />
       <Banner />
       <Aboutus />
-      {/* <div className="bg-blue-800/20">
+      <div className="testimonials-bg">
         <Testimonials />
-        <Impact />
-      </div> */}
-      {/* <Apply />
+        {/* <Impact /> */}
+      </div>
       <OurReach />
-      <FAQ /> */}
+      <FAQ />
       {/* <Testimonials /> */}
       {/* <Events />
       <MessageUs />
