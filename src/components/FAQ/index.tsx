@@ -14,7 +14,7 @@ const FAQ = () => {
         Frequently asked questions
       </h2>
       <div
-        id="faq-section"
+        id="faq"
         className="mx-auto max-w-7xl py-24 lg:px-8 bg-blue-800 rounded-2xl my-16 faq-bg"
       >
         <h3 className="text-xl font-normal text-white text-center mb-6">
