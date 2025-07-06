@@ -65,43 +65,40 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <label htmlFor="menu-toggle" className="pointer-cursor md:hidden block">
-        {/* <svg
-          className="fill-current"
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
-        >
-          <title>menu</title>
-          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-        </svg> */}
-        <svg
-          className="w-6 h-6"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fillRule="evenodd"
-            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-            clipRule="evenodd"
-          ></path>
-        </svg>
-        <svg
-          className="hidden w-6 h-6"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fillRule="evenodd"
-            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-            clipRule="evenodd"
-          ></path>
-        </svg>
+      <label
+        htmlFor="menu-toggle"
+        className="pointer-cursor md:hidden block text-white hover:text-blue-200"
+      >
+        {!isMobileMenuOpen ? (
+          <svg
+            className="w-6 h-6"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+            onClick={() => setMobileMenuIsOpen((prev) => !prev)}
+          >
+            <path
+              fillRule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clipRule="evenodd"
+            ></path>
+          </svg>
+        ) : (
+          <svg
+            className="w-6 h-6"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+            onClick={() => setMobileMenuIsOpen((prev) => !prev)}
+          >
+            <path
+              fillRule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clipRule="evenodd"
+            ></path>
+          </svg>
+        )}
       </label>
-      <input className="hidden" type="checkbox" id="menu-toggle" />
 
       <div
         className="hidden md:flex md:items-center md:w-auto w-full"
@@ -122,6 +119,28 @@ const Navbar = () => {
           </ul>
         </nav>
       </div>
+      {isMobileMenuOpen ? (
+        <div
+          className="flex md:hidden w-full"
+          id="mobile-menu"
+          onClick={() => setMobileMenuIsOpen(false)}
+        >
+          <nav>
+            <ul className="md:hidden flex flex-col text-base pt-4">
+              {navItems.map((navItem_) => (
+                <li key={navItem_.label} className="block">
+                  <Link
+                    className="py-2 px-2 block text-white hover:bg-blue-800 rounded-lg"
+                    href={navItem_.href}
+                  >
+                    {navItem_.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      ) : null}
     </header>
   );
 };
