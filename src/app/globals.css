@@ -19,6 +19,17 @@ html {
 }
 
 /* 
+* BUTTONS
+*/
+.btn-primary {
+  @apply rounded-md bg-blue-600 text-white hover:bg-linear-to-r hover:from-blue-700 hover:to-purple-700;
+}
+
+.btn-primary:hover {
+  @apply bg-blue-800;
+}
+
+/* 
 * BANNER
 */
 .banner-bg {

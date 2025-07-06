@@ -71,7 +71,7 @@ const Aboutus = () => {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              {/* <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Link
                   href="#"
                   className="px-8 py-3 border border-text-dark text-text-dark font-medium rounded-full hover:bg-white transition-colors"
@@ -84,7 +84,7 @@ const Aboutus = () => {
                 >
                   More About Us
                 </Link>
-              </div>
+              </div> */}
             </div>
 
             <div className="relative animate-float">
@@ -103,7 +103,7 @@ const Aboutus = () => {
       </section>
 
       <div className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-6">
+        <div id="focus-areas" className="max-w-7xl mx-auto px-6">
           <h2 className="font-light text-4xl lg:text-6xl text-center text-moss mb-12">
             Our Focus Areas
           </h2>

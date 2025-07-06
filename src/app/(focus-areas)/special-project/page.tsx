@@ -1,5 +1,5 @@
 import FAQcomponent from "@/components/atoms/faqComponent";
-import ApplyLayout from "../_components/layout";
+import FocusLayout from "../_components/layout";
 
 const FAQs = [
   {
@@ -26,7 +26,7 @@ const FAQs = [
 
 export default function VulnerableGroup() {
   return (
-    <ApplyLayout page="special-project">
+    <FocusLayout page="special-project">
       <>
         <p>
           Our special projects are aimed at building community resilience by
@@ -47,6 +47,6 @@ export default function VulnerableGroup() {
           <FAQcomponent FAQs={FAQs} />
         </section>
       </>
-    </ApplyLayout>
+    </FocusLayout>
   );
 }

@@ -65,13 +65,7 @@ const DonateModal = ({ buttonLocation = "default" }) => {
         >
           <button
             type="button"
-            className={`${
-              buttonLocation == "navbar"
-                ? " hover:bg-purple-800 hover:text-white border-1 border-gray-400 py-1 md:py-2 px-2 md:px-4"
-                : buttonLocation == "banner"
-                ? "text-lg md:text-2xl bg-purple-800 hover:bg-purple-900 text-white py-2 md:py-4 px-4 md:px-8"
-                : "py-2 md:py-4"
-            }  lg:px-8 font-semibold hover:shadow-xl hover:scale-105 transition-all duration-200 rounded-full cursor-pointer`}
+            className={`transition-all duration-200 hover:scale-105 py-2 px-4 md:py-4 md:px-8 text-xl md:text-4xl bg-blue-600 text-white hover:bg-linear-to-r hover:from-blue-700 hover:to-purple-700 font-semibold rounded-lg cursor-pointer`}
             onClick={openModal}
           >
             Donate

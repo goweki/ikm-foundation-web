@@ -10,7 +10,7 @@ const faqData: { label: string; href: string }[] = [
 const FAQ = () => {
   return (
     <>
-      <h2 className="font-light text-4xl lg:text-6xl text-center text-moss mb-12">
+      <h2 className="font-light text-4xl lg:text-6xl text-center text-moss mb-12 px-4">
         Frequently asked questions
       </h2>
       <div

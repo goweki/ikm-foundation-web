@@ -47,7 +47,7 @@ export default function FormLayout({
               alt="Banner"
               className="w-full h-full object-cover"
               height={1024}
-              src="/videos/apply_education.webp"
+              src="/images/focus-areas/form_banner.webp"
               width={1024}
             />
 

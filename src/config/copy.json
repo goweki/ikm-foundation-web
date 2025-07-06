@@ -7,7 +7,8 @@
         "desc": "for IKMF Scholarship"
       },
       "description": "Supporting bright students from lower/vulnerable socio-economic backgrounds access secondary school education.",
-      "FAQ": []
+      "FAQ": [],
+      "image": "/images/focus-areas/scholarship_banner.jpg"
     },
     "headstart": {
       "title": "Head Start Africa",
@@ -16,7 +17,8 @@
         "desc": "for Head Start Africa"
       },
       "description": "Part of DLA Piper’s global Head Start Initiative supporting talented young people from low-income backgrounds succeed within legal careers through structured, long-term support.",
-      "FAQ": []
+      "FAQ": [],
+      "image": "/images/focus-areas/headstart_banner.jpg"
     },
     "healthcare": {
       "title": "Medical Assistance",
@@ -25,7 +27,8 @@
         "desc": "for Medical Assistance"
       },
       "description": "Improving access to quality healthcare through raising funds for medical fees and donation of medical equipment.",
-      "FAQ": []
+      "FAQ": [],
+      "image": "/images/focus-areas/health_banner.jpg"
     },
     "vulnerable-group": {
       "title": "Vulnerable Groups",
@@ -34,7 +37,8 @@
         "desc": "to improve lives"
       },
       "description": "Supporting persons living in vulnerable conditions through partnering with care homes, schools, and shelters to improve living conditions and restore dignity.",
-      "FAQ": []
+      "FAQ": [],
+      "image": "/images/focus-areas/vulnerable_group_banner.jpg"
     },
     "special-project": {
       "title": "Special Projects",
@@ -43,7 +47,8 @@
         "desc": "as a Special Project"
       },
       "description": "Supporting special projects that improve the lives of vulnerable groups in Kenya through partnerships with local organisations and communities.",
-      "FAQ": []
+      "FAQ": [],
+      "image": "/images/focus-areas/special_project_banner.jpg"
     },
     "grant": {
       "title": "Grant Funding",
@@ -51,8 +56,9 @@
         "action": "Apply",
         "desc": "for Grant Funding"
       },
-      "description": "Supporting projects that improve the resilience of communities in Kenya through partnerships with individuals, organisations and communities",
-      "FAQ": []
+      "description": "Supporting projects that require more than Ksh. 200,000",
+      "FAQ": [],
+      "image": "/images/focus-areas/form_banner.webp"
     },
     "fap": {
       "title": "Financial Assistance",
@@ -60,9 +66,9 @@
         "action": "Apply",
         "desc": "for Financial Assistance Program"
       },
-      "description": "Supporting initiatives that improve the lives of vulnerable persons in Kenya",
-
-      "FAQ": []
+      "description": "Supporting initiatives requiring Ksh. 200,000 or less",
+      "FAQ": [],
+      "image": "/images/focus-areas/form_banner.webp"
     }
   }
 }
