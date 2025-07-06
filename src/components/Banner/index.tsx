@@ -11,14 +11,14 @@ const Banner = () => {
               <br />
               through
               <br />
-              <span className="bg-blue-500/30 text-white rounded-sm px-1 shadow-sm shadow-white/50 uppercase">
+              <span className="bg-blue-500/50 text-white backdrop-blur-md rounded-sm px-1 shadow-sm shadow-white/50 uppercase">
                 Responsible
               </span>
               <br />
               Business
             </h1>
           </div>
-          <div className="w-full flex items-center justify-between mt-6 py-1 px-4 uppercase rounded-sm">
+          <div className="w-full flex items-center justify-between mt-6 py-1 px-4 uppercase">
             <h3 className="text-white text-lg font-semibold">
               <DonateModal buttonLocation="banner" />
             </h3>

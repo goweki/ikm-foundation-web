@@ -1,5 +1,5 @@
 import FAQcomponent from "@/components/atoms/faqComponent";
-import ApplyLayout from "../_components/layout";
+import FocusLayout from "../_components/layout";
 
 const FAQs = [
   {
@@ -27,7 +27,7 @@ const FAQs = [
 
 export default function VulnerableGroup() {
   return (
-    <ApplyLayout page="vulnerable-group">
+    <FocusLayout page="vulnerable-group">
       <>
         <p>
           IKMF supports abandoned children, elderly individuals, and those
@@ -53,6 +53,6 @@ export default function VulnerableGroup() {
           <FAQcomponent FAQs={FAQs} />
         </section>
       </>
-    </ApplyLayout>
+    </FocusLayout>
   );
 }
