@@ -59,47 +59,47 @@ class MultipleItems extends Component<Props> {
               </h2>
             </div>
 
-            <Slider {...carouselSettings}>
-              {events.map((event, i) => (
-                <div key={i}>
-                  <div className="bg-white m-3 px-3 pt-3 pb-12 my-10 shadow-lg rounded-3xl relative">
-                    <Image
-                      src={
-                        event.image &&
-                        Array.isArray(event.image) &&
-                        event.image.length > 0 &&
-                        event.image[0]?.url
-                          ? (event.image[0].url as string)
-                          : "/images/events/calendar.webp"
-                      }
-                      alt="event-image"
-                      width={389}
-                      height={262}
-                      className="inline-block m-auto rounded-lg"
-                    />
-
-                    <h3 className="absolute top-4 left-4 bg-blue-900 text-white py-3 px-6 rounded-lg">
-                      {event.date}
-                    </h3>
-                    <h4 className="text-2xl font-bold pt-6 px-1 text-black">
-                      {event.name}
-                    </h4>
-                    {/* <h4 className="text-2xl font-bold pt-1 text-black">
-                    {items.description}
-                  </h4> */}
-
-                    <div>
-                      <h3 className="text-base font-normal py-2 opacity-75 px-1">
-                        {event.description}
+            <div className="mx-12">
+              <Slider {...carouselSettings}>
+                {events.map((event, i) => (
+                  <div key={i}>
+                    <div className="bg-white m-3 px-3 pt-3 pb-12 my-10 shadow-lg rounded-3xl relative">
+                      <Image
+                        src={
+                          event.image &&
+                          Array.isArray(event.image) &&
+                          event.image.length > 0 &&
+                          event.image[0]?.url
+                            ? (event.image[0].url as string)
+                            : "/images/events/calendar.webp"
+                        }
+                        alt="event-image"
+                        width={389}
+                        height={262}
+                        className="inline-block m-auto rounded-lg"
+                      />
+                      <h3 className="absolute top-4 left-4 bg-blue-900 text-white py-3 px-6 rounded-lg">
+                        {event.date}
                       </h3>
-                      {/* <h3 className="text-base font-normal pb-1 opacity-75">
-                      {items.date}
-                    </h3> */}
+                      <h4 className="text-2xl font-bold pt-6 px-1 text-black">
+                        {event.name}
+                      </h4>
+                      {/* <h4 className="text-2xl font-bold pt-1 text-black">
+                      {items.description}
+                    </h4> */}
+                      <div>
+                        <h3 className="text-base font-normal py-2 opacity-75 px-1">
+                          {event.description}
+                        </h3>
+                        {/* <h3 className="text-base font-normal pb-1 opacity-75">
+                        {items.date}
+                      </h3> */}
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
-            </Slider>
+                ))}
+              </Slider>
+            </div>
           </div>
         </div>
       </>

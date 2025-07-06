@@ -25,11 +25,11 @@ html {
   font-size: 42px;
 }
 .slick-prev {
-  left: -50px;
+  left: -42px;
   z-index: 1;
 }
 .slick-next {
-  right: -40px;
+  right: -24px;
   z-index: 1;
 }
 
