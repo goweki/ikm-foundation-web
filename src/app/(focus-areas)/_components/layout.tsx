@@ -109,7 +109,7 @@ export default function FocusLayout({
 
         <div className="block lg:flex lg:space-x-2 px-2 lg:p-0 mt-10 mb-10">
           {/* <!-- children --> */}
-          <div className="w-full lg:w-2/3 mx-2 md:mx-8">{children}</div>
+          <div className="w-full lg:w-2/3 px-2 md:px-8">{children}</div>
 
           {/* <!-- right sidebar --> */}
           <div className="w-full lg:w-1/3 p-3">
