@@ -159,7 +159,7 @@ export default function Testimonials() {
                         {item.label}
                       </div>
                       <div className="font-semibold text-5xl md:text-2xl tracking-tight ">
-                        {item.quantity}
+                        {item.quantity}+
                       </div>
                       <div className="font-normal opacity-75">{item.unit}</div>
                     </div>
