@@ -75,13 +75,13 @@ class MultipleItems extends Component<Props> {
                       alt="event-image"
                       width={389}
                       height={262}
-                      className="inline-block m-auto rounded-2xl"
+                      className="inline-block m-auto rounded-lg"
                     />
 
-                    <h3 className="absolute bg-blue-800 text-white py-3 px-6 rounded-full article-img">
+                    <h3 className="absolute top-4 left-4 bg-blue-900 text-white py-3 px-6 rounded-lg">
                       {event.date}
                     </h3>
-                    <h4 className="text-2xl font-bold pt-6 text-black">
+                    <h4 className="text-2xl font-bold pt-6 px-1 text-black">
                       {event.name}
                     </h4>
                     {/* <h4 className="text-2xl font-bold pt-1 text-black">
@@ -89,7 +89,7 @@ class MultipleItems extends Component<Props> {
                   </h4> */}
 
                     <div>
-                      <h3 className="text-base font-normal py-2 opacity-75">
+                      <h3 className="text-base font-normal py-2 opacity-75 px-1">
                         {event.description}
                       </h3>
                       {/* <h3 className="text-base font-normal pb-1 opacity-75">

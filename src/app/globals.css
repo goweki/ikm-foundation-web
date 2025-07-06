@@ -18,6 +18,21 @@ html {
   scroll-behavior: smooth !important;
 }
 
+/* REACT SLICK */
+.slick-prev:before,
+.slick-next:before {
+  color: #000000; /* Change arrow color */
+  font-size: 42px; /* Adjust arrow size */
+}
+.slick-prev {
+  left: -50px; /* Move left arrow further left */
+  z-index: 1; /* Ensure arrows are above slides */
+}
+.slick-next {
+  right: -40px; /* Move right arrow further right */
+  z-index: 1;
+}
+
 /* 
 * BUTTONS
 */
