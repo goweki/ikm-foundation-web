@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "IKM Foundation",
-  description: "Driven by Values, Powered by Change.",
+  description: "Improving lives through responsible business.",
 };
 
 export default function RootLayout({
