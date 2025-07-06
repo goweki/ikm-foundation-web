@@ -21,15 +21,15 @@ html {
 /* REACT SLICK */
 .slick-prev:before,
 .slick-next:before {
-  color: #000000; /* Change arrow color */
-  font-size: 42px; /* Adjust arrow size */
+  color: #000000;
+  font-size: 42px;
 }
 .slick-prev {
-  left: -50px; /* Move left arrow further left */
-  z-index: 1; /* Ensure arrows are above slides */
+  left: -50px;
+  z-index: 1;
 }
 .slick-next {
-  right: -40px; /* Move right arrow further right */
+  right: -40px;
   z-index: 1;
 }
 
