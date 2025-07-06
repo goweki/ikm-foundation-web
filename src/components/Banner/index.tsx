@@ -2,7 +2,10 @@ import DonateModal from "../atoms/DonateModal";
 
 const Banner = () => {
   return (
-    <section id="banner" className="banner-bg w-full h-screen bg-no-repeat">
+    <section
+      id="banner"
+      className="banner-bg w-full min-h-screen bg-no-repeat pt-20 md:pt-24 flex items-center"
+    >
       <div className="w-[90%] mx-auto h-full flex items-center justify-between py-10">
         <div className="lg:w-fit">
           <div className="text-2xl xs:text-4xl sm:text-6xl text-left text-white font-serif font-extrabold">
