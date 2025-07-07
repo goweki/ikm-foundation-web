@@ -21,8 +21,7 @@ html {
 /* REACT SLICK */
 .slick-prev:before,
 .slick-next:before {
-  color: #000000;
-  font-size: 42px;
+  @apply text-black text-xl md:text-4xl;
 }
 .slick-prev {
   left: -42px;
