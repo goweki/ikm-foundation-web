@@ -16,7 +16,6 @@ export default function Home() {
       <Aboutus />
       <div className="testimonials-bg">
         <Testimonials />
-        {/* <Impact /> */}
       </div>
       <OurReach />
       <FAQ />
