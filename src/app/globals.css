@@ -49,10 +49,6 @@ html {
 .banner-bg {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/images/banner/banner_anim.webp");
-  /* url("/images/banner/banner_anim.webp"); */
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 /* 
