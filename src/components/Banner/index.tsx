@@ -4,7 +4,7 @@ const Banner = () => {
   return (
     <section
       id="banner"
-      className="banner-bg w-full md:min-h-screen bg-no-repeat pt-20 md:pt-24 flex items-center"
+      className="banner-bg w-full min-h-96 md:min-h-screen bg-no-repeat pt-20 md:pt-24 flex items-center"
     >
       <div className="w-[90%] mx-auto h-full flex items-center justify-between py-10">
         <div className="lg:w-fit">
