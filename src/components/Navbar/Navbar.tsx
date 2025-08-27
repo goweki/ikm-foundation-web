@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Logo from "../Logos/ikmf";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import Image from "next/image";
 
 interface NavItem {
