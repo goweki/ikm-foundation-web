@@ -8,7 +8,8 @@
       },
       "description": "Supporting bright students from lower/vulnerable socio-economic backgrounds access secondary school education.",
       "FAQ": [],
-      "image": "/images/focus-areas/scholarship_banner.jpg"
+      "banner": "/images/focus-areas/scholarship_banner.jpg",
+      "formImage": "/images/focus-areas/scholarship_square.jpg"
     },
     "headstart": {
       "title": "Head Start Africa",
@@ -18,7 +19,8 @@
       },
       "description": "Part of DLA Piper’s global Head Start Initiative supporting talented young people from low-income backgrounds succeed within legal careers through structured, long-term support.",
       "FAQ": [],
-      "image": "/images/focus-areas/headstart_banner.jpg"
+      "banner": "/images/focus-areas/headstart_banner.jpg",
+      "formImage": "/images/focus-areas/headstart_square.jpg"
     },
     "healthcare": {
       "title": "Medical Assistance",
@@ -28,7 +30,8 @@
       },
       "description": "Improving access to quality healthcare through raising funds for medical fees and donation of medical equipment.",
       "FAQ": [],
-      "image": "/images/focus-areas/health_banner.jpg"
+      "banner": "/images/focus-areas/health_banner.jpg",
+      "formImage": "/images/focus-areas/health_square.jpg"
     },
     "vulnerable-group": {
       "title": "Vulnerable Groups",
@@ -38,7 +41,8 @@
       },
       "description": "Supporting persons living in vulnerable conditions through partnering with care homes, schools, and shelters to improve living conditions and restore dignity.",
       "FAQ": [],
-      "image": "/images/focus-areas/vulnerable_group_banner.jpg"
+      "banner": "/images/focus-areas/vulnerable_group_banner.jpg",
+      "formImage": "/images/focus-areas/vulnerable_group_square.jpg"
     },
     "special-project": {
       "title": "Special Projects",
@@ -48,7 +52,8 @@
       },
       "description": "Supporting special projects that improve the lives of vulnerable groups in Kenya through partnerships with local organisations and communities.",
       "FAQ": [],
-      "image": "/images/focus-areas/special_project_banner.jpg"
+      "banner": "/images/focus-areas/special_project_banner.jpg",
+      "formImage": "/images/focus-areas/special_project_banner.jpg"
     },
     "grant": {
       "title": "Grant Funding",
@@ -58,7 +63,8 @@
       },
       "description": "Supporting projects that require more than Ksh. 200,000",
       "FAQ": [],
-      "image": "/images/focus-areas/form_banner.webp"
+      "banner": "/images/focus-areas/special_project_banner.jpg",
+      "formImage": "/images/focus-areas/form_banner.webp"
     },
     "fap": {
       "title": "Financial Assistance",
@@ -68,7 +74,8 @@
       },
       "description": "Supporting initiatives requiring Ksh. 200,000 or less",
       "FAQ": [],
-      "image": "/images/focus-areas/form_banner.webp"
+      "banner": "/images/focus-areas/special_project_banner.jpg",
+      "formImage": "/images/focus-areas/form_banner.webp"
     }
   }
 }

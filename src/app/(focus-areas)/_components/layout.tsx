@@ -93,7 +93,7 @@ export default function FocusLayout({
               }}
             ></div>
             <img
-              src={texts.image}
+              src={texts.banner}
               className="absolute left-0 top-0 w-full h-full rounded z-0 object-cover"
             />
             <div className="p-4 absolute bottom-0 left-0 z-20">
