@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Logo from "../Logos/ikmf";
+import Image from "next/image";
 
 interface NavItem {
   label: string;
@@ -61,6 +62,13 @@ const Navbar = () => {
               IKM <br />
               Foundation
             </p>
+            {/* <Image
+              src="/images/IKMF_logo_standard_600.png"
+              className="h-16 w-16"
+              alt="logo"
+              height={600}
+              width={600}
+            /> */}
           </div>
         </Link>
       </div>
