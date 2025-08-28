@@ -1,5 +1,5 @@
 import FAQcomponent from "@/components/atoms/faqComponent";
-import FocusLayout from "../_components/layout";
+import PillarsLayout from "../_components/layout";
 
 const FAQs = [
   {
@@ -52,7 +52,7 @@ const FAQs = [
 
 export default function Headstart() {
   return (
-    <FocusLayout page="headstart">
+    <PillarsLayout page="headstart">
       <>
         <p>
           The Head Start Africa Academy is a transformative three-week adventure
@@ -135,6 +135,6 @@ export default function Headstart() {
           <FAQcomponent FAQs={FAQs} />
         </section>
       </>
-    </FocusLayout>
+    </PillarsLayout>
   );
 }

@@ -1,7 +1,7 @@
 // "use client";
 
 import FAQcomponent from "@/components/atoms/faqComponent";
-import FocusLayout from "../_components/layout";
+import PillarsLayout from "../_components/layout";
 // import { useSearchParams } from "next/navigation";
 
 const FAQs = [
@@ -43,7 +43,7 @@ export default function Scholarship() {
   // if (section=='faq-section') {}
 
   return (
-    <FocusLayout page="scholarship">
+    <PillarsLayout page="scholarship">
       <>
         <p>
           The IKMF Scholarship programme supports bright students from lower
@@ -93,6 +93,6 @@ export default function Scholarship() {
           <FAQcomponent FAQs={FAQs} />
         </section>
       </>
-    </FocusLayout>
+    </PillarsLayout>
   );
 }

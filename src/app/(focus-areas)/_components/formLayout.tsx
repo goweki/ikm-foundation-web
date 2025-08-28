@@ -47,7 +47,6 @@ export default function FormLayout({
               alt="Banner"
               className="w-full h-full object-cover"
               height={1024}
-              // src="/images/focus-areas/form_banner.webp"
               src={texts.formImage}
               width={1024}
             />

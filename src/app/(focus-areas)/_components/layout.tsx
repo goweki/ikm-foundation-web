@@ -10,7 +10,7 @@ const applications = [
   "special-project",
 ];
 
-export default function FocusLayout({
+export default function PillarsLayout({
   children,
   page,
 }: {
@@ -57,10 +57,10 @@ export default function FocusLayout({
               </svg>
               <Link
                 rel="noopener noreferrer"
-                href="/#focus-areas"
+                href="/#pillars"
                 className="flex items-center px-1 uppercase hover:underline"
               >
-                Focus areas
+                Our Foundation Pillars
               </Link>
             </li>
             <li className="flex items-center space-x-2">

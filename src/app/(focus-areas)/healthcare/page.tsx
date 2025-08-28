@@ -1,5 +1,5 @@
 import FAQcomponent from "@/components/atoms/faqComponent";
-import FocusLayout from "../_components/layout";
+import PillarsLayout from "../_components/layout";
 
 const FAQs = [
   {
@@ -26,7 +26,7 @@ const FAQs = [
 
 export default function Healthcare() {
   return (
-    <FocusLayout page="healthcare">
+    <PillarsLayout page="healthcare">
       <>
         <p>
           We improve access to quality healthcare through raising funds for
@@ -47,6 +47,6 @@ export default function Healthcare() {
           <FAQcomponent FAQs={FAQs} />
         </section>
       </>
-    </FocusLayout>
+    </PillarsLayout>
   );
 }

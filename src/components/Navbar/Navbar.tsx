@@ -14,7 +14,7 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { label: "About us", href: "#about-us" },
-  { label: "Focus areas", href: "#focus-areas" },
+  { label: "Foundation Pillars", href: "#pillars" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact us", href: "#contact-us" },
 ];
