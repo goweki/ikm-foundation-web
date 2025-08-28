@@ -14,7 +14,7 @@ const Banner = () => {
               <br />
               through
               <br />
-              <span className="bg-blue-500/50 text-white backdrop-blur-md rounded-sm px-1 shadow-sm shadow-white/50 uppercase">
+              <span className="bg-blue-500/50 text-white backdrop-blur-md rounded-sm px-1 shadow-sm shadow-white/50">
                 Responsible
               </span>
               <br />
