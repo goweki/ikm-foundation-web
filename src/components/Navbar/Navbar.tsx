@@ -19,7 +19,7 @@ const navItems: NavItem[] = [
   { label: "Contact us", href: "#contact-us" },
 ];
 
-const Navbar = () => {
+export default function Navbar() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isMobileMenuOpen, setMobileMenuIsOpen] = useState<boolean>(false);
   const [isVisible, setIsVisible] = useState<boolean>(true);
@@ -49,31 +49,23 @@ const Navbar = () => {
 
   return (
     <header
-      className={`w-full fixed z-30 bg-gray-800/80 text-white backdrop-blur-md lg:px-16 px-4 flex flex-wrap items-center py-4 shadow-sm transition-transform duration-300 ${
+      className={`w-full fixed z-30 bg-white/60 text-gray-800 backdrop-blur-md lg:px-16 px-4 flex flex-wrap items-center py-4 shadow-sm border-b-1 border-gray-800/20 transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="flex-1 flex justify-between items-center mix-blend-screen">
+      <div className="flex-1 flex justify-between items-center">
         <Link href="/" className="text-xl font-bold">
           <div className="flex flex-row items-center justify-center">
             <div className="w-10 h-10 m-2 mb-1">
               <Logo />
             </div>
-            <p className="w-fit leading-none text-blue-300">
+            <p className="w-fit leading-none">
               IKM <br />
               Foundation
             </p>
-            {/* <Image
-              src="/images/IKMF_logo_standard_600.png"
-              className="h-16 w-16"
-              alt="logo"
-              height={600}
-              width={600}
-            /> */}
           </div>
         </Link>
       </div>
-
       <label
         htmlFor="menu-toggle"
         className="pointer-cursor md:hidden block text-white hover:text-blue-200"
@@ -108,7 +100,6 @@ const Navbar = () => {
           </svg>
         )}
       </label>
-
       <div
         className="hidden md:flex md:items-center md:w-auto w-full"
         id="menu"
@@ -118,7 +109,7 @@ const Navbar = () => {
             {navItems.map((navItem_) => (
               <li key={navItem_.label}>
                 <Link
-                  className="md:p-4 py-3 px-0 block text-white hover:text-blue-200"
+                  className="md:p-4 py-3 px-0 block text-black hover:text-blue-800"
                   href={navItem_.href}
                 >
                   {navItem_.label}
@@ -152,6 +143,4 @@ const Navbar = () => {
       ) : null}
     </header>
   );
-};
-
-export default Navbar;
+}
