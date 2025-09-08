@@ -7,7 +7,7 @@ export default function Logo({
   fill?: string;
   stroke?: string;
   strokeWidth?: number;
-  props?: any;
+  props?: React.SVGProps<SVGSVGElement>;
 }) {
   let stroke1: string | null = "#1E75BB";
   let stroke2: string | null = "#293B8F";

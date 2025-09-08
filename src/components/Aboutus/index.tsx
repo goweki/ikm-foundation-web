@@ -5,34 +5,45 @@ interface datatype {
   title: string;
   description: string;
   imgSrc: string;
+  backgroundImage: string;
   href: string;
 }
 
 const Aboutdata: datatype[] = [
   {
-    title: "IKMF Scholarship",
+    title: "Education",
     imgSrc: "/images/about-us/academic_icon.svg",
+    backgroundImage: "/images/focus-areas/headstart_banner.jpg",
     description:
-      "Increasing access to learning for children from disadvantages environments",
+      " Promoting access to education and opportunities for talented young people",
     href: "/scholarship",
   },
-  {
-    title: "Head Start Africa",
-    imgSrc: "/images/about-us/mentor_icon.svg",
-    description:
-      "Nurturing future professionals within the legal field and beyond",
-    href: "/headstart",
-  },
+  // {
+  //   title: "IKMF Scholarship",
+  //   imgSrc: "/images/about-us/academic_icon.svg",
+  //   description:
+  //     "Increasing access to learning for children from disadvantages environments",
+  //   href: "/scholarship",
+  // },
+  // {
+  //   title: "Head Start Africa",
+  //   imgSrc: "/images/about-us/mentor_icon.svg",
+  //   description:
+  //     "Nurturing future professionals within the legal field and beyond",
+  //   href: "/headstart",
+  // },
   {
     title: "Healthcare",
     imgSrc: "/images/about-us/health_icon.svg",
+    backgroundImage: "/images/focus-areas/health_banner.jpg",
     description:
-      "Improving access to life-saving therapies and medications in our communities",
+      "Improving access to life-saving interventions and support in our communities",
     href: "/healthcare",
   },
   {
     title: "Vulnerable Groups",
     imgSrc: "/images/about-us/vulnerable_icon.svg",
+    backgroundImage: "/images/focus-areas/vulnerable_group_banner.jpg",
     description:
       "Protecting dignity and stability of vulnerable persons and groups in communities",
     href: "/vulnerable-group",
@@ -40,6 +51,7 @@ const Aboutdata: datatype[] = [
   {
     title: "Special projects",
     imgSrc: "/images/about-us/stars_icon.svg",
+    backgroundImage: "/images/focus-areas/special_project_banner.jpg",
     description:
       "Building community resilience by supporting long term sustainability projects.",
     href: "/special-project",
@@ -62,12 +74,12 @@ const Aboutus = () => {
                   {/* <span className="block font-light">Are</span> */}
                 </h1>
                 <p className="text-lg text-text-dark/90 max-w-lg mx-auto lg:mx-0">
-                  Founded in 2011, The IKM Foundation (IKMF) has the objective
-                  of creating a platform to run IKM Advocates&#39; Corporate
-                  Social Responsibility (CSR) activities. Our mission is to
-                  transform lives through impactful partnerships and sustainable
-                  programmes by working to establish lasting, community-driven
-                  change.
+                  Founded in 2011 as the CSR platform of IKM Advocates, IKM
+                  Foundation was established to promote lasting,
+                  community-driven change by supporting access to education,
+                  healthcare, and inclusive opportunities for vulnerable groups.
+                  Our mission is to transform lives through impactful
+                  partnerships and sustainable programmes.
                 </p>
               </div>
 
@@ -103,14 +115,56 @@ const Aboutus = () => {
       </section>
 
       <div className="bg-white py-16">
-        <div id="focus-areas" className="max-w-7xl mx-auto px-6">
+        <div id="pillars" className="max-w-7xl mx-auto px-6">
           <h2 className="font-light text-4xl lg:text-6xl text-center text-moss mb-12">
-            Our Focus Areas
+            Our Foundation Pillars
           </h2>
 
           <div className="flex flex-wrap items-center justify-center mt-10 lg:mt-16 gap-4 lg:gap-8">
             {Aboutdata.map((item, i) => (
-              <div key={i} className="relative">
+              <Link
+                href={item.href}
+                key={i}
+                className="group relative overflow-hidden rounded-2xl shadow-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+              >
+                {/* <!-- Background Image --> */}
+                <div
+                  style={{
+                    backgroundImage: `url('${item.backgroundImage}')`,
+                  }}
+                  className="absolute inset-0 bg-cover bg-center"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                </div>
+
+                {/* <!-- Glass overlay --> */}
+                <div className="absolute inset-0 glass-effect opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                <div className="relative z-10 p-8 h-full flex flex-col justify-end">
+                  <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
+                    <div className="w-12 h-12 bg-white/50 rounded-lg flex items-center justify-center mb-3 group-hover:rotate-12 transition-transform duration-300">
+                      <Image
+                        src={item.imgSrc}
+                        alt="Icon"
+                        width={24}
+                        height={24}
+                        className="text-white"
+                      />
+                    </div>
+                    <h3 className="text-lg font-bold text-white mb-1">
+                      {item.title}
+                    </h3>
+                    <p className="text-white/80 text-xs">{item.description}</p>
+                  </div>
+                </div>
+              </Link>
+            ))}
+            {/* 
+            alternatives
+            */}
+
+            {/* <!-- Option 1: v0 --> */}
+            {/* <div key={i} className="relative">
                 <div className="group relative overflow-hidden bg-gray-300 px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-300 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
                   <span className="absolute top-10 z-0 h-20 w-20 rounded-full bg-linear-to-r from-cyan-500 to-blue-800 transition-all duration-300 group-hover:scale-[10]"></span>
                   <div className="relative z-10 mx-auto max-w-md">
@@ -139,8 +193,76 @@ const Aboutus = () => {
                     </div>
                   </div>
                 </div>
+              </div> */}
+
+            {/* <!-- Option 2: Geometric Pattern Background --> */}
+
+            {/* <div className="group relative overflow-hidden bg-white geometric-bg rounded-2xl shadow-xl border transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+              
+              <div className="absolute inset-0 opacity-10">
+                <svg
+                  className="absolute top-0 left-0 w-32 h-32"
+                  viewBox="0 0 100 100"
+                >
+                  <polygon
+                    points="50,10 90,90 10,90"
+                    fill="currentColor"
+                    className="text-blue-500"
+                  />
+                </svg>
+                <svg
+                  className="absolute bottom-0 right-0 w-24 h-24 rotate-45"
+                  viewBox="0 0 100 100"
+                >
+                  <rect
+                    x="25"
+                    y="25"
+                    width="50"
+                    height="50"
+                    fill="currentColor"
+                    className="text-red-500"
+                  />
+                </svg>
               </div>
-            ))}
+
+              <div className="relative z-10 p-8">
+                <div className="w-14 h-14 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:rotate-45 transition-transform duration-300">
+                  <svg
+                    className="w-7 h-7 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">
+                  Geometric Patterns
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  Modern geometric design with subtle pattern overlays and clean
+                  typography.
+                </p>
+
+                <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                  <span className="text-gray-400 text-sm">Explore</span>
+                  <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center group-hover:bg-indigo-500 group-hover:text-white transition-colors duration-300">
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div> */}
           </div>
         </div>
       </div>
