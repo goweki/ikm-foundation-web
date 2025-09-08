@@ -7,34 +7,29 @@ interface TestimonialCardProp {
 
 const REVIEWS: TestimonialCardProp[] = [
   {
-    name: "Kelvin",
-    position: "IKMF Beneficiary",
-    avatar: "/images/testimonial/user.svg",
-    review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum, quam quis congue faucibus, ipsum tortor maximus justo, sed luctus quam risus sit amet purus.`,
+    name: "Jacob",
+    position: "Head Start Scholar",
+    avatar: "/images/testimonials/jacob.png",
+    review: `At the two-week Head Start Africa Academy, we were exposed to real-world skills needed to thrive in the 21st century - these reflections inspire me to use my knowledge and experience in the future to advocate for a mega Africa-focused curriculum`,
   },
+
   {
-    name: "Kesley",
-    position: "Headstart Alumni",
-    avatar: "/images/testimonial/user.svg",
-    review: `Pellentesque tempor nisl tempus leo egestas vehicula. Curabitur iaculis vel arcu ut auctor. Aliquam blandit, orci at ornare porttitor, est mi pulvinar augue, non commodo nunc lectus eleifend neque.`,
-  },
-  {
-    name: "John",
-    position: "Head-Start Alumni",
-    avatar: "/images/testimonial/user.svg",
-    review: `Bryntum components have streamlined my workflows.`,
+    name: "Bernard",
+    position: "Head Start Scholar",
+    avatar: "/images/testimonials/benard.png",
+    review: `The programme has ignited my passion for law, while its life skills training empowered me to invest in farming to supplement family income and fund my legal education`,
   },
   {
     name: "Concilia",
-    position: "Grant Benefitiary",
-    avatar: "/images/testimonial/user.svg",
-    review: `Vestibulum gravida est vel iaculis facilisis. Mauris commodo auctor purus non pharetra. In ac felis aliquam, vestibulum mi sit amet, cursus odio. Aenean sit amet orci eget augue porttitor dignissim.`,
+    position: "Alumna - IKMF Scholarship/Head Start",
+    avatar: "/images/testimonials/concilia.png",
+    review: `With IKMF’s support, I focused on my studies without worrying about fees. Today, I’m living my dream`,
   },
   {
-    name: "Bernard",
-    position: "IKMF Beneficiary",
-    avatar: "/images/testimonial/user.svg",
-    review: `Nulla ac egestas mauris. Curabitur id orci accumsan, semper orci ut, auctor nibh. Mauris cursus orci id lorem posuere, sed rutrum quam mollis.`,
+    name: "Sister Lydia",
+    position: "Principal - St Maria Girls Rombo, Loitoktok",
+    avatar: "/images/testimonials/sst_lydia.png",
+    review: `I would like to express my sincere gratitude for your support in the water drilling project. Your commitment to assisting the school is deeply appreciated and will significantly improve the lives of our learners by addressing the long-standing challenge of water scarcity`,
   },
 ];
 
@@ -103,7 +98,7 @@ export default function Testimonials() {
   return (
     <div className="p-6 xl:col-span-3">
       <div className="grid gap-4 md:grid-cols-2">
-        <div className="grid content-center gap-4">
+        <div className="grid content-center gap-4 overflow-auto">
           {REVIEWS.slice(0, 2).map((review, i) => (
             <div key={i}>
               <TestimonialCard testimonial={review} />
@@ -111,7 +106,7 @@ export default function Testimonials() {
           ))}
         </div>
         <div className="grid content-center gap-4">
-          {REVIEWS.slice(3, 5).map((review, i) => (
+          {REVIEWS.slice(2, 4).map((review, i) => (
             <div key={i}>
               <TestimonialCard testimonial={review} />
             </div>

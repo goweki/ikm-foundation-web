@@ -52,7 +52,7 @@ const FAQs = [
 
 export default function Headstart() {
   return (
-    <PillarsLayout page="headstart">
+    <PillarsLayout page="education">
       <>
         <p>
           The Head Start Africa Academy is a transformative three-week adventure

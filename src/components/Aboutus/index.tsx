@@ -15,8 +15,8 @@ const Aboutdata: datatype[] = [
     imgSrc: "/images/about-us/academic_icon.svg",
     backgroundImage: "/images/focus-areas/headstart_banner.jpg",
     description:
-      " Promoting access to education and opportunities for talented young people",
-    href: "/scholarship",
+      "Promoting access to education and opportunities for talented young people",
+    href: "/education",
   },
   // {
   //   title: "IKMF Scholarship",
@@ -29,7 +29,7 @@ const Aboutdata: datatype[] = [
   //   title: "Head Start Africa",
   //   imgSrc: "/images/about-us/mentor_icon.svg",
   //   description:
-  //     "Nurturing future professionals within the legal field and beyond",
+  //     "Nurturing future professionals by diversifying pathways to the legal profession",
   //   href: "/headstart",
   // },
   {
@@ -53,7 +53,7 @@ const Aboutdata: datatype[] = [
     imgSrc: "/images/about-us/stars_icon.svg",
     backgroundImage: "/images/focus-areas/special_project_banner.jpg",
     description:
-      "Building community resilience by supporting long term sustainability projects.",
+      "Building community resilience by supporting long term sustainability projects",
     href: "/special-project",
   },
 ];
@@ -73,6 +73,7 @@ const Aboutus = () => {
                   <span className="block">Who We Are</span>
                   {/* <span className="block font-light">Are</span> */}
                 </h1>
+
                 <p className="text-lg text-text-dark/90 max-w-lg mx-auto lg:mx-0">
                   Founded in 2011 as the CSR platform of IKM Advocates, IKM
                   Foundation was established to promote lasting,
@@ -80,6 +81,10 @@ const Aboutus = () => {
                   healthcare, and inclusive opportunities for vulnerable groups.
                   Our mission is to transform lives through impactful
                   partnerships and sustainable programmes.
+                </p>
+                <p className="mb-2 italic">
+                  Empowering communities through access to education, healthcare
+                  and social support.
                 </p>
               </div>
 

@@ -126,7 +126,7 @@ export default function Testimonials() {
                 data-aos-anchor-placement="top-center"
                 data-aos-duration="1000"
               >
-                Stories of Impact
+                Our Impact
               </h3>
               <h3
                 className="text-xl sm:text-5xl font-bold text-white/25 lg:ml-8 mb-4 -mt-4"
@@ -134,14 +134,14 @@ export default function Testimonials() {
                 data-aos-anchor-placement="top-center"
                 data-aos-duration="1100"
               >
-                Stories of Impact
+                Our Impact
               </h3>
             </div>
             <div>
               <div className="mx-auto max-w-xl lg:px-8">
                 <div className="mt-6 relative animate-float">
                   <div className="dance-text mb-5 text-left text-white">
-                    impact driven
+                    {/* inspiring change */}
                   </div>
                   <Image
                     src="/images/manage/toggle.svg"
