@@ -1,14 +1,17 @@
 "use client";
 import Slider from "react-slick";
-import React, { Component, useContext } from "react";
+import React, { Component } from "react";
 import Image from "next/image";
-import { DataContext, Event as EventType } from "@/app/providers";
 
-type Props = {
-  events: EventType[];
+type YouTubeVideo = {
+  youtubeUrl: string;
 };
 
-class MultipleItems extends Component<Props> {
+type Props = {
+  events: YouTubeVideo[];
+};
+
+class Carousels extends Component<Props> {
   render() {
     const { events } = this.props;
 
@@ -18,92 +21,79 @@ class MultipleItems extends Component<Props> {
       slidesToShow: 3,
       centerMode: true,
       slidesToScroll: 2,
-      // arrows: true,
       autoplay: false,
       speed: 500,
       cssEase: "linear",
       responsive: [
         {
           breakpoint: 1200,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: false,
-          },
+          settings: { slidesToShow: 2, slidesToScroll: 1 },
         },
         {
           breakpoint: 600,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: false,
-          },
+          settings: { slidesToShow: 1, slidesToScroll: 1 },
         },
       ],
     };
 
     return (
-      <>
-        <div className="events-bg py-20" id="blog-section">
-          <div className="mx-auto max-w-7xl sm:py-4 lg:px-8 ">
-            <div className="text-center">
-              <h2
-                className="font-medium text-4xl lg:text-6xl text-center text-moss mb-12"
-                data-aos="fade-up"
-                data-aos-anchor-placement="top-center"
-                data-aos-duration="1000"
-              >
-                Our latest events.
-              </h2>
-            </div>
+      <div className="events-bg py-20" id="blog-section">
+        <div className="mx-auto max-w-7xl sm:py-4 lg:px-8 ">
+          <div className="text-center">
+            <h2 className="font-medium text-4xl lg:text-6xl text-center text-moss mb-12">
+              We Are Social
+            </h2>
+          </div>
 
-            <div className="mx-12">
-              <Slider {...carouselSettings}>
-                {events.map((event, i) => (
+          <div className="mx-12">
+            <Slider {...carouselSettings}>
+              {events.map((event, i) => {
+                const videoId = getYouTubeId(event.youtubeUrl);
+                const thumbnailUrl = videoId
+                  ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
+                  : "/images/fallback-thumbnail.jpg";
+
+                return (
                   <div key={i}>
-                    <div className="bg-white m-3 px-3 pt-3 pb-12 my-10 shadow-lg rounded-3xl relative">
+                    <a
+                      href={event.youtubeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
                       <Image
-                        src={
-                          event.image &&
-                          Array.isArray(event.image) &&
-                          event.image.length > 0 &&
-                          event.image[0]?.url
-                            ? (event.image[0].url as string)
-                            : "/images/events/calendar.webp"
-                        }
-                        alt="event-image"
+                        src={thumbnailUrl}
+                        alt={`YouTube video ${i + 1}`}
                         width={389}
                         height={262}
-                        className="inline-block m-auto rounded-lg"
+                        className="inline-block m-auto rounded-lg shadow-md hover:scale-105 transition-transform"
                       />
-                      <h3 className="absolute text-xs md:text-sm top-4 left-4 bg-blue-900 text-white py-3 px-6 rounded-lg">
-                        {event.date}
-                      </h3>
-                      <h4 className="text-base md:text-xl font-bold pt-6 px-1 text-black">
-                        {event.name}
-                      </h4>
-                      <div>
-                        <h3 className="text-sm md:text-base font-normal py-2 opacity-75 px-1">
-                          {event.description}
-                        </h3>
-                      </div>
-                    </div>
+                    </a>
                   </div>
-                ))}
-              </Slider>
-            </div>
+                );
+              })}
+            </Slider>
           </div>
         </div>
-      </>
+      </div>
     );
   }
 }
 
 export default function MultipleItemsWrapper() {
-  const dataContext = useContext(DataContext);
-  const events: EventType[] = dataContext?.data?.events || [];
+  return <Carousels events={youtubeVideos} />;
+}
 
-  return <MultipleItems events={events} />;
+const youtubeVideos: YouTubeVideo[] = [
+  { youtubeUrl: "https://www.youtube.com/watch?v=84_ZMDgEPRA" },
+  { youtubeUrl: "https://www.youtube.com/watch?v=mWEX5Y1jLRw" },
+  { youtubeUrl: "https://www.youtube.com/watch?v=t4yRqIZIoX0" },
+  { youtubeUrl: "https://www.youtube.com/watch?v=T2-0zX2XM8E" },
+];
+
+// Helper function
+function getYouTubeId(url: string): string | null {
+  const regex = /(?:youtube\.com\/.*v=|youtu\.be\/)([^"&?/\s]{11})/;
+  const match = url.match(regex);
+  return match ? match[1] : null;
 }

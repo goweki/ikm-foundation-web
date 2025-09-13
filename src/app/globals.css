@@ -121,6 +121,24 @@ html {
 }
 
 /* 
+* MAP
+*/
+
+/* Target all paths inside the SVG group with id="regions" */
+svg g#regions path {
+  transition: transform 0.2s ease, fill 0.2s ease;
+  transform-origin: center;
+  fill: #cccccc;
+}
+
+/* Apply scale on hover */
+svg g#regions path:hover {
+  transform: scale(1.05);
+  stroke: none;
+  fill: currentColor;
+}
+
+/* 
 * FAQ
 */
 .faq-bg {

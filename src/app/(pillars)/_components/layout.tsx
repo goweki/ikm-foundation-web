@@ -3,8 +3,7 @@ import textConfig from "@/config/copy.json";
 import Link from "next/link";
 
 const applications = [
-  "scholarship",
-  "headstart",
+  "education",
   "healthcare",
   "vulnerable-group",
   "special-project",
@@ -164,23 +163,7 @@ const renderApplyLinks = (page: string) => {
         Apply Now
       </Link>
     );
-  else if (page == "education")
-    return (
-      <>
-        <Link
-          href={"/scholarship"}
-          className="btn-primary w-fit uppercase py-2 px-4 hover:scale-105 transition-all duration-200 ml-8 sm:ml-0"
-        >
-          Apply for scholarship
-        </Link>
-        <Link
-          href={"/headstart"}
-          className="btn-primary w-fit uppercase py-2 px-4 hover:scale-105 transition-all duration-200 ml-8 sm:ml-0"
-        >
-          Apply for Headstart Africa, Kenya
-        </Link>
-      </>
-    );
+  else if (page == "education") return null;
   else
     return (
       <>
