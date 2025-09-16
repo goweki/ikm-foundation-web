@@ -56,13 +56,13 @@ export default function Navbar() {
       <div className="flex-1 flex justify-between items-center">
         <Link href="/" className="text-xl font-bold">
           <div className="flex flex-row items-center justify-center">
-            <div className="w-10 h-10 m-2 mb-1">
+            <div className="w-14 h-14 -mb-1">
               <Logo />
             </div>
-            <p className="w-fit leading-none">
+            {/* <p className="w-fit leading-none">
               IKM <br />
               Foundation
-            </p>
+            </p> */}
           </div>
         </Link>
       </div>
