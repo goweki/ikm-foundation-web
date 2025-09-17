@@ -3,6 +3,9 @@ import textConfig from "@/config/copy.json";
 import Image from "next/image";
 import Link from "next/link";
 
+// /images/focus-areas/special_project_square.jpg
+//
+
 type Applications =
   | "education"
   | "headstart"

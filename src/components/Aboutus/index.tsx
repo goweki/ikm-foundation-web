@@ -51,7 +51,7 @@ const Aboutdata: datatype[] = [
   {
     title: "Special projects",
     imgSrc: "/images/about-us/stars_icon.svg",
-    backgroundImage: "/images/focus-areas/special_project_square.jpg",
+    backgroundImage: "/images/focus-areas/specialproject_square.jpg",
     description:
       "Building community resilience by supporting long term sustainability projects",
     href: "/special-project",
