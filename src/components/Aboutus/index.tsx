@@ -4,7 +4,6 @@ import Link from "next/link";
 interface datatype {
   title: string;
   description: string;
-  imgSrc: string;
   backgroundImage: string;
   href: string;
 }
@@ -12,7 +11,6 @@ interface datatype {
 const Aboutdata: datatype[] = [
   {
     title: "Education",
-    imgSrc: "/images/about-us/academic_icon.svg",
     backgroundImage: "/images/focus-areas/headstart_square.jpg",
     description:
       "Promoting access to education and opportunities for talented young people",
@@ -34,7 +32,6 @@ const Aboutdata: datatype[] = [
   // },
   {
     title: "Healthcare",
-    imgSrc: "/images/about-us/health_icon.svg",
     backgroundImage: "/images/focus-areas/health_square.jpg",
     description:
       "Improving access to life-saving interventions and support in our communities",
@@ -42,7 +39,6 @@ const Aboutdata: datatype[] = [
   },
   {
     title: "Vulnerable Groups",
-    imgSrc: "/images/about-us/vulnerable_icon.svg",
     backgroundImage: "/images/focus-areas/vulnerable_group_square.jpg",
     description:
       "Protecting dignity and stability of vulnerable persons and groups in communities",
@@ -50,7 +46,6 @@ const Aboutdata: datatype[] = [
   },
   {
     title: "Special projects",
-    imgSrc: "/images/about-us/stars_icon.svg",
     backgroundImage: "/images/focus-areas/specialproject_square.jpg",
     description:
       "Building community resilience by supporting long term sustainability projects",
