@@ -13,7 +13,7 @@ const Aboutdata: datatype[] = [
   {
     title: "Education",
     imgSrc: "/images/about-us/academic_icon.svg",
-    backgroundImage: "/images/focus-areas/headstart_banner.jpg",
+    backgroundImage: "/images/focus-areas/headstart_square.jpg",
     description:
       "Promoting access to education and opportunities for talented young people",
     href: "/education",
@@ -35,7 +35,7 @@ const Aboutdata: datatype[] = [
   {
     title: "Healthcare",
     imgSrc: "/images/about-us/health_icon.svg",
-    backgroundImage: "/images/focus-areas/health_banner.jpg",
+    backgroundImage: "/images/focus-areas/health_square.jpg",
     description:
       "Improving access to life-saving interventions and support in our communities",
     href: "/healthcare",
@@ -43,7 +43,7 @@ const Aboutdata: datatype[] = [
   {
     title: "Vulnerable Groups",
     imgSrc: "/images/about-us/vulnerable_icon.svg",
-    backgroundImage: "/images/focus-areas/vulnerable_group_banner.jpg",
+    backgroundImage: "/images/focus-areas/vulnerable_group_square.jpg",
     description:
       "Protecting dignity and stability of vulnerable persons and groups in communities",
     href: "/vulnerable-group",
@@ -51,7 +51,7 @@ const Aboutdata: datatype[] = [
   {
     title: "Special projects",
     imgSrc: "/images/about-us/stars_icon.svg",
-    backgroundImage: "/images/focus-areas/special_project_banner.jpg",
+    backgroundImage: "/images/focus-areas/special_project_square.jpg",
     description:
       "Building community resilience by supporting long term sustainability projects",
     href: "/special-project",
@@ -127,12 +127,44 @@ const Aboutus = () => {
 
           <div className="flex flex-wrap items-center justify-center mt-10 lg:mt-16 gap-4 lg:gap-8">
             {Aboutdata.map((item, i) => (
-              <Link
+              <article
+                key={i}
+                className="group relative aspect-video h-96 w-[36rem] overflow-hidden rounded-xl shadow-md hover:shadow-2xl"
+              >
+                {/* Background image */}
+                <img
+                  className="absolute inset-0 h-full w-full object-cover"
+                  src={item.backgroundImage}
+                  alt="Foundation Pillar"
+                />
+
+                {/* Dark overlay for hover */}
+                <div className="absolute inset-0 bg-black/20 transition-colors duration-300 ease-out group-hover:bg-black/50" />
+
+                {/* Gradient + content */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/0 to-transparent to-90% text-white transition-all duration-300 group-hover:bg-gradient-to-t group-hover:from-black/60 group-hover:transition-all group-hover:duration-500">
+                  <h2 className="absolute bottom-8 left-8 m-0 font-extrabold uppercase transition-all delay-300 duration-100 ease-out group-hover:bottom-1/2 group-hover:delay-0 group-hover:duration-300">
+                    {item.title}
+                  </h2>
+                  <p className="absolute left-8 top-1/2 line-clamp-3 max-w-[80%] pt-4 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100 group-hover:delay-500 group-hover:duration-300">
+                    {item.description}
+                  </p>
+                  <Link
+                    href={item.href}
+                    className="absolute bottom-8 left-8 max-w-[80%] rounded-lg border px-4 py-2 uppercase opacity-0 transition-opacity ease-out group-hover:opacity-100 group-hover:transition-opacity group-hover:delay-500 group-hover:duration-300 hover:border-blue-400 hover:text-blue-400"
+                  >
+                    find out more
+                  </Link>
+                </div>
+              </article>
+            ))}
+
+            {/* <Link
                 href={item.href}
                 key={i}
                 className="group relative overflow-hidden rounded-2xl shadow-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl"
               >
-                {/* <!-- Background Image --> */}
+               
                 <div
                   style={{
                     backgroundImage: `url('${item.backgroundImage}')`,
@@ -142,7 +174,7 @@ const Aboutus = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 </div>
 
-                {/* <!-- Glass overlay --> */}
+           
                 <div className="absolute inset-0 glass-effect opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
                 <div className="relative z-10 p-8 h-full flex flex-col justify-end">
@@ -162,8 +194,8 @@ const Aboutus = () => {
                     <p className="text-white/80 text-xs">{item.description}</p>
                   </div>
                 </div>
-              </Link>
-            ))}
+              </Link> */}
+
             {/* 
             alternatives
             */}

@@ -3,19 +3,20 @@ import textConfig from "@/config/copy.json";
 import Image from "next/image";
 import Link from "next/link";
 
-const applications = [
-  "education",
-  "healthcare",
-  "vulnerable-group",
-  "special-project",
-];
+type Applications =
+  | "education"
+  | "headstart"
+  | "scholarship"
+  | "healthcare"
+  | "vulnerable-group"
+  | "special-project";
 
 export default function PillarsLayout({
   children,
   page,
 }: {
   children: React.ReactNode;
-  page: (typeof applications)[number];
+  page: Applications;
 }) {
   const texts = textConfig.pages[page as keyof typeof textConfig.pages];
 
@@ -122,7 +123,7 @@ export default function PillarsLayout({
             <div className="my-4 border border-dotted"></div>
 
             {/* <!-- other applications --> */}
-            <div className="p-1 mt-4 mb-4">
+            {/* <div className="p-1 mt-4 mb-4">
               <p className="md:text-2xl">Other Applications</p>
               <ul className="ml-3">
                 {applications
@@ -140,10 +141,10 @@ export default function PillarsLayout({
                     );
                   })}
               </ul>
-            </div>
+            </div> */}
 
             {/* <!-- divider --> */}
-            <div className="border border-dotted"></div>
+            {/* <div className="border border-dotted"></div> */}
           </div>
         </div>
       </main>

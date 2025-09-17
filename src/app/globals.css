@@ -134,8 +134,8 @@ svg g#regions path {
 /* Apply scale on hover */
 svg g#regions path:hover {
   transform: scale(1.05);
-  stroke: none;
-  fill: currentColor;
+  fill: url(#riftValleyImage);
+  cursor: pointer;
 }
 
 /* 
