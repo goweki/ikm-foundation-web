@@ -60,17 +60,7 @@
 //   );
 // }
 
-export default function Logo({
-  fill = "none",
-  stroke,
-  strokeWidth = 5,
-  ...props
-}: {
-  fill?: string;
-  stroke?: string;
-  strokeWidth?: number;
-  props?: React.SVGProps<SVGSVGElement>;
-}) {
+export default function Logo() {
   return (
     <svg
       version="1.1"
