@@ -49,6 +49,17 @@ const FAQs = [
       "Students who have completed their KCSE and are transitioning to university. We prioritise academically promising students from low-income households, orphans, vulnerable children, and students with disabilities. Students must have been accepted to study law, IT or business-related program such as finance, marketing, commerce or accounting.",
   },
   {
+    question:
+      "Do I need to apply separately for the Head Start Africa Academy? ",
+    answer:
+      "No. All students accepted into Head Start Africa automatically participate in the Academy as part of their 5-year journey.",
+  },
+  {
+    question: "Do I have to pay to join the Academy?",
+    answer:
+      "No. The Academy is fully funded for all Head Start Africa Scholars and eligible applicants. No. The Academy is fully funded for all Head Start Africa Scholars and eligible applicants. A self-sponsored track is available for external participants from families able to contribute, with details shared in our July/August call for applications.",
+  },
+  {
     question: "Will the Program pay for all program expenses?",
     answer:
       "We will pay for all travel and accommodation costs relating to the placements and events, including the Head Start Africa Academy. We will work with you to arrange travel. Please be advised that the Head Start Africa, Kenya programme does not provide stipend for food costs or other living costs such as transport if living outside university housing. The support therefore includes only the following: 1. Tuition fees and accommodation costs (up to a certain amount) if unable to secure sufficient HEF or bursary funds  2. Laptop  3. Subscription for internet or relevant learning content if/when required  4. Travel, participation fees and related costs during the Head Start Academy and other training organised by us, work placements and DLA Piper (IKM) events  5. Business attire",

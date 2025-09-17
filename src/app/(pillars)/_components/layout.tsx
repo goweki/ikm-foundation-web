@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import textConfig from "@/config/copy.json";
+import Image from "next/image";
 import Link from "next/link";
 
 const applications = [
@@ -113,7 +114,8 @@ export default function PillarsLayout({
           {/* <!-- right sidebar --> */}
           <div className="w-full lg:w-1/3 p-3">
             <div className="flex flex-col space-y-2">
-              {renderApplyLinks(page)}
+              {/* {renderApplyLinks(page)} */}
+              {YouTubePreview(page)}
             </div>
 
             {/* <!-- divider --> */}
@@ -149,6 +151,57 @@ export default function PillarsLayout({
 
       {/* <!-- footer --> */}
       <Footer />
+    </div>
+  );
+}
+
+function getYouTubeId(url: string): string | null {
+  const regex = /(?:youtube\.com.*(?:\?|&)v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+  const match = url.match(regex);
+  return match ? match[1] : null;
+}
+
+function YouTubePreview(page: string) {
+  const url =
+    page == "scholarship"
+      ? "https://youtu.be/t4yRqIZIoX0"
+      : page === "headstart"
+      ? "https://youtu.be/mWEX5Y1jLRw"
+      : page === "healthcare"
+      ? "https://youtu.be/7sDaDhWrlvw"
+      : null;
+
+  if (!url) return null;
+  const videoId = getYouTubeId(url);
+  if (!videoId) return <p className="text-italic">missing link</p>;
+
+  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+
+  return (
+    <div className="flex flex-col">
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="px-6 py-2 rounded-md bg-moss self-left text-sm font-medium hover:bg-moss/90 transition"
+      >
+        Watch to learn more...
+      </a>
+
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block w-full max-w-md rounded-lg overflow-hidden shadow-md hover:shadow-lg transition"
+      >
+        <Image
+          src={thumbnailUrl}
+          alt="YouTube video preview"
+          width={480}
+          height={270}
+          className="w-full h-auto object-cover"
+        />
+      </a>
     </div>
   );
 }
