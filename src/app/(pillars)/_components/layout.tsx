@@ -114,7 +114,7 @@ export default function PillarsLayout({
           {/* <!-- right sidebar --> */}
           <div className="w-full lg:w-1/3 p-3">
             <div className="flex flex-col space-y-2">
-              {/* {renderApplyLinks(page)} */}
+              {renderApplyLinks(page)}
               {YouTubePreview(page)}
             </div>
 
@@ -173,27 +173,14 @@ function YouTubePreview(page: string) {
 
   if (!url) return null;
   const videoId = getYouTubeId(url);
-  if (!videoId) return <p className="text-italic">missing link</p>;
+  if (!videoId) return <p className="italic text-destructive">missing link</p>;
 
   const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
 
   return (
-    <div className="flex flex-col">
-      <a
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="px-6 py-2 rounded-md bg-moss self-left text-sm font-medium hover:bg-moss/90 transition"
-      >
-        Watch to learn more...
-      </a>
-
-      <a
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block w-full max-w-md rounded-lg overflow-hidden shadow-md hover:shadow-lg transition"
-      >
+    <div className="flex flex-col mt-8">
+      <Link href={url} target="_blank" rel="noopener noreferrer">
+        <span className="italic">Watch to learn more...</span>
         <Image
           src={thumbnailUrl}
           alt="YouTube video preview"
@@ -201,37 +188,37 @@ function YouTubePreview(page: string) {
           height={270}
           className="w-full h-auto object-cover"
         />
-      </a>
+      </Link>
     </div>
   );
 }
 
-// const renderApplyLinks = (page: string) => {
-//   if (page == "scholarship" || page === "headstart")
-//     return (
-//       <Link
-//         href={"/" + page + "/apply"}
-//         className="btn-primary w-fit uppercase py-2 px-4 hover:scale-105 transition-all duration-200 ml-8 sm:ml-0"
-//       >
-//         Apply Now
-//       </Link>
-//     );
-//   else if (page == "education") return null;
-//   else
-//     return (
-//       <>
-//         <Link
-//           href={"/grant"}
-//           className="btn-primary w-fit uppercase py-2 px-4 hover:scale-105 transition-all duration-200 ml-8 sm:ml-0"
-//         >
-//           Apply As Grant
-//         </Link>
-//         <Link
-//           href={"/fap"}
-//           className="btn-primary w-fit uppercase py-2 px-4 hover:scale-105 transition-all duration-200 ml-8 sm:ml-0"
-//         >
-//           Apply As Financial Assistance below 200k
-//         </Link>
-//       </>
-//     );
-// };
+const renderApplyLinks = (page: string) => {
+  if (page == "scholarship" || page === "headstart")
+    return (
+      <Link
+        href={"/" + page + "/apply"}
+        className="btn-primary w-fit uppercase py-2 px-4 hover:scale-105 transition-all duration-200 ml-8 sm:ml-0"
+      >
+        Apply Now
+      </Link>
+    );
+  else if (page == "education") return null;
+  else
+    return (
+      <>
+        <Link
+          href={"/grant"}
+          className="btn-primary w-fit uppercase py-2 px-4 hover:scale-105 transition-all duration-200 ml-8 sm:ml-0"
+        >
+          Apply As Grant
+        </Link>
+        <Link
+          href={"/fap"}
+          className="btn-primary w-fit uppercase py-2 px-4 hover:scale-105 transition-all duration-200 ml-8 sm:ml-0"
+        >
+          Apply As Financial Assistance below 200k
+        </Link>
+      </>
+    );
+};
