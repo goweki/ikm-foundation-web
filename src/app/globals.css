@@ -212,7 +212,6 @@ svg g#regions path:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
   overflow: hidden;
 }
 
@@ -222,7 +221,7 @@ svg g#regions path:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #365bff 0%, #8a34e0 100%);
   background-size: 400% 400%;
   animation: gradientShift 8s ease infinite;
 }
@@ -236,17 +235,13 @@ svg g#regions path:hover {
   height: 100%;
   background-image: radial-gradient(
       circle at 20% 80%,
-      rgba(120, 119, 198, 0.3) 0%,
+      rgba(100, 97, 255, 0.3) 0%,
       transparent 50%
     ),
-    radial-gradient(
-      circle at 80% 20%,
-      rgba(255, 119, 198, 0.3) 0%,
-      transparent 50%
-    ),
+    radial-gradient(circle at 80% 20%, rgba(0, 84, 99, 0.3) 0%, transparent 50%),
     radial-gradient(
       circle at 40% 40%,
-      rgba(120, 219, 255, 0.2) 0%,
+      rgba(58, 160, 197, 0.2) 0%,
       transparent 50%
     );
   animation: float 6s ease-in-out infinite;
@@ -521,6 +516,10 @@ svg g#regions path:hover {
     right: 0;
   }
 }
+
+/* PAYMENT DIALOG */
+
+/*  */
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

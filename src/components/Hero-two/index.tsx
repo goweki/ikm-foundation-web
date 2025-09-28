@@ -26,16 +26,17 @@ export default function Hero() {
 
       <div className="hero-content">
         {/* <h1 className="hero-title">Transform Your Vision Into Reality</h1> */}
-        <h1 className="hero-title my-8">
-          Improving Lives through Responsible
+        <h1 className="hero-title my-12">
+          Improving Lives through{" "}
+          <span className="!text-purple-500">Responsible</span>
           <br />
           Business
         </h1>
-        <p className="hero-subtitle">
+        {/* <p className="hero-subtitle">
           Discover innovative solutions that push boundaries and create
           extraordinary experiences. Join thousands who have already embarked on
           this transformative journey.
-        </p>
+        </p> */}
 
         {/* Dialog for Video */}
         <Dialog>

@@ -18,7 +18,6 @@
         "desc": "for IKMF Scholarship"
       },
       "description": "Supporting bright students from disadvantaged backgrounds access secondary school education",
-      "FAQ": [],
       "banner": "/images/focus-areas/scholarship_banner.jpg",
       "formImage": "/images/focus-areas/scholarship_square.jpg"
     },
@@ -28,7 +27,7 @@
         "action": "Apply",
         "desc": "for Head Start Africa, Kenya"
       },
-      "description": "Nurturing future professionals within the legal industry",
+      "description": "Supporting talented young people from low-income backgrounds succeed in legal careers",
       "FAQ": [],
       "banner": "/images/focus-areas/headstart_banner.jpg",
       "formImage": "/images/focus-areas/headstart_square.jpg"
@@ -40,7 +39,6 @@
         "desc": "for Medical Assistance"
       },
       "description": "Improving access to life-saving interventions and support in our communities",
-      "FAQ": [],
       "banner": "/images/focus-areas/health_banner.jpg",
       "formImage": "/images/focus-areas/health_square.jpg"
     },
@@ -62,7 +60,6 @@
         "desc": "as a Special Project"
       },
       "description": "Building community resilience by supporting long term sustainability projects",
-      "FAQ": [],
       "banner": "/images/focus-areas/special_project_banner.jpg",
       "formImage": "/images/focus-areas/special_project_banner.jpg"
     },
@@ -84,7 +81,6 @@
         "desc": "for Financial Assistance Program"
       },
       "description": "Supporting initiatives requiring Ksh. 200,000 or less",
-      "FAQ": [],
       "banner": "/images/focus-areas/special_project_banner.jpg",
       "formImage": "/images/focus-areas/form_banner.webp"
     }

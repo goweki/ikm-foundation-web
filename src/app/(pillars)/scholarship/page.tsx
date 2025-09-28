@@ -2,7 +2,7 @@
 
 import FAQcomponent from "@/components/atoms/faqComponent";
 import PillarsLayout from "../_components/layout";
-import { BookOpen, Check } from "lucide-react";
+import { BookOpen, Check, GraduationCap, Users, Wallet } from "lucide-react";
 
 const FAQs = [
   {
@@ -48,10 +48,30 @@ const eligibility = [
 ];
 
 const support = [
-  "school fees, mentorship and material support including tablets, uniforms, and setbooks",
-  "Supporting students from across Kenya, ensuring equal opportunities regardless of location",
-  "Currently supporting 61 students in their educational journey towards a brighter future",
-  "103 students successfully supported between 2015 and 2024, creating lasting change",
+  "Covers school fees",
+  "Mentorship",
+  "Material support e.g. tablet, uniforms, set books ",
+];
+
+const stats = [
+  {
+    number: "62",
+    description: "Currently supporting 62 students",
+    icon: Users,
+    bg: "bg-yellow-50",
+  },
+  {
+    number: "200",
+    description: "200 students supported between 2015 and 2024",
+    icon: GraduationCap,
+    bg: "bg-green-50",
+  },
+  {
+    number: "17M",
+    description: "Over 17M KES offered in scholarships",
+    icon: Wallet,
+    bg: "bg-orange-50",
+  },
 ];
 
 export default function Scholarship() {
@@ -74,7 +94,9 @@ export default function Scholarship() {
               financial need, with a focus on those from vulnerable households
               and orphaned children
             </p>
-
+            <p className="text-gray-600 font-bold mb-4 leading-relaxed">
+              What we offer
+            </p>
             <div className="space-y-3 mb-8">
               {support.map((item, i) => (
                 <div
@@ -85,6 +107,27 @@ export default function Scholarship() {
                   <span>{item}</span>
                 </div>
               ))}
+            </div>
+            <p className="text-gray-600 font-bold mb-4 leading-relaxed">
+              Stats
+            </p>
+            <div className="max-w-4xl mx-auto mb-8">
+              <dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
+                {stats.map(({ number, description, icon: Icon, bg }, i) => (
+                  <div
+                    key={i}
+                    className={`flex flex-col items-center justify-center p-6 text-center sm:border-0 sm:border-r last:border-r-0 ${bg}`}
+                  >
+                    <Icon className="w-8 h-8 text-gray-700 mb-3" />
+                    <dd className="order-1 text-3xl font-extrabold text-gray-800">
+                      {number}
+                    </dd>
+                    <dt className="order-2 text-sm mt-2 leading-6 text-gray-600">
+                      {description}
+                    </dt>
+                  </div>
+                ))}
+              </dl>
             </div>
             <p className="text-gray-600 font-bold mb-4 leading-relaxed">
               Eligibility

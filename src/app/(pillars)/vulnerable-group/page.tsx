@@ -1,12 +1,27 @@
 import FAQcomponent from "@/components/atoms/faqComponent";
 import PillarsLayout from "../_components/layout";
-import { Heart } from "lucide-react";
+import { Handshake, Heart, UserRoundPlus } from "lucide-react";
 
 const support = [
   "Donating food and essentials to children’s homes",
   "Renovation and solar power installation at Nyumba ya Wazee",
   "Construction of school blocks and dormitories for disadvantaged learners through Amara Charitable Trust",
   "Providing academic materials and essential items for visually impaired students at Thika School for the Visually Impaired",
+];
+
+const stats = [
+  {
+    number: "2M",
+    description: "Over 2M KES in donations and in-kind support",
+    icon: Handshake,
+    bg: "bg-yellow-50",
+  },
+  {
+    number: "5",
+    description: "Over 500 beneficiaries",
+    icon: UserRoundPlus,
+    bg: "bg-green-50",
+  },
 ];
 
 const FAQs = [
@@ -60,22 +75,27 @@ export default function VulnerableGroup() {
               ))}
             </div>
 
-            {/* <div className="space-y-4">
-              <Link
-                href="/grant"
-                className="group inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-4 px-6 rounded-xl transition-all duration-300 hover:scale-[1.02]"
-              >
-                Apply for Grant
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
-              <Link
-                href="/fap"
-                className="group inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-4 px-6 rounded-xl transition-all duration-300 hover:scale-[1.02]"
-              >
-                Apply for Financial Assistance below 200K
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
-            </div> */}
+            <p className="text-gray-600 font-bold mb-4 leading-relaxed">
+              Stats
+            </p>
+            <div className="max-w-4xl mx-auto mb-8">
+              <dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
+                {stats.map(({ number, description, icon: Icon, bg }, i) => (
+                  <div
+                    key={i}
+                    className={`flex flex-col items-center justify-center p-6 text-center sm:border-0 sm:border-r last:border-r-0 ${bg}`}
+                  >
+                    <Icon className="w-8 h-8 text-gray-700 mb-3" />
+                    <dd className="order-1 text-3xl font-extrabold text-gray-800">
+                      {number}
+                    </dd>
+                    <dt className="order-2 text-sm mt-2 leading-6 text-gray-600">
+                      {description}
+                    </dt>
+                  </div>
+                ))}
+              </dl>
+            </div>
           </div>
         </div>
         <br />

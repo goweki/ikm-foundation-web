@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import textConfig from "@/config/copy.json";
+
 interface datatype {
   title: string;
   description: string;
@@ -12,43 +14,25 @@ const Aboutdata: datatype[] = [
   {
     title: "Education",
     backgroundImage: "/images/focus-areas/headstart_square.jpg",
-    description:
-      "Promoting access to education and opportunities for talented young people",
+    description: textConfig.pages.education.description,
     href: "/education",
   },
-  // {
-  //   title: "IKMF Scholarship",
-  //   imgSrc: "/images/about-us/academic_icon.svg",
-  //   description:
-  //     "Increasing access to learning for children from disadvantages environments",
-  //   href: "/scholarship",
-  // },
-  // {
-  //   title: "Head Start Africa",
-  //   imgSrc: "/images/about-us/mentor_icon.svg",
-  //   description:
-  //     "Nurturing future professionals by diversifying pathways to the legal profession",
-  //   href: "/headstart",
-  // },
   {
     title: "Healthcare",
     backgroundImage: "/images/focus-areas/health_square.jpg",
-    description:
-      "Improving access to life-saving interventions and support in our communities",
+    description: textConfig.pages.healthcare.description,
     href: "/healthcare",
   },
   {
     title: "Vulnerable Groups",
     backgroundImage: "/images/focus-areas/vulnerable_group_square.jpg",
-    description:
-      "Protecting dignity and stability of vulnerable persons and groups in communities",
+    description: textConfig.pages["vulnerable-group"].description,
     href: "/vulnerable-group",
   },
   {
     title: "Special projects",
     backgroundImage: "/images/focus-areas/specialproject_square.jpg",
-    description:
-      "Building community resilience by supporting long term sustainability projects",
+    description: textConfig.pages["special-project"].description,
     href: "/special-project",
   },
 ];

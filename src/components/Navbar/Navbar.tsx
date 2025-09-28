@@ -6,6 +6,7 @@ import Link from "next/link";
 import Logo from "../Logos/ikmf";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import Image from "next/image";
+import DonateModal from "../atoms/DonateModal";
 
 interface NavItem {
   label: string;
@@ -116,6 +117,7 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
+            <DonateModal />
           </ul>
         </nav>
       </div>
@@ -137,6 +139,9 @@ export default function Navbar() {
                   </Link>
                 </li>
               ))}
+              <li className="pt-2 pl-2">
+                <DonateModal />
+              </li>
             </ul>
           </nav>
         </div>

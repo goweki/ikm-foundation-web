@@ -68,8 +68,7 @@ export default function Headstart() {
                   </h2>
 
                   <p className="text-gray-600 mb-6 leading-relaxed">
-                    Nurturing future professionals within the legal field and
-                    beyond
+                    Nurturing future professionals within the legal industry
                   </p>
 
                   <div className="space-y-3 mb-8">

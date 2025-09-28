@@ -24,7 +24,7 @@ export default function PillarsLayout({
   const texts = textConfig.pages[page as keyof typeof textConfig.pages];
 
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto min-h-screen flex flex-col">
       <nav
         aria-label="breadcrumb"
         className="fixed top-0 left-0 w-full p-4 z-30 bg-gray-800/80 text-gray-200 backdrop-blur-md py-4 flex flex-wrap items-center shadow-sm"
@@ -83,7 +83,7 @@ export default function PillarsLayout({
         </div>
       </nav>
 
-      <main className="pt-16">
+      <main className="pt-16 flex flex-col flex-1 border-x-1 border-gray-200">
         <div className="block">
           <div
             className="mb-4 md:mb-0 w-full relative inline-block"

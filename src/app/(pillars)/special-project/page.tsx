@@ -1,11 +1,54 @@
 import FAQcomponent from "@/components/atoms/faqComponent";
 import PillarsLayout from "../_components/layout";
-import { Heart } from "lucide-react";
+import { Heart, UserRoundPlus } from "lucide-react";
 
 const support = [
   "Fundraising for Palmhouse Foundation and Starehe Girls",
   "Sports, disability inclusion, and school infrastructure projects",
   "Drilling a borehole for water access in Kitale",
+];
+
+const stats = [
+  {
+    number: "2,000+",
+    description: "2,000+ beneficiaries ",
+    icon: UserRoundPlus,
+    bg: "bg-yellow-50",
+  },
+  {
+    number: "7M+",
+    description: "7M+ KES in donations and in-kind support ",
+    icon: UserRoundPlus,
+    bg: "bg-green-50",
+  },
+];
+
+const impact = [
+  {
+    number: "2,000",
+    description: "2,000 beneficiaries",
+    icon: UserRoundPlus,
+    bg: "bg-yellow-50",
+  },
+  {
+    number: "5+",
+    description: "5+ development projects",
+    icon: UserRoundPlus,
+    bg: "bg-green-50",
+  },
+  {
+    number: "47M+",
+    description:
+      "47M+ KES invested in education and community support programs",
+    icon: UserRoundPlus,
+    bg: "bg-green-50",
+  },
+  {
+    number: "230+",
+    description: "230+ Scholars",
+    icon: UserRoundPlus,
+    bg: "bg-green-50",
+  },
 ];
 
 const FAQs = [
@@ -57,22 +100,49 @@ export default function VulnerableGroup() {
               ))}
             </div>
 
-            {/* <div className="space-y-4">
-              <Link
-                href="/grant"
-                className="group inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-4 px-6 rounded-xl transition-all duration-300 hover:scale-[1.02]"
-              >
-                Apply for Grant
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
-              <Link
-                href="/fap"
-                className="group inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-4 px-6 rounded-xl transition-all duration-300 hover:scale-[1.02]"
-              >
-                Apply for Financial Assistance below 200K
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
-            </div> */}
+            <p className="text-gray-600 font-bold mb-4 leading-relaxed">
+              Stats
+            </p>
+            <div className="max-w-4xl mx-auto mb-8">
+              <dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
+                {stats.map(({ number, description, icon: Icon, bg }, i) => (
+                  <div
+                    key={i}
+                    className={`flex flex-col items-center justify-center p-6 text-center sm:border-0 sm:border-r last:border-r-0 ${bg}`}
+                  >
+                    <Icon className="w-8 h-8 text-gray-700 mb-3" />
+                    <dd className="order-1 text-3xl font-extrabold text-gray-800">
+                      {number}
+                    </dd>
+                    <dt className="order-2 text-sm mt-2 leading-6 text-gray-600">
+                      {description}
+                    </dt>
+                  </div>
+                ))}
+              </dl>
+            </div>
+
+            <p className="text-gray-600 font-bold mb-4 leading-relaxed">
+              Impact
+            </p>
+            <div className="max-w-4xl mx-auto mb-8">
+              <dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
+                {impact.map(({ number, description, icon: Icon, bg }, i) => (
+                  <div
+                    key={i}
+                    className={`flex flex-col items-center justify-center p-6 text-center sm:border-0 sm:border-r last:border-r-0 ${bg}`}
+                  >
+                    <Icon className="w-8 h-8 text-gray-700 mb-3" />
+                    <dd className="order-1 text-3xl font-extrabold text-gray-800">
+                      {number}
+                    </dd>
+                    <dt className="order-2 text-sm mt-2 leading-6 text-gray-600">
+                      {description}
+                    </dt>
+                  </div>
+                ))}
+              </dl>
+            </div>
           </div>
         </div>
         <br />

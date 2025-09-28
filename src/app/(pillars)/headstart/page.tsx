@@ -1,8 +1,47 @@
 import FAQcomponent from "@/components/atoms/faqComponent";
 import PillarsLayout from "../_components/layout";
-import { BookOpen, Check, TrendingUp, DoorOpen } from "lucide-react";
+import {
+  BookOpen,
+  Check,
+  DoorOpen,
+  Users,
+  GraduationCap,
+  Venus,
+} from "lucide-react";
+import Link from "next/link";
 
-const support = [
+// const support = [
+//   "Leadership and self-awareness",
+//   "Goal setting and personal vision",
+//   "Responsible relationships",
+//   "Employability and professional skills",
+//   "Healthy living and resilience",
+//   "Critical thinking and problem solving",
+// ];
+
+const eligibility = [
+  "A Recent high school graduate: KCSE or equivalent",
+  "Aged 18–20",
+  "Come from a low-income household; is orphaned or vulnerable; is living with disability",
+  "Have an interest to pursue a legal career or law-related career such as business-related studies (finance, accounting, economics etc) or IT ",
+  "Scored in the 70th percentile in KCSE based on school and background (B+ and above, B minimum will be considered for those from traditionally marginalised communities) ",
+  "Maintained good grades in senior secondary based on school and background (B+ and above, B minimum will be considered for those from traditionally marginalised communities) ",
+  "Attended a government public secondary school",
+  "Completed the application form",
+  "Have a leadership and moral fitness letter from the secondary school",
+  "Have a letter from the local Chief",
+
+  "Have a university admission letter, if already admitted to university ",
+];
+
+const programmeDetails = {
+  location: "Camp Malta, Sagana",
+  duration: "2 weeks in August",
+  selection:
+    " All students accepted into Head Start Africa automatically participate in the Academy. We also welcome a limited number of self-sponsored participants. These are external applicants whose contributions help sustain the Academy and expand opportunities for under-served youth",
+};
+
+const whyJoin = [
   "Leadership and self-awareness",
   "Goal setting and personal vision",
   "Responsible relationships",
@@ -11,35 +50,31 @@ const support = [
   "Critical thinking and problem solving",
 ];
 
-const eligibility = [
-  "A Recent high school graduate: (KCSE/IGCSE) or equivalent",
-  "Aged 18–20",
-  "Committed to personal growth and responsible citizenship",
-  "Come from a low-income household; is orphaned or vulnerable; is living with disability",
-  "Have an interest to pursue a legal career or law-related career such as finance or IT",
-  "Scored in the 70th percentile in KCSE based on school and background (B+ and above, B minimum will be considered for those from traditionally marginalised communities)",
-  "Maintained good grades based on school and background (B+ and above, B minimum will be considered for those from traditionally marginalised communities)",
-  "Attended a government public secondary school",
-  "Completed the application form",
-  "Have a leadership and moral fitness letter from the secondary school",
-  "Have a letter from the local Chief",
-  "Have a university admission letter, if already admitted to university",
-];
-
-const programmeDetails = {
-  location: "Camp Malta, Sagana",
-  duration: "2 weeks in August",
-  cost: "KES 65,000 (includes return transport from Nairobi, food, accommodation, facilitation)",
-  applicationPeriod: "Opens in July, closes early August",
-  selection:
-    "Based on application form, motivation and alignment for the programme, and availability of spots",
-};
-
-const whyJoin = [
-  "Build skills that last a lifetime",
-  "Prepare for university and career",
-  "Join a growing community of passionate changemakers",
-  "Receive a certificate of participation",
+const stats = [
+  {
+    number: "32",
+    description: "32 Scholars enrolled in 11 Kenyan universities",
+    icon: Users,
+    bg: "bg-yellow-50",
+  },
+  {
+    number: "5",
+    description: "5-year structured programme",
+    icon: GraduationCap,
+    bg: "bg-green-50",
+  },
+  {
+    number: "14M+",
+    description: "14M+ KES in sponsorships",
+    icon: GraduationCap,
+    bg: "bg-green-50",
+  },
+  {
+    number: "17M",
+    description: ">70% are young women",
+    icon: Venus,
+    bg: "bg-orange-50",
+  },
 ];
 
 const FAQs = [
@@ -111,15 +146,28 @@ export default function Headstart() {
 
           <div className="relative p-8">
             <p className="text-gray-600 mb-6 leading-relaxed">
-              The Head Start Africa Academy is a transformative three-week
-              adventure bootcamp designed to ignite leadership, confidence, and
-              critical life skills in ambitious youth. Held annually in Sagana,
-              Kenya, the Academy blends outdoor adventure, workshops, and peer
-              collaboration to help participants discover who they are—and who
-              they can become. What You&apos;ll Learn:
+              Part of DLA Piper’s global{" "}
+              <Link href="https://www.dlapiper.com/en/about-us/sustainability/head-start-program">
+                Head Start
+              </Link>{" "}
+              initiative, this transformative five-year programme supports
+              talented youth from low-income backgrounds. It provides
+              scholarships to study law, IT, or business; career development
+              training through the annual Head Start Africa Academy; mentorship;
+              financial support; work placements; and networking opportunities.
+              Students who are selected to be part of the program are called
+              Scholars.
+            </p>
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              The Head Start Africa Academy is a transformative two-week
+              adventure bootcamp designed to develop leadership, confidence, and
+              critical life skills in young people. Held annually in Sagana,
+              Kenya, the Academy blends outdoor adventure, experiential
+              workshops, and peer collaboration to help participants discover
+              who they are—and who they can become.
             </p>
 
-            <div className="space-y-3 mb-8">
+            {/* <div className="space-y-3 mb-8">
               {support.map((item, i) => (
                 <div
                   key={i}
@@ -129,10 +177,14 @@ export default function Headstart() {
                   <span>{item}</span>
                 </div>
               ))}
-            </div>
+            </div> */}
 
             <p className="text-gray-600 font-bold mb-4 leading-relaxed">
               Eligibility
+            </p>
+
+            <p className="text-gray-600 mb-2 leading-relaxed">
+              To be eligible for Head Start Africa, one must be:{" "}
             </p>
 
             <div className="space-y-3 mb-8">
@@ -173,6 +225,9 @@ export default function Headstart() {
             <p className="text-gray-600 font-bold mb-4 leading-relaxed">
               Why Join
             </p>
+            <p className="text-gray-600 mb-2 leading-relaxed">
+              Through the Head Start Africa Academy, you&apos;ll learn:{" "}
+            </p>
 
             <div className="space-y-3 mb-8">
               {whyJoin.map((item, i) => (
@@ -186,13 +241,27 @@ export default function Headstart() {
               ))}
             </div>
 
-            {/* <Link
-              href="/headstart/apply"
-              className="group inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-4 px-6 rounded-xl transition-all duration-300 hover:scale-[1.02]"
-            >
-              Apply for Headstart
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-            </Link> */}
+            <p className="text-gray-600 font-bold mb-4 leading-relaxed">
+              Stats
+            </p>
+            <div className="max-w-4xl mx-auto mb-8">
+              <dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
+                {stats.map(({ number, description, icon: Icon, bg }, i) => (
+                  <div
+                    key={i}
+                    className={`flex flex-col items-center justify-center p-6 text-center sm:border-0 sm:border-r last:border-r-0 ${bg}`}
+                  >
+                    <Icon className="w-8 h-8 text-gray-700 mb-3" />
+                    <dd className="order-1 text-3xl font-extrabold text-gray-800">
+                      {number}
+                    </dd>
+                    <dt className="order-2 text-sm mt-2 leading-6 text-gray-600">
+                      {description}
+                    </dt>
+                  </div>
+                ))}
+              </dl>
+            </div>
           </div>
         </div>
         <br />
