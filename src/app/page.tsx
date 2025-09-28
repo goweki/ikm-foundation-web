@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Banner from "@/components/Banner";
+// import Banner from "@/components/Banner";
+import Hero from "@/components/Hero-two";
 import Aboutus from "@/components/Aboutus";
 import OurReach from "@/components/OurReach";
 import FAQ from "@/components/FAQ";
@@ -12,7 +13,8 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Banner />
+      {/* <Banner /> */}
+      <Hero />
       <Aboutus />
       <div className="testimonials-bg">
         <Testimonials />
