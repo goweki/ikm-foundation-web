@@ -77,7 +77,7 @@ export default function PillarsLayout({
               >
                 <path d="M32 30.031h-32l16-28.061z"></path>
               </svg>
-              <span className="flex items-center px-1">{page}</span>
+              <span className="flex items-center px-1 uppercase">{page}</span>
             </li>
           </ol>
         </div>
