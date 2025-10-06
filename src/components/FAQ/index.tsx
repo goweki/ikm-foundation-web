@@ -32,17 +32,13 @@ const faqData: { label: string; href: string; icon: React.ReactNode }[] = [
 const FAQ = () => {
   return (
     <>
-      <h2 className="font-light text-4xl lg:text-6xl text-center text-moss mb-12 px-4">
-        Frequently asked questions
-      </h2>
       <div
         id="faq"
         className="mx-auto max-w-7xl py-24 lg:px-8 bg-blue-800 rounded-2xl my-16 faq-bg"
       >
-        <h3 className="text-xl font-normal text-white text-center mb-6">
-          FAQs by category{" "}
-        </h3>
-
+        <h2 className="font-light text-4xl lg:text-6xl text-center text-moss mb-12 px-4 text-white">
+          Frequently Asked Questions
+        </h2>
         <div className="w-full px-4 pt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
           {faqData.map((item, index) => (
             <Link
