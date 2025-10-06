@@ -221,7 +221,7 @@ svg g#regions path:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #365bff 0%, #8a34e0 100%);
+  background: linear-gradient(135deg, #2a3c90 0%, #13246e 100%);
   background-size: 400% 400%;
   animation: gradientShift 8s ease infinite;
 }
@@ -311,7 +311,7 @@ svg g#regions path:hover {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  animation: titleGlow 2s ease-in-out infinite alternate;
+  /* animation: titleGlow 2s ease-in-out infinite alternate; */
 }
 
 @keyframes titleGlow {
