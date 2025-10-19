@@ -7,9 +7,10 @@
         "desc": "for Education Support"
       },
       "description": "Promoting access to education and opportunities for talented young people",
-      "FAQ": [],
       "banner": "/images/focus-areas/scholarship_banner.jpg",
-      "formImage": "/images/focus-areas/scholarship_square.jpg"
+      "formImage": "/images/focus-areas/scholarship_square.jpg",
+      "FAQ": [],
+      "stats": []
     },
     "scholarship": {
       "title": "IKMF Scholarship",
@@ -19,7 +20,28 @@
       },
       "description": "Supporting bright students from disadvantaged backgrounds access secondary school education",
       "banner": "/images/focus-areas/scholarship_banner.jpg",
-      "formImage": "/images/focus-areas/scholarship_square.jpg"
+      "formImage": "/images/focus-areas/scholarship_square.jpg",
+      "FAQ": [],
+      "stats": [
+        {
+          "number": "62",
+          "description": "Currently supporting 62 students",
+          "icon": "GraduationCap",
+          "bg": "bg-yellow-50"
+        },
+        {
+          "number": "200",
+          "description": "200 students supported between 2015 and 2024",
+          "icon": "Users",
+          "bg": "bg-green-50"
+        },
+        {
+          "number": "17M",
+          "description": "Over 17M KES offered in scholarships",
+          "icon": "Wallet",
+          "bg": "bg-orange-50"
+        }
+      ]
     },
     "headstart": {
       "title": "Head Start Africa",
@@ -28,9 +50,35 @@
         "desc": "for Head Start Africa, Kenya"
       },
       "description": "Supporting talented young people from low-income backgrounds succeed in legal careers",
-      "FAQ": [],
       "banner": "/images/focus-areas/headstart_banner.jpg",
-      "formImage": "/images/focus-areas/headstart_square.jpg"
+      "formImage": "/images/focus-areas/headstart_square.jpg",
+      "FAQ": [],
+      "stats": [
+        {
+          "number": "32",
+          "description": "32 Scholars enrolled in 11 Kenyan universities",
+          "icon": "Users",
+          "bg": "bg-yellow-50"
+        },
+        {
+          "number": "5",
+          "description": "5-year structured programme",
+          "icon": "GraduationCap",
+          "bg": "bg-green-50"
+        },
+        {
+          "number": "14M+",
+          "description": "14M+ KES in sponsorships",
+          "icon": "Wallet",
+          "bg": "bg-green-50"
+        },
+        {
+          "number": "17M",
+          "description": ">70% are young women",
+          "icon": "Venus",
+          "bg": "bg-orange-50"
+        }
+      ]
     },
     "healthcare": {
       "title": "Medical Assistance",
@@ -40,7 +88,9 @@
       },
       "description": "Improving access to life-saving interventions and support in our communities",
       "banner": "/images/focus-areas/health_banner.jpg",
-      "formImage": "/images/focus-areas/health_square.jpg"
+      "formImage": "/images/focus-areas/health_square.jpg",
+      "FAQ": [],
+      "stats": []
     },
     "vulnerable-group": {
       "title": "Vulnerable Groups",
@@ -49,9 +99,23 @@
         "desc": "to improve lives"
       },
       "description": "Supporting persons living in vulnerable conditions through partnering with care homes, schools, and shelters to improve living conditions and restore dignity.",
-      "FAQ": [],
       "banner": "/images/focus-areas/vulnerable_group_banner.jpg",
-      "formImage": "/images/focus-areas/vulnerable_group_square.jpg"
+      "formImage": "/images/focus-areas/vulnerable_group_square.jpg",
+      "FAQ": [],
+      "stats": [
+        {
+          "number": "2M",
+          "description": "Over 2M KES in donations and in-kind support",
+          "icon": "Handshake",
+          "bg": "bg-yellow-50"
+        },
+        {
+          "number": "5",
+          "description": "Over 500 beneficiaries",
+          "icon": "UserRoundPlus",
+          "bg": "bg-green-50"
+        }
+      ]
     },
     "special-project": {
       "title": "Special Projects",
@@ -61,7 +125,22 @@
       },
       "description": "Building community resilience by supporting long term sustainability projects",
       "banner": "/images/focus-areas/special_project_banner.jpg",
-      "formImage": "/images/focus-areas/special_project_banner.jpg"
+      "formImage": "/images/focus-areas/special_project_banner.jpg",
+      "FAQ": [],
+      "stats": [
+        {
+          "number": "2,000+",
+          "description": "2,000+ beneficiaries ",
+          "icon": "Users",
+          "bg": "bg-yellow-50"
+        },
+        {
+          "number": "7M+",
+          "description": "7M+ KES in donations and in-kind support ",
+          "icon": "Wallet",
+          "bg": "bg-green-50"
+        }
+      ]
     },
     "grant": {
       "title": "Grant Funding",
@@ -70,9 +149,10 @@
         "desc": "for Grant Funding"
       },
       "description": "Supporting projects that require more than Ksh. 200,000",
-      "FAQ": [],
       "banner": "/images/focus-areas/special_project_banner.jpg",
-      "formImage": "/images/focus-areas/form_banner.webp"
+      "formImage": "/images/focus-areas/form_banner.webp",
+      "FAQ": [],
+      "stats": []
     },
     "fap": {
       "title": "Financial Assistance",
@@ -82,7 +162,9 @@
       },
       "description": "Supporting initiatives requiring Ksh. 200,000 or less",
       "banner": "/images/focus-areas/special_project_banner.jpg",
-      "formImage": "/images/focus-areas/form_banner.webp"
+      "formImage": "/images/focus-areas/form_banner.webp",
+      "FAQ": [],
+      "stats": []
     }
   }
 }
