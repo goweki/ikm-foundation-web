@@ -241,9 +241,9 @@ export default function Headstart() {
               ))}
             </div>
 
-            <p className="text-gray-600 font-bold mb-4 leading-relaxed">
+            {/* <p className="text-gray-600 font-bold mb-4 leading-relaxed">
               Stats
-            </p>
+            </p> */}
             <div className="max-w-4xl mx-auto mb-8">
               <dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
                 {stats.map(({ number, description, icon: Icon, bg }, i) => (
