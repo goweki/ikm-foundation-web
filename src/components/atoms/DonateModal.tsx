@@ -83,7 +83,7 @@ const DonateModal = ({ buttonLocation = "default" }) => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-slate-200 bg-opacity-25" />
+            <div className="fixed inset-0 bg-foreground/90" />
           </TransitionChild>
 
           <div className="fixed inset-0 overflow-y-auto">
@@ -97,9 +97,9 @@ const DonateModal = ({ buttonLocation = "default" }) => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <DialogPanel className="w-full max-w-md transform overflow-hidden rounded-2xl p-6 text-left align-middle shadow-xl transition-all">
+                <DialogPanel className="w-full max-w-md transform overflow-hidden rounded-2xl p-6 text-left align-middle shadow-xl transition-all bg-card">
                   {/*Header Snippet */}
-                  <div className="relative -mt-6 -mx-6 px-6 py-8 bg-gradient-to-br from-blue-500 via-purple-600 to-indigo-700 overflow-hidden">
+                  <div className="relative -mt-6 -mx-6 px-6 py-8 bg-gradient-to-br from-blue-600 via-blue-800 to-blue-900 overflow-hidden">
                     {/* Animated Background Elements */}
                     <div className="absolute inset-0 opacity-20">
                       <div className="floating-orb absolute top-2 left-4 w-32 h-32 bg-white rounded-full blur-3xl"></div>
