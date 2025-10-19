@@ -1,23 +1,7 @@
 import FAQcomponent from "@/components/atoms/faqComponent";
 import PillarsLayout from "../_components/layout";
-import {
-  BookOpen,
-  Check,
-  DoorOpen,
-  Users,
-  GraduationCap,
-  Venus,
-} from "lucide-react";
+import { BookOpen, Check, DoorOpen } from "lucide-react";
 import Link from "next/link";
-
-// const support = [
-//   "Leadership and self-awareness",
-//   "Goal setting and personal vision",
-//   "Responsible relationships",
-//   "Employability and professional skills",
-//   "Healthy living and resilience",
-//   "Critical thinking and problem solving",
-// ];
 
 const eligibility = [
   "A Recent high school graduate: KCSE or equivalent",
@@ -48,33 +32,6 @@ const whyJoin = [
   "Employability and professional skills",
   "Healthy living and resilience",
   "Critical thinking and problem solving",
-];
-
-const stats = [
-  {
-    number: "32",
-    description: "32 Scholars enrolled in 11 Kenyan universities",
-    icon: Users,
-    bg: "bg-yellow-50",
-  },
-  {
-    number: "5",
-    description: "5-year structured programme",
-    icon: GraduationCap,
-    bg: "bg-green-50",
-  },
-  {
-    number: "14M+",
-    description: "14M+ KES in sponsorships",
-    icon: GraduationCap,
-    bg: "bg-green-50",
-  },
-  {
-    number: "17M",
-    description: ">70% are young women",
-    icon: Venus,
-    bg: "bg-orange-50",
-  },
 ];
 
 const FAQs = [
@@ -239,28 +196,6 @@ export default function Headstart() {
                   <span>{item}</span>
                 </div>
               ))}
-            </div>
-
-            {/* <p className="text-gray-600 font-bold mb-4 leading-relaxed">
-              Stats
-            </p> */}
-            <div className="max-w-4xl mx-auto mb-8">
-              <dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
-                {stats.map(({ number, description, icon: Icon, bg }, i) => (
-                  <div
-                    key={i}
-                    className={`flex flex-col items-center justify-center p-6 text-center sm:border-0 sm:border-r last:border-r-0 ${bg}`}
-                  >
-                    <Icon className="w-8 h-8 text-gray-700 mb-3" />
-                    <dd className="order-1 text-3xl font-extrabold text-gray-800">
-                      {number}
-                    </dd>
-                    <dt className="order-2 text-sm mt-2 leading-6 text-gray-600">
-                      {description}
-                    </dt>
-                  </div>
-                ))}
-              </dl>
             </div>
           </div>
         </div>

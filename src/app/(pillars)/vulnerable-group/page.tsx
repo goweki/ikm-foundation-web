@@ -9,21 +9,6 @@ const support = [
   "Providing academic materials and essential items for visually impaired students at Thika School for the Visually Impaired",
 ];
 
-const stats = [
-  {
-    number: "2M",
-    description: "Over 2M KES in donations and in-kind support",
-    icon: Handshake,
-    bg: "bg-yellow-50",
-  },
-  {
-    number: "5",
-    description: "Over 500 beneficiaries",
-    icon: UserRoundPlus,
-    bg: "bg-green-50",
-  },
-];
-
 const FAQs = [
   {
     question: "What kind of support does IKMF provide to vulnerable groups?",
@@ -73,28 +58,6 @@ export default function VulnerableGroup() {
                   <span>{item}</span>
                 </div>
               ))}
-            </div>
-
-            {/* <p className="text-gray-600 font-bold mb-4 leading-relaxed">
-              Stats
-            </p> */}
-            <div className="max-w-4xl mx-auto mb-8">
-              <dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
-                {stats.map(({ number, description, icon: Icon, bg }, i) => (
-                  <div
-                    key={i}
-                    className={`flex flex-col items-center justify-center p-6 text-center sm:border-0 sm:border-r last:border-r-0 ${bg}`}
-                  >
-                    <Icon className="w-8 h-8 text-gray-700 mb-3" />
-                    <dd className="order-1 text-3xl font-extrabold text-gray-800">
-                      {number}
-                    </dd>
-                    <dt className="order-2 text-sm mt-2 leading-6 text-gray-600">
-                      {description}
-                    </dt>
-                  </div>
-                ))}
-              </dl>
             </div>
           </div>
         </div>

@@ -1,10 +1,25 @@
 import Footer from "@/components/Footer";
 import textConfig from "@/config/copy.json";
+import { Page } from "@/config/types";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  Handshake,
+  UserRoundPlus,
+  Users,
+  GraduationCap,
+  Venus,
+  Wallet,
+} from "lucide-react";
 
-// /images/focus-areas/special_project_square.jpg
-//
+const iconMap: Record<string, React.ElementType> = {
+  Handshake,
+  UserRoundPlus,
+  Users,
+  GraduationCap,
+  Venus,
+  Wallet,
+};
 
 type Applications =
   | "education"
@@ -21,7 +36,8 @@ export default function PillarsLayout({
   children: React.ReactNode;
   page: Applications;
 }) {
-  const texts = textConfig.pages[page as keyof typeof textConfig.pages];
+  const texts = textConfig.pages[page as keyof typeof textConfig.pages] as Page;
+  const stats = texts.stats;
 
   return (
     <div className="max-w-7xl mx-auto min-h-screen flex flex-col">
@@ -125,26 +141,26 @@ export default function PillarsLayout({
             {/* <!-- divider --> */}
             <div className="my-4 border border-dotted"></div>
 
-            {/* <!-- other applications --> */}
-            {/* <div className="p-1 mt-4 mb-4">
-              <p className="md:text-2xl">Other Applications</p>
-              <ul className="ml-3">
-                {applications
-                  .filter((option) => option !== page)
-                  .map((option, index) => {
-                    return (
-                      <li key={index} className="my-4">
-                        <Link
-                          href={`/${option}`}
-                          className="w-40 flex items-center hover:underline bg-white px-1 py-1 rounded-md text-black transition hover:translate-x-2"
-                        >
-                          <span className="mx-2">{option}</span>
-                        </Link>
-                      </li>
-                    );
-                  })}
-              </ul>
-            </div> */}
+            {/* <!-- stats --> */}
+            <dl className="rounded-lg shadow-lg grid grid-cols-1">
+              {stats.map(({ number, description, icon, bg }, i) => {
+                const IconComponent = iconMap[icon];
+                return (
+                  <div
+                    key={i}
+                    className={`flex flex-col p-6 border-b-2 last:border-b-0 border-dotted rounded-lg ${bg}`}
+                  >
+                    <IconComponent className="w-8 h-8 text-gray-700 mb-3" />
+                    <dd className="order-1 text-3xl font-extrabold text-gray-800">
+                      {number}
+                    </dd>
+                    <dt className="order-2 mt-2 leading-6 text-gray-600">
+                      {description}
+                    </dt>
+                  </div>
+                );
+              })}
+            </dl>
 
             {/* <!-- divider --> */}
             {/* <div className="border border-dotted"></div> */}

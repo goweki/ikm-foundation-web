@@ -53,27 +53,6 @@ const support = [
   "Material support e.g. tablet, uniforms, set books ",
 ];
 
-const stats = [
-  {
-    number: "62",
-    description: "Currently supporting 62 students",
-    icon: Users,
-    bg: "bg-yellow-50",
-  },
-  {
-    number: "200",
-    description: "200 students supported between 2015 and 2024",
-    icon: GraduationCap,
-    bg: "bg-green-50",
-  },
-  {
-    number: "17M",
-    description: "Over 17M KES offered in scholarships",
-    icon: Wallet,
-    bg: "bg-orange-50",
-  },
-];
-
 export default function Scholarship() {
   // const searchParams = useSearchParams();
   // const section = searchParams.get("section");
@@ -108,27 +87,7 @@ export default function Scholarship() {
                 </div>
               ))}
             </div>
-            {/* <p className="text-gray-600 font-bold mb-4 leading-relaxed">
-              Stats
-            </p> */}
-            <div className="max-w-4xl mx-auto mb-8">
-              <dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
-                {stats.map(({ number, description, icon: Icon, bg }, i) => (
-                  <div
-                    key={i}
-                    className={`flex flex-col items-center justify-center p-6 text-center sm:border-0 sm:border-r last:border-r-0 ${bg}`}
-                  >
-                    <Icon className="w-8 h-8 text-gray-700 mb-3" />
-                    <dd className="order-1 text-3xl font-extrabold text-gray-800">
-                      {number}
-                    </dd>
-                    <dt className="order-2 text-sm mt-2 leading-6 text-gray-600">
-                      {description}
-                    </dt>
-                  </div>
-                ))}
-              </dl>
-            </div>
+
             <p className="text-gray-600 font-bold mb-4 leading-relaxed">
               Eligibility
             </p>

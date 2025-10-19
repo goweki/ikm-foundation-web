@@ -1,26 +1,17 @@
 import FAQcomponent from "@/components/atoms/faqComponent";
 import PillarsLayout from "../_components/layout";
-import { Heart, UserRoundPlus } from "lucide-react";
+import {
+  GraduationCap,
+  Handshake,
+  Heart,
+  UserRoundPlus,
+  Wallet,
+} from "lucide-react";
 
 const support = [
   "Fundraising for Palmhouse Foundation and Starehe Girls",
   "Sports, disability inclusion, and school infrastructure projects",
   "Drilling a borehole for water access in Kitale",
-];
-
-const stats = [
-  {
-    number: "2,000+",
-    description: "2,000+ beneficiaries ",
-    icon: UserRoundPlus,
-    bg: "bg-yellow-50",
-  },
-  {
-    number: "7M+",
-    description: "7M+ KES in donations and in-kind support ",
-    icon: UserRoundPlus,
-    bg: "bg-green-50",
-  },
 ];
 
 const impact = [
@@ -33,21 +24,21 @@ const impact = [
   {
     number: "5+",
     description: "5+ development projects",
-    icon: UserRoundPlus,
+    icon: Handshake,
     bg: "bg-green-50",
   },
   {
     number: "47M+",
     description:
       "47M+ KES invested in education and community support programs",
-    icon: UserRoundPlus,
-    bg: "bg-green-50",
+    icon: Wallet,
+    bg: "bg-orange-50",
   },
   {
     number: "230+",
     description: "230+ Scholars",
-    icon: UserRoundPlus,
-    bg: "bg-green-50",
+    icon: GraduationCap,
+    bg: "bg-emerald-50",
   },
 ];
 
@@ -100,33 +91,11 @@ export default function VulnerableGroup() {
               ))}
             </div>
 
-            {/* <p className="text-gray-600 font-bold mb-4 leading-relaxed">
-              Stats
-            </p> */}
-            <div className="max-w-4xl mx-auto mb-8">
-              <dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
-                {stats.map(({ number, description, icon: Icon, bg }, i) => (
-                  <div
-                    key={i}
-                    className={`flex flex-col items-center justify-center p-6 text-center sm:border-0 sm:border-r last:border-r-0 ${bg}`}
-                  >
-                    <Icon className="w-8 h-8 text-gray-700 mb-3" />
-                    <dd className="order-1 text-3xl font-extrabold text-gray-800">
-                      {number}
-                    </dd>
-                    <dt className="order-2 text-sm mt-2 leading-6 text-gray-600">
-                      {description}
-                    </dt>
-                  </div>
-                ))}
-              </dl>
-            </div>
-
             <p className="text-gray-600 font-bold mb-4 leading-relaxed">
               Impact
             </p>
             <div className="max-w-4xl mx-auto mb-8">
-              <dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
+              <dl className="rounded-lg sm:grid sm:grid-cols-3">
                 {impact.map(({ number, description, icon: Icon, bg }, i) => (
                   <div
                     key={i}
