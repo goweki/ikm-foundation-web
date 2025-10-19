@@ -5,7 +5,7 @@ export default function PopUp({
   data,
 }: {
   popupRef: React.RefObject<HTMLDivElement | null>;
-  data?: Impact[];
+  data?: { quantity: string; description: string }[];
 }) {
   if (!data) return null;
 
@@ -15,9 +15,9 @@ export default function PopUp({
         key={i}
         className="flex items-baseline space-x-1 text-lg font-medium"
       >
-        <span className="text-gray-600 font-black">{item.label}:</span>
+        {/* <span className="text-gray-600 font-black">{item.label}:</span> */}
         <span className="text-blue-700 font-bold">{item.quantity}+</span>
-        <span className="text-gray-800">{item.unit}</span>
+        <span className="text-gray-800">{item.description}</span>
       </div>
     ));
 

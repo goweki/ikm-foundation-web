@@ -23,7 +23,7 @@ const faqData: { label: string; href: string; icon: React.ReactNode }[] = [
     icon: <Shield className="w-8 h-8" />,
   },
   {
-    label: "Special Project",
+    label: "Special Projects",
     href: "/special-project#faq-section",
     icon: <Star className="w-8 h-8" />,
   },
