@@ -1,12 +1,12 @@
 "use client";
 
-import { DataContext, Impact } from "@/app/providers";
+// import { DataContext, Impact } from "@/app/providers";
 import Image from "next/image";
-import { useContext } from "react";
+// import { useContext } from "react";
 import TestimonialCards from "./_testimonialCards";
 
 export default function Testimonials() {
-  const dataContext = useContext(DataContext);
+  // const dataContext = useContext(DataContext);
 
   // const impact: Impact[] = dataContext?.data?.impact || [];
   const impact: { quantity: string; description: string }[] = [

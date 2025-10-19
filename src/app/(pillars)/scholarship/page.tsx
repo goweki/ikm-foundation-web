@@ -2,7 +2,7 @@
 
 import FAQcomponent from "@/components/atoms/faqComponent";
 import PillarsLayout from "../_components/layout";
-import { BookOpen, Check, GraduationCap, Users, Wallet } from "lucide-react";
+import { BookOpen, Check } from "lucide-react";
 
 const FAQs = [
   {

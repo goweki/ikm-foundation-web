@@ -1,4 +1,4 @@
-import { Impact } from "@/app/providers";
+// import { Impact } from "@/app/providers";
 
 export default function PopUp({
   popupRef,

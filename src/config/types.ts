@@ -16,7 +16,7 @@ export interface Page {
   description: string;
   banner: string;
   formImage: string;
-  FAQ: any[]; // Replace with real FAQ type later
+  FAQ: { question: string; answer: string }[];
   stats: Stat[];
 }
 

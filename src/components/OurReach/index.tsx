@@ -1,13 +1,13 @@
 "use client";
 
-import { DataContext, Impact } from "@/app/providers";
-import { useCallback, useContext, useEffect, useRef } from "react";
+// import { DataContext } from "@/app/providers";
+import { useCallback, useEffect, useRef } from "react";
 import PopUp from "../atoms/popup";
 
 const Index = () => {
   const mapRef = useRef<SVGSVGElement>(null);
   const popupRef = useRef<HTMLDivElement>(null);
-  const dataContext = useContext(DataContext);
+  //   const dataContext = useContext(DataContext);
 
   // const impact: Impact[] = dataContext?.data?.impact || [];
   const impact: { quantity: string; description: string }[] = [

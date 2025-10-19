@@ -1,6 +1,6 @@
 import FAQcomponent from "@/components/atoms/faqComponent";
 import PillarsLayout from "../_components/layout";
-import { Handshake, Heart, UserRoundPlus } from "lucide-react";
+import { Heart } from "lucide-react";
 
 const support = [
   "Donating food and essentials to children’s homes",
