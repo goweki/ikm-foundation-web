@@ -50,7 +50,9 @@ const DonateModal = ({ buttonLocation = "default" }) => {
     setIsOpen(false);
   };
 
-  const openModal = () => {
+  const openModal = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
     setIsOpen(true);
   };
 
