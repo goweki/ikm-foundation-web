@@ -69,7 +69,7 @@ export default function Navbar() {
       </div>
       <label
         htmlFor="menu-toggle"
-        className="pointer-cursor md:hidden block text-white hover:text-blue-200"
+        className="pointer-cursor md:hidden block hover:text-primary"
       >
         {!isMobileMenuOpen ? (
           <svg
@@ -132,7 +132,7 @@ export default function Navbar() {
               {navItems.map((navItem_) => (
                 <li key={navItem_.label} className="block">
                   <Link
-                    className="py-2 px-2 block text-white hover:bg-blue-800 rounded-lg"
+                    className="py-2 px-2 block hover:bg-accent hover:text-accent-foreground rounded-lg"
                     href={navItem_.href}
                   >
                     {navItem_.label}
