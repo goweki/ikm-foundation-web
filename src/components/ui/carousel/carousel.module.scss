@@ -91,6 +91,7 @@ $desktop: 1200px;
     transform-style: preserve-3d;
     transform: perspective(1000px) translateX(calc(100% * var(--offset)));
     transition: transform 0.5s ease-in-out;
+    padding: 1rem;
 
     &:hover {
       transition: none;
@@ -165,9 +166,9 @@ $desktop: 1200px;
 }
 
 .prevSlideBtn {
-  left: -10%;
+  left: -25%;
 }
 
 .nextSlideBtn {
-  right: -10%;
+  right: -25%;
 }

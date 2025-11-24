@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, RefObject } from "react";
-import styles from "./Carousel.module.scss";
+import styles from "./carousel.module.scss";
 
 type SlideData = {
   id?: number;
@@ -24,6 +24,7 @@ function useTilt(active: boolean, animationDuration = "150ms") {
 
     const el = ref.current;
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const unify = (e: any) => (e.changedTouches ? e.changedTouches[0] : e);
 
     const state = {
@@ -36,6 +37,7 @@ function useTilt(active: boolean, animationDuration = "150ms") {
       el.style.transition = `transform ${animationDuration} ease-out`;
     };
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const handleMove = (e: any) => {
       e.preventDefault();
       if (!state.rect) state.rect = el.getBoundingClientRect();
@@ -93,7 +95,7 @@ const Slide = ({
       className={styles.slide}
       data-active={active || undefined}
       style={{
-        // @ts-ignore
+        // @ts-expect-error: CSS custom properties are not in the style type
         "--offset": offset,
         "--dir": offset === 0 ? 0 : offset > 0 ? 1 : -1,
       }}
