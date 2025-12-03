@@ -27,19 +27,19 @@
           "number": "62",
           "description": "Currently supporting 62 students",
           "icon": "GraduationCap",
-          "bg": "bg-yellow-50"
+          "bg": "bg-transparent"
         },
         {
           "number": "200",
           "description": "200 students supported between 2015 and 2024",
           "icon": "Users",
-          "bg": "bg-green-50"
+          "bg": "bg-transparent"
         },
         {
           "number": "17M",
           "description": "Over 17M KES offered in scholarships",
           "icon": "Wallet",
-          "bg": "bg-orange-50"
+          "bg": "bg-transparent"
         }
       ]
     },
@@ -58,25 +58,25 @@
           "number": "32",
           "description": "32 Scholars enrolled in 11 Kenyan universities",
           "icon": "Users",
-          "bg": "bg-yellow-50"
+          "bg": "bg-transparent"
         },
         {
           "number": "5",
           "description": "5-year structured programme",
           "icon": "GraduationCap",
-          "bg": "bg-green-50"
+          "bg": "bg-transparent"
         },
         {
           "number": "14M+",
           "description": "14M+ KES in sponsorships",
           "icon": "Wallet",
-          "bg": "bg-green-50"
+          "bg": "bg-transparent"
         },
         {
           "number": "17M",
           "description": ">70% are young women",
           "icon": "Venus",
-          "bg": "bg-orange-50"
+          "bg": "bg-transparent"
         }
       ]
     },
@@ -107,13 +107,13 @@
           "number": "2M",
           "description": "Over 2M KES in donations and in-kind support",
           "icon": "Handshake",
-          "bg": "bg-yellow-50"
+          "bg": "bg-transparent"
         },
         {
           "number": "5",
           "description": "Over 500 beneficiaries",
           "icon": "UserRoundPlus",
-          "bg": "bg-green-50"
+          "bg": "bg-transparent"
         }
       ]
     },
@@ -132,13 +132,13 @@
           "number": "2,000+",
           "description": "2,000+ beneficiaries ",
           "icon": "Users",
-          "bg": "bg-yellow-50"
+          "bg": "bg-transparent"
         },
         {
           "number": "7M+",
           "description": "7M+ KES in donations and in-kind support ",
           "icon": "Wallet",
-          "bg": "bg-green-50"
+          "bg": "bg-transparent"
         }
       ]
     },
