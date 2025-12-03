@@ -157,15 +157,11 @@ html {
 * MAP
 */
 
-svg#kenya {
-  fill: url(#hoverImage);
-}
-
 /* Target all paths inside the SVG group with id="regions" */
 svg g#regions path {
   transition: transform 0.2s ease, fill 0.2s ease;
   transform-origin: center;
-  /* fill: #cccccc; */
+  fill: url(#hoverImage);
 }
 
 /* Apply scale on hover */
