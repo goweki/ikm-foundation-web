@@ -1,12 +1,6 @@
 import FAQcomponent from "@/components/atoms/faqComponent";
 import PillarsLayout from "../_components/layout";
-import {
-  GraduationCap,
-  Handshake,
-  Heart,
-  UserRoundPlus,
-  Wallet,
-} from "lucide-react";
+import { Heart } from "lucide-react";
 
 const support = [
   "Fundraising for Palmhouse Foundation and Starehe Girls",
