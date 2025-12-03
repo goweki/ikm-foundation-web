@@ -87,7 +87,7 @@ const Aboutus = () => {
             <div className="relative animate-float">
               <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-cream/50">
                 <Image
-                  src="/images/about-us/mentorship_03.jpg"
+                  src="/images/pillars/ikmf-2023-DSC_6926.jpg"
                   alt="mentorship_img"
                   height={1201}
                   width={1805}

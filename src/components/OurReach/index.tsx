@@ -134,7 +134,6 @@ const Index = () => {
                 height="400"
               >
                 <image
-                  //   href="/gallery/ikmf-2023/DSC_6979.jpg"
                   href={imgHighlight.image}
                   x="0"
                   y="0"

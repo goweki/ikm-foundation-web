@@ -6,7 +6,7 @@ export const images = [
   },
   {
     id: 102,
-    image: "/gallery/headstart/Great.jpg",
+    image: "/images/pillars/headstart_great.jpg",
     description: "Headstart Africa",
   },
   {
@@ -31,7 +31,7 @@ export const images = [
   },
   {
     id: 203,
-    image: "/gallery/ikmf-2023/DSC_6926.jpg",
+    image: "/images/pillars/ikmf-2023-DSC_6926.jpg",
     description: "IKMF 2023",
   },
   {

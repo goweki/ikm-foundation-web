@@ -8,8 +8,8 @@ import FAQ from "@/components/FAQ";
 import Testimonials from "@/components/Testimonials";
 import Events from "@/components/Events";
 import MessageUs from "@/components/MessageUs";
-import Carousel from "@/components/ui/carousel";
-import { images } from "@/utils/images";
+// import Carousel from "@/components/ui/carousel";
+// import { images } from "@/utils/images";
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
       {/* <Banner /> */}
       <Hero />
       <Aboutus />
-      <Carousel slides={images} />
+      {/* <Carousel slides={images} /> */}
       <div className="testimonials-bg">
         <Testimonials />
       </div>
