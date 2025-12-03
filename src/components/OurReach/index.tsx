@@ -1,13 +1,17 @@
 "use client";
 
 // import { DataContext } from "@/app/providers";
-import { useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import PopUp from "../atoms/popup";
+import { images } from "@/utils/images";
 
 const Index = () => {
   const mapRef = useRef<SVGSVGElement>(null);
   const popupRef = useRef<HTMLDivElement>(null);
   //   const dataContext = useContext(DataContext);
+  const [imgHighlight, setImgHighlight] = useState(
+    () => images[Math.floor(Math.random() * images.length)]
+  );
 
   // const impact: Impact[] = dataContext?.data?.impact || [];
   const impact: { quantity: string; description: string }[] = [
@@ -20,12 +24,18 @@ const Index = () => {
     { quantity: "230", description: "Scholars" },
   ];
 
+  // shuffles current highlighted image
+  const shuffleImage = () =>
+    setImgHighlight(images[Math.floor(Math.random() * images.length)]);
+
   // Callback for mouse enter on region paths
   const handleEnterRegion = useCallback((evt: Event) => {
     const mapPath = evt.target as SVGPathElement;
     if (!mapPath) return;
+    shuffleImage();
 
     console.log("Mouse entered region -", mapPath.id);
+
     // mapPath.removeAttribute("fill");
     // mapPath.classList.add("fill-primary");
   }, []);
@@ -118,13 +128,14 @@ const Index = () => {
             <defs>
               {/* Image pattern for hover */}
               <pattern
-                id="riftValleyImage"
+                id="hoverImage"
                 patternUnits="userSpaceOnUse"
                 width="400"
                 height="400"
               >
                 <image
-                  href="/images/about-us/headstart_03.jpg"
+                  //   href="/gallery/ikmf-2023/DSC_6979.jpg"
+                  href={imgHighlight.image}
                   x="0"
                   y="0"
                   width="400"
