@@ -3,14 +3,14 @@ import Link from "next/link";
 
 import textConfig from "@/config/copy.json";
 
-interface datatype {
+interface PillarsData {
   title: string;
   description: string;
   backgroundImage: string;
   href: string;
 }
 
-const Aboutdata: datatype[] = [
+const pillars: PillarsData[] = [
   {
     title: "Education",
     backgroundImage: "/images/focus-areas/headstart_square.jpg",
@@ -25,7 +25,8 @@ const Aboutdata: datatype[] = [
   },
   {
     title: "Vulnerable Groups",
-    backgroundImage: "/images/focus-areas/vulnerable_group_square.jpg",
+    // backgroundImage: "/images/focus-areas/vulnerable_group_square.jpg",
+    backgroundImage: "/gallery/vulnerable-groups-thika/Euginia.jpg",
     description: textConfig.pages["vulnerable-group"].description,
     href: "/vulnerable-group",
   },
@@ -105,7 +106,7 @@ const Aboutus = () => {
           </h2>
 
           <div className="flex flex-wrap items-center justify-center mt-10 lg:mt-16 gap-4 lg:gap-8">
-            {Aboutdata.map((item, i) => (
+            {pillars.map((item, i) => (
               <article
                 key={i}
                 className="group relative aspect-video h-96 w-[36rem] overflow-hidden rounded-xl shadow-md hover:shadow-2xl"

@@ -27,8 +27,7 @@ export default function Hero() {
       <div className="hero-content">
         {/* <h1 className="hero-title">Transform Your Vision Into Reality</h1> */}
         <h1 className="hero-title my-12">
-          Improving Lives through{" "}
-          <span className="!text-purple-500">Responsible</span>
+          Improving Lives through <span className="">Responsible</span>
           <br />
           Business
         </h1>
