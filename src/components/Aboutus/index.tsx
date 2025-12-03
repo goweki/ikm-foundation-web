@@ -13,26 +13,26 @@ interface PillarsData {
 const pillars: PillarsData[] = [
   {
     title: "Education",
-    backgroundImage: "/images/focus-areas/headstart_square.jpg",
+    backgroundImage: "/images/pillars/headstart_square.jpg",
     description: textConfig.pages.education.description,
     href: "/education",
   },
   {
     title: "Healthcare",
-    backgroundImage: "/images/focus-areas/health_square.jpg",
+    backgroundImage: "/images/pillars/health_square.jpg",
     description: textConfig.pages.healthcare.description,
     href: "/healthcare",
   },
   {
     title: "Vulnerable Groups",
-    // backgroundImage: "/images/focus-areas/vulnerable_group_square.jpg",
+    // backgroundImage: "/images/pillars/vulnerable_group_square.jpg",
     backgroundImage: "/gallery/vulnerable-groups-thika/Euginia.jpg",
     description: textConfig.pages["vulnerable-group"].description,
     href: "/vulnerable-group",
   },
   {
     title: "Special projects",
-    backgroundImage: "/images/focus-areas/specialproject_square.jpg",
+    backgroundImage: "/gallery/vulnerable-groups-thika/Morris Tree.jpg",
     description: textConfig.pages["special-project"].description,
     href: "/special-project",
   },
