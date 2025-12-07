@@ -16,7 +16,7 @@ export default function Impact() {
     { quantity: "2,000", description: "beneficiaries" },
     { quantity: "5", description: "projects" },
     {
-      quantity: "47M+",
+      quantity: "47M",
       description: "KES invested",
     },
     { quantity: "230", description: "Scholars" },
