@@ -49,7 +49,7 @@ const FAQs = [
   {
     question: "Do I have to pay to join the Academy?",
     answer:
-      "No. The Academy is fully funded for all Head Start Africa Scholars and eligible applicants. No. The Academy is fully funded for all Head Start Africa Scholars and eligible applicants. A self-sponsored track is available for external participants from families able to contribute, with details shared in our July/August call for applications.",
+      "No. The Academy is fully funded for all Head Start Africa Scholars and eligible applicants. A self-sponsored track is available for external participants from families able to contribute, with details shared in our July/August call for applications.",
   },
   {
     question: "Will the Program pay for all program expenses?",
