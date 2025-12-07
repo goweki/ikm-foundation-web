@@ -5,7 +5,7 @@ import Hero from "@/components/Hero-two";
 import Aboutus from "@/components/Aboutus";
 import OurReach from "@/components/OurReach";
 import FAQ from "@/components/FAQ";
-import Testimonials from "@/components/Testimonials";
+import Impact from "@/components/Impact";
 import Events from "@/components/Events";
 import MessageUs from "@/components/MessageUs";
 // import Carousel from "@/components/ui/carousel";
@@ -20,7 +20,7 @@ export default function Home() {
       <Aboutus />
       {/* <Carousel slides={images} /> */}
       <div className="testimonials-bg">
-        <Testimonials />
+        <Impact />
       </div>
       <OurReach />
       <FAQ />

@@ -4,8 +4,11 @@
 import Image from "next/image";
 // import { useContext } from "react";
 import TestimonialCards from "./_testimonialCards";
+import MeasuringImpact from "./_measuringImpact";
+import TheoryOfChange from "./_theoryOfChange";
+import Reports from "./_reports";
 
-export default function Testimonials() {
+export default function Impact() {
   // const dataContext = useContext(DataContext);
 
   // const impact: Impact[] = dataContext?.data?.impact || [];
@@ -75,6 +78,12 @@ export default function Testimonials() {
           <TestimonialCards />
         </div>
       </div>
+      <hr />
+      <MeasuringImpact />
+      <hr />
+      <TheoryOfChange />
+      <hr />
+      <Reports />
     </section>
   );
 }
