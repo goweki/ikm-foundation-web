@@ -28,21 +28,6 @@ export default function Headstart() {
                   backgrounds
                 </p>
 
-                {/* <div className="space-y-3 mb-8">
-                    <div className="flex items-center text-sm text-gray-600">
-                      <BookOpen className="w-4 h-4 mr-2 text-blue-500" />
-                      <span>Full or partial tuition coverage</span>
-                    </div>
-                    <div className="flex items-center text-sm text-gray-600">
-                      <BookOpen className="w-4 h-4 mr-2 text-blue-500" />
-                      <span>Learning materials and resources</span>
-                    </div>
-                    <div className="flex items-center text-sm text-gray-600">
-                      <BookOpen className="w-4 h-4 mr-2 text-blue-500" />
-                      <span>Academic support services</span>
-                    </div>
-                  </div> */}
-
                 <Link
                   href="/scholarship"
                   className="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-4 px-6 rounded-xl transition-all duration-300 group-hover:scale-[1.02]"
@@ -59,7 +44,7 @@ export default function Headstart() {
 
               <div className="relative p-8">
                 <div className="flex items-center justify-center w-16 h-16 bg-purple-100 rounded-2xl mb-6 group-hover:bg-purple-200 transition-colors duration-300">
-                  <Users className="w-8 h-8 text-purple-600" />
+                  <Users className="w-8 h-8 text-blue-600" />
                 </div>
 
                 <h2 className="text-3xl font-semibold text-gray-800 mb-4">
@@ -85,7 +70,7 @@ export default function Headstart() {
 
                 <Link
                   href="/headstart"
-                  className="inline-flex items-center justify-center w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-4 px-6 rounded-xl transition-all duration-300 group-hover:scale-[1.02]"
+                  className="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-4 px-6 rounded-xl transition-all duration-300 group-hover:scale-[1.02]"
                 >
                   Learn more
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
