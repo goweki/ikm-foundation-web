@@ -25,7 +25,7 @@ const FAQs = [
       "We assess community need, feasibility, transparency, and long-term impact. A project must align with our values and have measurable outcomes.",
   },
   {
-    question: "Can companies or donors co-fund a project with IKMF??",
+    question: "Can companies or donors co-fund a project with IKMF?",
     answer:
       "Yes. We actively seek co-funding opportunities. Please fill this form to express your interest by end of January each year.",
   },
