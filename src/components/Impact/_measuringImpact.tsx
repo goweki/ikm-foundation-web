@@ -51,7 +51,7 @@ const MeasuringImpact = () => {
             {/* Illustration */}
             <div className="relative h-64 md:h-auto">
               <Image
-                src="/gallery/vulnerable-groups-thika/Morris Tree.jpg"
+                src="/gallery/vulnerable-groups-thika/Sue Tree.jpg"
                 alt="Measuring impact illustration"
                 fill
                 className="object-cover"
