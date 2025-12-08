@@ -1,7 +1,7 @@
 import Footer from "@/components/Footer";
 import textConfig from "@/config/copy.json";
 import { Page } from "@/config/types";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import {
   Handshake,
@@ -11,6 +11,17 @@ import {
   Venus,
   Wallet,
 } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import ReactPlayer from "react-player";
+import { buttonVariants } from "@/components/ui/button";
 
 const iconMap: Record<string, React.ElementType> = {
   Handshake,
@@ -133,9 +144,9 @@ export default function PillarsLayout({
 
           {/* <!-- right sidebar --> */}
           <div className="w-full lg:w-1/3 p-3">
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-8 my-12 px-8">
               {renderApplyLinks(page)}
-              {YouTubePreview(page)}
+              {renderVideoLink(page)}
             </div>
 
             {/* <!-- divider --> */}
@@ -175,14 +186,48 @@ export default function PillarsLayout({
   );
 }
 
-function getYouTubeId(url: string): string | null {
-  const regex = /(?:youtube\.com.*(?:\?|&)v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
-  const match = url.match(regex);
-  return match ? match[1] : null;
-}
+// function getYouTubeId(url: string): string | null {
+//   const regex = /(?:youtube\.com.*(?:\?|&)v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+//   const match = url.match(regex);
+//   return match ? match[1] : null;
+// }
 
-function YouTubePreview(page: string) {
-  const url =
+// // Youtube preview
+
+// function YouTubePreview(page: string) {
+//   const url =
+//     page == "scholarship"
+//       ? "https://youtu.be/t4yRqIZIoX0"
+//       : page === "headstart"
+//       ? "https://youtu.be/mWEX5Y1jLRw"
+//       : page === "healthcare"
+//       ? "https://youtu.be/7sDaDhWrlvw"
+//       : null;
+
+//   if (!url) return null;
+//   const videoId = getYouTubeId(url);
+//   if (!videoId) return <p className="italic text-destructive">missing link</p>;
+
+//   const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+
+//   return (
+//     <div className="flex flex-col mt-8">
+//       <Link href={url} target="_blank" rel="noopener noreferrer">
+//         <span className="italic">Watch to learn more...</span>
+//         <Image
+//           src={thumbnailUrl}
+//           alt="YouTube video preview"
+//           width={480}
+//           height={270}
+//           className="w-full h-auto object-cover"
+//         />
+//       </Link>
+//     </div>
+//   );
+// }
+
+function renderVideoLink(page: string) {
+  const ytLink =
     page == "scholarship"
       ? "https://youtu.be/t4yRqIZIoX0"
       : page === "headstart"
@@ -191,26 +236,29 @@ function YouTubePreview(page: string) {
       ? "https://youtu.be/7sDaDhWrlvw"
       : null;
 
-  if (!url) return null;
-  const videoId = getYouTubeId(url);
-  if (!videoId) return <p className="italic text-destructive">missing link</p>;
-
-  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-
-  return (
-    <div className="flex flex-col mt-8">
-      <Link href={url} target="_blank" rel="noopener noreferrer">
-        <span className="italic">Watch to learn more...</span>
-        <Image
-          src={thumbnailUrl}
-          alt="YouTube video preview"
-          width={480}
-          height={270}
-          className="w-full h-auto object-cover"
-        />
-      </Link>
-    </div>
-  );
+  return ytLink ? (
+    <Dialog>
+      <DialogTrigger asChild>
+        <button className="video-button">
+          <>
+            <svg className="play-icon" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+            <span className="italic">Watch to learn more...</span>
+          </>
+        </button>
+      </DialogTrigger>
+      <DialogContent className="max-w-4xl w-full aspect-video p-0 border-0 shadow-xl rounded-xl overflow-hidden">
+        <VisuallyHidden>
+          <DialogHeader>
+            <DialogTitle>IKM Foundation</DialogTitle>
+            <DialogDescription>IKM Foundation</DialogDescription>
+          </DialogHeader>
+        </VisuallyHidden>
+        <ReactPlayer src={ytLink} playing controls width="100%" height="100%" />
+      </DialogContent>
+    </Dialog>
+  ) : null;
 }
 
 const renderApplyLinks = (page: string) => {
@@ -218,7 +266,7 @@ const renderApplyLinks = (page: string) => {
     return (
       <Link
         href={"/" + page + "/apply"}
-        className="btn-primary w-fit uppercase py-2 px-4 hover:scale-105 transition-all duration-200 ml-8 sm:ml-0"
+        className={buttonVariants({ variant: "default" })}
       >
         Apply Now
       </Link>
@@ -229,14 +277,11 @@ const renderApplyLinks = (page: string) => {
       <>
         <Link
           href={"/grant"}
-          className="btn-primary w-fit uppercase py-2 px-4 hover:scale-105 transition-all duration-200 ml-8 sm:ml-0"
+          className={buttonVariants({ variant: "default" })}
         >
           Apply As Grant
         </Link>
-        <Link
-          href={"/fap"}
-          className="btn-primary w-fit uppercase py-2 px-4 hover:scale-105 transition-all duration-200 ml-8 sm:ml-0"
-        >
+        <Link href={"/fap"} className={buttonVariants({ variant: "default" })}>
           Apply As Financial Assistance below 200k
         </Link>
       </>

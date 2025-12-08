@@ -10,6 +10,7 @@ import clsx from "clsx";
 import { Heart, X } from "lucide-react";
 import { Fragment, useState } from "react";
 import { PaystackButton } from "react-paystack";
+import { Button } from "../ui/button";
 
 const DonateModal = ({ buttonLocation = "default" }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,17 +61,17 @@ const DonateModal = ({ buttonLocation = "default" }) => {
     <>
       <div className=" inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto md:ml-6 sm:pr-0">
         <div className={"w-full items-center justify-center"}>
-          <button
+          <Button
             type="button"
-            className={`transition-all duration-200 hover:scale-105 ${
+            className={`${
               buttonLocation == "hero"
                 ? "text-xl md:text-4xl py-2 px-4 md:py-4 md:px-8"
                 : "py-1 px-2 md:py-2 md:px-4"
-            } bg-blue-600 text-white hover:bg-linear-to-r hover:from-blue-700 hover:to-purple-700 font-semibold rounded-lg cursor-pointer`}
+            }`}
             onClick={openModal}
           >
             Donate
-          </button>
+          </Button>
         </div>
       </div>
 

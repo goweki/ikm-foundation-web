@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 // import Banner from "@/components/Banner";
-import Hero from "@/components/Hero-two";
+import Hero from "@/components/Hero";
 import Aboutus from "@/components/Aboutus";
 import OurReach from "@/components/OurReach";
 import FAQ from "@/components/FAQ";
@@ -19,9 +19,7 @@ export default function Home() {
       <Hero />
       <Aboutus />
       {/* <Carousel slides={images} /> */}
-      <div className="testimonials-bg">
-        <Impact />
-      </div>
+      <Impact />
       <OurReach />
       <FAQ />
       <Events />

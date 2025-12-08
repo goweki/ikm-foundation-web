@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import ReactPlayer from "react-player";
 import {
@@ -12,7 +13,7 @@ import {
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 export default function Hero() {
-  const YOUTUBE_VIDEO_URL = "https://youtu.be/mWEX5Y1jLRw?si=h8ugmLEhoe4WzeUX"; // Replace with your video
+  const YOUTUBE_VIDEO_URL = "https://youtu.be/mWEX5Y1jLRw?si=h8ugmLEhoe4WzeUX";
 
   return (
     <section className="hero min-h-screen py-20">

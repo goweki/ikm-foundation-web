@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { Button, buttonVariants } from "../ui/button";
 
 const MessageUsForm = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -127,42 +128,44 @@ const MessageUsForm = () => {
         </div>
       </div>
 
-      <button
-        type="submit"
-        className="btn-primary font-bold hover:shadow-xl hover:scale-105 transition duration-200 py-2 md:py-3 w-full rounded-full my-6 uppercase"
-        disabled={isLoading}
-      >
-        {isLoading ? (
-          <div className="flex justify-center items-center space-x-2">
-            <svg
-              className="animate-spin h-5 w-5 text-white"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-            >
-              <circle
-                className="opacity-25"
-                cx="12"
-                cy="12"
-                r="10"
-                strokeWidth="4"
-              ></circle>
-              <path
-                className="opacity-75"
+      <div className="my-6 mx-auto">
+        <Button
+          type="submit"
+          className={buttonVariants({ variant: "default" })}
+          disabled={isLoading}
+        >
+          {isLoading ? (
+            <div className="flex justify-center items-center space-x-2">
+              <svg
+                className="animate-spin h-5 w-5 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
                 fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="4"
-                d="M4 12a8 8 0 018-8 8 8 0 010 16 8 8 0 01-8-8z"
-              ></path>
-            </svg>
-            <span>Submitting...</span>
-          </div>
-        ) : (
-          "Send Message"
-        )}
-      </button>
+                stroke="currentColor"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="4"
+                  d="M4 12a8 8 0 018-8 8 8 0 010 16 8 8 0 01-8-8z"
+                ></path>
+              </svg>
+              <span>Submitting...</span>
+            </div>
+          ) : (
+            "Send Message"
+          )}
+        </Button>
+      </div>
     </form>
   );
 };
