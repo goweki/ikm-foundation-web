@@ -69,7 +69,7 @@ export default function FormLayout({
         </div>
 
         {/* <!-- Right Section --> */}
-        <div className="w-full md:w-1/2 flex justify-center items-center bg-purple-200">
+        <div className="w-full md:w-1/2 flex justify-center items-center bg-blue-200">
           <div className="w-full">{children}</div>
         </div>
       </main>
