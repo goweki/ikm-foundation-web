@@ -18,9 +18,7 @@ export default function Home() {
       {/* <Hero /> */}
       {/* <Aboutus /> */}
       {/* <Carousel slides={images} /> */}
-      <div className="testimonials-bg">
-        <Impact />
-      </div>
+      <Impact />
       <OurReach />
       <FAQ />
       <Events />

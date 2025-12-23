@@ -8,10 +8,10 @@
 @import "slick-carousel/slick/slick-theme.css";
 
 :root {
-  --primary-color: #1f317f; /* blue */
-  --primary-color-foreground: #ffffff; /* blue */
-  --secondary-color: #65a6db; /* light blue */
-  --secondary-color-foreground: #292929; /* dark grey */
+  --primary: #2a3c90; /* blue */
+  --primary-foreground: #ffffff; /* white */
+  --secondary: #3792dd; /* light blue */
+  --secondary-foreground: #292929; /* dark grey */
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.13 0.028 261.692);
@@ -69,9 +69,12 @@ html {
 * BUTTONS
 */
 .btn-primary {
-  @apply rounded-md bg-blue-600 text-white hover:bg-blue-800;
+  @apply bg-blue-600 text-white hover:bg-blue-800 transition-all duration-200 hover:scale-105;
 }
 
+.btn-outline {
+  @apply bg-transparent hover:bg-blue-800 hover:text-white border border-gray-500;
+}
 /* 
 * BANNER
 */

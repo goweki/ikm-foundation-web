@@ -51,7 +51,7 @@ export default function FormLayout({
               width={1024}
             />
 
-            <div className="absolute inset-0 bg-purple-800/60" />
+            <div className="absolute inset-0 bg-blue-800/60" />
             <div className="absolute top-6 left-6 m-4">
               <h2 className="text-2xl md:text-4xl font-semibold mb-2">
                 {texts.title}
@@ -69,7 +69,7 @@ export default function FormLayout({
         </div>
 
         {/* <!-- Right Section --> */}
-        <div className="w-full md:w-1/2 flex justify-center items-center bg-purple-200">
+        <div className="w-full md:w-1/2 flex justify-center items-center bg-blue-200">
           <div className="w-full">{children}</div>
         </div>
       </main>
