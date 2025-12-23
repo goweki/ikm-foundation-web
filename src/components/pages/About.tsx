@@ -1,4 +1,4 @@
-import { Users, Target, Lightbulb, Award } from "lucide-react";
+import { Target, Lightbulb } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import ImageSlider, { SlideItem } from "../ui/image-slider";
+import MessageUs from "../MessageUs";
 
 export default function AboutPage() {
   const values = [
@@ -176,16 +177,7 @@ export default function AboutPage() {
       <section className="container mx-auto px-4 py-16 mb-16">
         <Card className="max-w-4xl mx-auto bg-gradient-to-r from-blue-600 to-blue-800 border-0 text-white">
           <CardContent className="text-center py-12 px-6">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Work Together?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Let's discuss how we can help bring your vision to life with
-              innovative solutions and expert craftsmanship.
-            </p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-lg">
-              Get In Touch
-            </button>
+            <MessageUs />
           </CardContent>
         </Card>
       </section>

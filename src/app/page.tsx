@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
+// import Hero from "@/components/Hero";
 import OurReach from "@/components/OurReach";
 import FAQ from "@/components/FAQ";
 import Impact from "@/components/Impact";

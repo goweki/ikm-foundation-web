@@ -1,4 +1,3 @@
-import DonateModal from "../atoms/DonateModal";
 import PlayButton from "../Hero/play-button";
 
 const Banner = () => {

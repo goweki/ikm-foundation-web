@@ -1,5 +1,3 @@
-import Navbar from "@/components/Navbar";
-
 export interface TitleProps {
   title1: string;
   title2: string;

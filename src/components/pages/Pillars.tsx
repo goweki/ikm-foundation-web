@@ -1,7 +1,4 @@
-import { Users, Target, Lightbulb, Award } from "lucide-react";
 import Link from "next/link";
-import ImageSlider, { SlideItem } from "../ui/image-slider";
-import { images } from "@/utils/images";
 import textConfig from "@/config/copy.json";
 
 interface PillarsData {
@@ -40,67 +37,6 @@ const pillars: PillarsData[] = [
 ];
 
 export default function PillarsPage() {
-  const values = [
-    {
-      icon: Target,
-      title: "Our Mission",
-      description:
-        "To deliver innovative solutions that empower businesses to achieve their full potential through cutting-edge technology and dedicated support.",
-    },
-    {
-      icon: Lightbulb,
-      title: "Innovation First",
-      description:
-        "We constantly push boundaries and explore new technologies to stay ahead of the curve and provide our clients with the best solutions.",
-    },
-    {
-      icon: Users,
-      title: "Customer Focused",
-      description:
-        "Our clients are at the heart of everything we do. We build lasting relationships through transparency, reliability, and exceptional service.",
-    },
-  ];
-
-  const team = [
-    { name: "Sarah Johnson", role: "CEO & Founder", initials: "SJ" },
-    { name: "Michael Chen", role: "CTO", initials: "MC" },
-    { name: "Emily Rodriguez", role: "Head of Design", initials: "ER" },
-  ];
-
-  const _images: SlideItem[] = images.map(({ id, image, description }) => ({
-    id,
-    name: description,
-    image,
-  }));
-
-  const images_: SlideItem[] = [
-    {
-      id: 202,
-      name: "IKMF 2023",
-      image: "/gallery/ikmf-2023/DSC_6870.jpg",
-    },
-    {
-      id: 401,
-      image: "/gallery/special-projects-loitoktok/DSC_4404.JPG",
-      name: "Special Projects",
-    },
-    {
-      id: 402,
-      image: "/gallery/special-projects-loitoktok/DSC_4448.JPG",
-      name: "Special Projects",
-    },
-    {
-      id: 403,
-      image: "/gallery/special-projects-loitoktok/DSC_5024.JPG",
-      name: "Special Projects",
-    },
-    {
-      id: 102,
-      image: "/images/pillars/headstart_great.jpg",
-      name: "Headstart Africa",
-    },
-  ];
-
   return (
     <>
       <div className="bg-white pb-16">
