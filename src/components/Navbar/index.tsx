@@ -1,8 +1,9 @@
 "use client";
-import Navbar from "./Navbar";
+
+import { NavbarComponent } from "./Navbar";
 import React, { useEffect } from "react";
 
-const Navbarin: React.FC = () => {
+const Navbar: React.FC = () => {
   useEffect(() => {
     // The debounce function receives our function as a parameter
     const debounce = (fn: (...args: unknown[]) => void) => {
@@ -36,7 +37,8 @@ const Navbarin: React.FC = () => {
     // Update scroll position for first time
     storeScroll();
   }, []);
-  return <Navbar />;
+
+  return <NavbarComponent />;
 };
 
-export default Navbarin;
+export default Navbar;

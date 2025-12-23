@@ -1,4 +1,5 @@
 import DonateModal from "../atoms/DonateModal";
+import PlayButton from "../Hero/play-button";
 
 const Banner = () => {
   return (
@@ -23,7 +24,8 @@ const Banner = () => {
           </div>
           <div className="w-full flex items-center justify-between mt-6 py-1 px-4 uppercase">
             <h3 className="text-white text-lg font-semibold">
-              <DonateModal buttonLocation="banner" />
+              {/* <DonateModal buttonLocation="banner" /> */}
+              <PlayButton />
             </h3>
           </div>
         </div>

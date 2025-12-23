@@ -50,12 +50,12 @@ export const images = [
     description: "IKMF 2024",
   },
   {
-    id: 302,
+    id: 303,
     image: "/gallery/ikmf-2024/IKM Foundation-19th April 2024-Ngummo-184.jpg",
     description: "IKMF 2024",
   },
   {
-    id: 303,
+    id: 304,
     image: "/gallery/ikmf-2024/IKM Foundation-19th April 2024-Ngummo-193.jpg",
     description: "IKMF 2024",
   },
@@ -121,17 +121,17 @@ export const images = [
     description: "Thika School",
   },
   {
-    id: 508,
+    id: 509,
     image: "/gallery/vulnerable-groups-thika/Students in action.jpg",
     description: "Thika School",
   },
   {
-    id: 508,
+    id: 510,
     image: "/gallery/vulnerable-groups-thika/Sue Tree.jpg",
     description: "Thika School",
   },
   {
-    id: 508,
+    id: 511,
     image: "/gallery/vulnerable-groups-thika/Tesrah Goalball.jpg",
     description: "Thika School",
   },

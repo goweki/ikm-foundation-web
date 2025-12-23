@@ -14,18 +14,34 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { label: "About us", href: "#about-us" },
-  { label: "Foundation Pillars", href: "#pillars" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact us", href: "#contact-us" },
+  { label: "Home", href: "/" },
+  { label: "About us", href: "/about" },
+  { label: "Foundation Pillars", href: "/pillars" },
+  // { label: "FAQ", href: "#faq" },
+  // { label: "Contact us", href: "#contact-us" },
 ];
 
-export default function Navbar() {
+export function NavbarComponent() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isMobileMenuOpen, setMobileMenuIsOpen] = useState<boolean>(false);
   const [isVisible, setIsVisible] = useState<boolean>(true);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const pathname = usePathname();
+
+  function isActivePath(href: string): boolean {
+    // Hash links are never part of pathname
+    if (href.startsWith("#")) {
+      return false;
+    }
+
+    // Exact match for root
+    if (href === "/") {
+      return pathname === "/";
+    }
+
+    // Exact match for all other routes
+    return pathname === href;
+  }
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -60,10 +76,10 @@ export default function Navbar() {
             <div className="w-14 h-14 -mb-1">
               <Logo />
             </div>
-            {/* <p className="w-fit leading-none">
+            <p className="w-fit leading-none text-blue-900">
               IKM <br />
               Foundation
-            </p> */}
+            </p>
           </div>
         </Link>
       </div>
@@ -107,16 +123,22 @@ export default function Navbar() {
       >
         <nav>
           <ul className="md:flex items-center justify-between text-base pt-4 md:pt-0">
-            {navItems.map((navItem_) => (
-              <li key={navItem_.label}>
-                <Link
-                  className="md:p-4 py-3 px-0 block text-black hover:text-blue-800"
-                  href={navItem_.href}
-                >
-                  {navItem_.label}
-                </Link>
-              </li>
-            ))}
+            {navItems.map(({ label, href }) => {
+              const isActive = isActivePath(href);
+
+              return (
+                <li key={label}>
+                  <Link
+                    className={`md:p-4 py-3 px-0 block hover:text-blue-800 ${
+                      isActive ? "font-bold" : ""
+                    }`}
+                    href={href}
+                  >
+                    {label}
+                  </Link>
+                </li>
+              );
+            })}
             <DonateModal />
           </ul>
         </nav>
