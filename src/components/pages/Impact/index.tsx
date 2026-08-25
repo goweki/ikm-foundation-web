@@ -10,9 +10,11 @@ import {
   Heart,
   Building2,
   ArrowUpRight,
+  DownloadIcon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { StatTiles } from "@/components/homepage/Impact/impact-numbers";
+import { Card, CardContent } from "@/components/ui/card";
 
 // ─── Data ──────────────────────────────────────────────────────────────────────
 
@@ -370,9 +372,53 @@ function TheoryOfChange() {
 
 // ─── 5. Annual Reports ─────────────────────────────────────────────────────────
 
+interface Report {
+  title: string;
+  description: string;
+  href: string;
+}
+
+const REPORTS: Report[] = [
+  // {
+  //   title: "2024 Sustainability Report",
+  //   description: "Annual impact and progress review",
+  //   href: "/reports/2024-sustainability-report.pdf",
+  // },
+];
+
+function ReportRow({ report }: { report: Report }) {
+  return (
+    <Card className="border-slate-200/70 shadow-sm">
+      <CardContent className="flex flex-col gap-3 p-5 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex items-center gap-3">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sky-50">
+            <FileText className="h-5 w-5 text-sky-600" strokeWidth={1.75} />
+          </div>
+          <div>
+            <p className="text-sm font-semibold text-slate-800">
+              {report.title}
+            </p>
+            <p className="text-xs text-slate-500">{report.description}</p>
+          </div>
+        </div>
+        <Button
+          asChild
+          variant="outline"
+          className="w-fit border-slate-200 text-sm text-slate-700 transition-colors hover:border-sky-300 hover:bg-sky-50 hover:text-sky-700"
+        >
+          <a href={report.href} target="_blank" rel="noopener noreferrer">
+            <DownloadIcon className="mr-2 h-4 w-4" />
+            View Report
+          </a>
+        </Button>
+      </CardContent>
+    </Card>
+  );
+}
+
 function Reports() {
   return (
-    <section className="w-full bg-sky-100 border-t border-slate-200/60">
+    <section className="w-full border-t border-slate-200/60 bg-sky-100">
       <div className="mx-auto max-w-7xl px-6 py-16 md:px-12 xl:px-16">
         <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-slate-400">
           Transparency
@@ -382,58 +428,34 @@ function Reports() {
         </h2>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-[1fr_auto] md:items-start md:gap-12">
-          {/* Text */}
           <div className="flex flex-col gap-5">
-            <p className="text-sm text-slate-600 leading-relaxed">
+            <p className="text-sm leading-relaxed text-slate-600">
               Each year, we publish a Sustainability Report covering the four
               pillars of our work. These reports provide transparent insights
               into our progress, the resources invested, the partnerships
               leveraged, and the change created across education, healthcare,
               vulnerable groups, and special community projects.
             </p>
-            <p className="text-sm text-slate-600 leading-relaxed">
+            <p className="text-sm leading-relaxed text-slate-600">
               Our annual reports invite donors, partners, and the public to
               understand how their support translates into real impact, and how
               we continuously evolve to meet the needs of the communities we
               serve.
             </p>
 
-            {/* Report row */}
-            <div className="mt-2 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between rounded-2xl border border-slate-200/70 bg-white p-5 shadow-sm">
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sky-50">
-                  <FileText
-                    className="h-5 w-5 text-sky-600"
-                    strokeWidth={1.75}
-                  />
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-slate-800">
-                    2024 Sustainability Report
-                  </p>
-                  <p className="text-xs text-slate-500">
-                    Annual impact and progress review
-                  </p>
-                </div>
-              </div>
-              <Button
-                variant="outline"
-                className="w-fit border-slate-200 text-sm text-slate-700 hover:border-sky-300 hover:bg-sky-50 hover:text-sky-700"
-              >
-                <FileText className="mr-2 h-4 w-4" />
-                View Report
-              </Button>
+            <div className="mt-2 flex flex-col gap-4">
+              {REPORTS.map((report) => (
+                <ReportRow key={report.href} report={report} />
+              ))}
             </div>
           </div>
 
-          <div className="relative h-64 w-full overflow-hidden rounded-2xl bg-slate-200 shadow-md md:w-72 md:h-80">
-            {/* Replace src below with your chosen image */}
+          <div className="relative h-64 w-full overflow-hidden rounded-2xl bg-slate-200 shadow-md md:h-80 md:w-72">
             <Image
-              src={"/images/impact/team_boat_balancing.png"}
-              alt="img"
-              // height={594}
-              // width={800}
+              src="/images/impact/team_boat_balancing.png"
+              alt="Team members balancing on a boat during a community outreach activity"
               fill
+              sizes="(min-width: 768px) 18rem, 100vw"
               className="object-cover"
             />
           </div>
