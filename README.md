@@ -1,36 +1,143 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# IKM Foundation Website
 
-## Getting Started
+The official website for **IKM Foundation**, built with Next.js, React, and Tailwind CSS v4.
 
-First, run the development server:
+## Tech Stack
+
+- Next.js 15
+- React 18
+- TypeScript
+- Tailwind CSS v4
+- shadcn/ui + Radix UI
+- Lucide React
+- Framer Motion
+- Sass
+- React Slick
+- React Player
+
+## Requirements
+
+- Node.js 24
+- npm
+
+## Development
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The development server runs at http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Build and start the standalone application:
 
-## Learn More
+```
+npm run build
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+The build automatically copies:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `public/` → `.next/standalone/public/`
+- `.next/static/` → `.next/standalone/.next/static/`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This makes `.next/standalone/` ready for deployment.
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The application is deployed to cPanel using GitHub Actions and FTP.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deployment is triggered automatically when changes are pushed to the `main` branch.
+
+The workflow:
+
+- Checks out the repository.
+- Installs Node.js 24.
+- Runs `npm ci`.
+- Builds the Next.js application.
+- Copies static assets into the standalone build.
+- Uploads `.next/standalone/` to cPanel via FTP.
+- GitHub Secrets
+
+### Configure these repository secrets:
+
+- FTP_HOST
+- FTP_USERNAME
+- FTP_PASSWORD
+
+The cPanel server must run the Next.js standalone application using server.js.
+
+## Project Structure
+
+```
+├── app/                 # Next.js application routes
+├── components/          # Reusable UI components
+├── public/              # Static assets
+├── styles/              # Global styles / Sass
+├── .github/workflows/   # GitHub Actions
+├── next.config.*        # Next.js configuration
+├── postcss.config.*     # Tailwind/PostCSS configuration
+├── tsconfig.json
+└── package.json
+```
+
+## UI Components
+
+The project is migrating from Headless UI to shadcn/ui.
+
+For new UI work, prefer:
+
+- shadcn/ui
+- Radix UI primitives
+- Tailwind CSS
+- class-variance-authority
+  -lucide-react
+
+Avoid adding new UI dependencies when an existing shadcn/Radix component can solve the requirement.
+
+Existing Headless UI components can be migrated incrementally rather than all at once.
+
+## Tailwind CSS
+
+The project uses Tailwind CSS v4.
+
+Keep the design system centralized using CSS variables and semantic theme tokens rather than hard-coding colours throughout components.
+
+Prefer semantic tokens such as:
+
+- background
+- foreground
+- primary
+- secondary
+- muted
+- accent
+- destructive
+- border
+
+This makes the colour system easier to maintain and change globally.
+
+## Development Guidelines
+
+Prefer:
+
+- TypeScript
+- Server Components by default
+- Client Components only when required
+- Reusable components
+- shadcn/ui for new UI
+- Semantic HTML
+- Accessible interactive elements
+- Centralized theme variables
+- Optimized images and assets
+
+Before committing changes, verify that the production build succeeds:
+
+```
+npm run build
+```
+
+## License
+
+Private project for IKM Foundation.
