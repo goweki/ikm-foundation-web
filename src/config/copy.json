@@ -1,0 +1,191 @@
+{
+  "pages": {
+    "education": {
+      "title": "Education",
+      "CTA": {
+        "action": "Apply",
+        "desc": "for Education Support"
+      },
+      "description": "Promoting access to education and opportunities for talented young people",
+      "banner": "/images/pillars/education_banner.jpg",
+      "formImage": "/images/pillars/scholarship_square.jpg",
+      "FAQ": [],
+      "stats": [
+        {
+          "number": "200+",
+          "description": "Over 200 students supported",
+          "icon": "GraduationCap",
+          "bg": "bg-transparent"
+        },
+        {
+          "number": "30+",
+          "description": "Over 30 Head Start Scholars enrolled in Kenyan universities",
+          "icon": "GraduationCap",
+          "bg": "bg-transparent"
+        },
+        {
+          "number": "70%",
+          "description": "Over 70% of Head Start Scholars are young women",
+          "icon": "Users",
+          "bg": "bg-transparent"
+        }
+      ]
+    },
+    "scholarship": {
+      "title": "IKMF Scholarship",
+      "CTA": {
+        "action": "Apply",
+        "desc": "for IKMF Scholarship"
+      },
+      "description": "Supporting bright students from disadvantaged backgrounds access secondary school education",
+      "banner": "/images/pillars/scholarship_banner.jpg",
+      "formImage": "/images/pillars/video-scholar.webp",
+      "FAQ": [],
+      "stats": [
+        {
+          "number": "200+",
+          "description": "Over 200 students supported since 2015",
+          "icon": "Users",
+          "bg": "bg-transparent"
+        },
+        {
+          "number": "17M+",
+          "description": "Over 17M KES offered in scholarships",
+          "icon": "Wallet",
+          "bg": "bg-transparent"
+        }
+      ]
+    },
+    "headstart": {
+      "title": "Head Start Africa",
+      "CTA": {
+        "action": "Apply",
+        "desc": "for Head Start Africa, Kenya"
+      },
+      "description": "Supporting talented young people from low-income backgrounds succeed in legal careers",
+      "banner": "/images/pillars/headstart_banner.jpg",
+      "formImage": "/images/pillars/children-tree-planting.webp",
+      "FAQ": [],
+      "stats": [
+        {
+          "number": "32",
+          "description": "32 Scholars enrolled in 11 Kenyan universities",
+          "icon": "Users",
+          "bg": "bg-transparent"
+        },
+        {
+          "number": "5",
+          "description": "5-year structured programme",
+          "icon": "GraduationCap",
+          "bg": "bg-transparent"
+        },
+        {
+          "number": "17M+",
+          "description": "Over 17M KES in sponsorships",
+          "icon": "Wallet",
+          "bg": "bg-transparent"
+        },
+        {
+          "number": "70%",
+          "description": "Over 70% are young women",
+          "icon": "Venus",
+          "bg": "bg-transparent"
+        }
+      ]
+    },
+    "healthcare": {
+      "title": "Medical Assistance",
+      "CTA": {
+        "action": "Apply",
+        "desc": "for Medical Assistance"
+      },
+      "description": "Improving access to life-saving interventions and support in our communities",
+      "banner": "/images/pillars/health_banner.jpg",
+      "formImage": "/images/pillars/health_square.jpg",
+      "FAQ": [],
+      "stats": [
+        {
+          "number": "2M+",
+          "description": "Over 2M in healthcare support",
+          "icon": "Activity",
+          "bg": "bg-transparent"
+        }
+      ]
+    },
+    "vulnerable-group": {
+      "title": "Vulnerable Groups",
+      "CTA": {
+        "action": "Partner",
+        "desc": "to improve lives"
+      },
+      "description": "Supporting persons living in vulnerable conditions through partnering with care homes, schools, and shelters to improve living conditions and restore dignity.",
+      "banner": "/images/pillars/vulnerable_group_banner.jpg",
+      "formImage": "/images/pillars/vulnerable_group_square.jpg",
+      "FAQ": [],
+      "stats": [
+        {
+          "number": "3M+",
+          "description": "Over 3M KES in donations and in-kind support",
+          "icon": "Handshake",
+          "bg": "bg-transparent"
+        },
+        {
+          "number": "500+",
+          "description": "Over 500 beneficiaries",
+          "icon": "UserRoundPlus",
+          "bg": "bg-transparent"
+        }
+      ]
+    },
+    "special-project": {
+      "title": "Special Projects",
+      "CTA": {
+        "action": "Apply",
+        "desc": "as a Special Project"
+      },
+      "description": "Building community resilience by supporting long term sustainability projects",
+      "banner": "/images/pillars/special_project_banner.jpg",
+      "formImage": "/images/pillars/special_project_banner.jpg",
+      "FAQ": [],
+      "stats": [
+        {
+          "number": "2,000+",
+          "description": "2,000+ beneficiaries ",
+          "icon": "Users",
+          "bg": "bg-transparent"
+        },
+        {
+          "number": "7M+",
+          "description": "7M+ KES in donations and in-kind support ",
+          "icon": "Wallet",
+          "bg": "bg-transparent"
+        }
+      ]
+    },
+    "grant": {
+      "title": "Grant Funding",
+      "CTA": {
+        "action": "Apply",
+        "desc": "for Grant Funding"
+      },
+      "description": "Supporting projects that require more than Ksh. 200,000",
+      "banner": "/images/pillars/special_project_banner.jpg",
+      "formImage": "/images/pillars/healthcare_brandon-story.webp",
+
+      "FAQ": [],
+      "stats": []
+    },
+    "fap": {
+      "title": "Financial Assistance",
+      "CTA": {
+        "action": "Apply",
+        "desc": "for Financial Assistance Program"
+      },
+      "description": "Supporting initiatives requiring Ksh. 200,000 or less",
+      "banner": "/images/pillars/special_project_banner.jpg",
+      "formImage": "/images/pillars/video-scholar.webp",
+      "FAQ": [],
+      "stats": []
+    }
+  }
+}
