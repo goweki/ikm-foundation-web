@@ -10,7 +10,7 @@ const FormLinks = {
     "https://airtable.com/embed/appGQZtROtfry9TUl/pagBE3y0ukLwXalmg/form",
   grant: "https://airtable.com/embed/appGQZtROtfry9TUl/pagHOBkSBYpgJvoek/form",
   fap: "https://airtable.com/embed/appGQZtROtfry9TUl/pageMDhCm9IAhZc4N/form",
-};
+}  satisfies Record<FormName, string>;
 
 const AirtableForm = ({ form: form }: { form: FormName }) => {
   const [loadingIframe, setLoadingIframe] = useState(true);
