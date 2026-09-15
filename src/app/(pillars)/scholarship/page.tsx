@@ -38,7 +38,7 @@ const FAQs = [
 ];
 
 const eligibility = [
-  "Scored in the 70th percentile in Kenya Junior Secondary Education Assessment (KJSEA) based on school and background (70% and above)",
+  "Scored in the 70th percentile in Kenya Junior Secondary Education Assessment (KJSEA) based on school and background (70% and above - 55 minimum cluster points in each pathway).",
   "Come from a low-income household, is orphaned or a vulnerable child and/or is living with disability",
   "Attended a government public school",
   "Maintained good grades based on school and background (70% and above)",
