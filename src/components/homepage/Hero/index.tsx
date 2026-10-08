@@ -50,7 +50,7 @@ const TextBlock = () => {
   return (
     <div className="flex md:w-1/2 flex-col gap-6">
       <h1 className="font-serif text-3xl text-white font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl 2xl:text-6xl">
-        Improving lives through{" "}
+        Improving situations through{" "}
         <em className="not-italic text-sky-400">education</em>, healthcare
         {" & "} <em className="not-italic text-sky-400">community</em> support
       </h1>
