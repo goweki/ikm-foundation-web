@@ -379,11 +379,11 @@ interface Report {
 }
 
 const REPORTS: Report[] = [
-  // {
-  //   title: "2024 Sustainability Report",
-  //   description: "Annual impact and progress review",
-  //   href: "/reports/2024-sustainability-report.pdf",
-  // },
+  {
+    title: "2022/2024 Sustainability Report",
+    description: "Driving Impact Through Purpose",
+    href: "/reports/IKMF_Sustainability_Report_2022_2024.pdf",
+  },
 ];
 
 function ReportRow({ report }: { report: Report }) {
