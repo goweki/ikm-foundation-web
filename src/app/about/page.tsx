@@ -16,7 +16,7 @@ export default function About() {
           className="text-[#0066cc] underline font-bold hover:text-[#004499] hover:no-underline"
         >
           DLA Piper Africa, Kenya (IKM Advocates)
-        </Link>{" "}
+        </Link>
         , IKM Foundation was established to promote lasting, community-driven
         change by supporting access to education, healthcare, and inclusive
         opportunities for vulnerable groups. Our mission is to transform lives
