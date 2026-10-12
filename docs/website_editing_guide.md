@@ -1,12 +1,12 @@
-# Next.js Website Editing Guide
+# Website Editing Guide
 
 This guide covers updating team details and adding impact reports to the website.
 
 ## Prerequisites
 
-- VS Code installed
+- [VS Code](https://code.visualstudio.com/) installed
 - Basic GitHub and Git knowledge
-- Access to the website's GitHub repository
+- [Repository link](https://github.com/goweki/ikm-foundation-web)
 
 ---
 
@@ -14,7 +14,7 @@ This guide covers updating team details and adding impact reports to the website
 
 1. Open your terminal and clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone <repository-link>
    ```
 2. Open the project folder in VS Code.
 3. Install dependencies and run the development server:
@@ -24,7 +24,7 @@ This guide covers updating team details and adding impact reports to the website
    ```
 4. Open `http://localhost:3000` in your browser to view the site.
 
-_[Screenshot Placeholder: VS Code terminal running `npm run dev`]_
+![alt text](screenshots/npm_run_dev.png)
 
 ---
 
