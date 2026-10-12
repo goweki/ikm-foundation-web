@@ -82,7 +82,7 @@ export default function AboutPage() {
 const TEAM = [
   {
     name: "James Kamau",
-    role: "Managing Partner",
+    role: "Patron",
     image: "/images/about/team-James.jpg",
   },
   {
@@ -100,6 +100,30 @@ const TEAM = [
     name: "Sandra Abongo",
     role: "Responsible Business Coordinator",
     image: "/images/about/team-Sandra.jpg",
+  },
+
+  {
+    name: "Annebell Mbiyu",
+    role: "CSR Commitee Member",
+    image: "/images/about/team-Annebell.jpg",
+  },
+
+  {
+    name: "Augustine Ihaji",
+    role: "CSR Commitee Member",
+    image: "/images/about/team-Augustine.jpg",
+  },
+
+  {
+    name: "Elizabeth Karuma",
+    role: "CSR Commitee Member",
+    image: "/images/about/team-Elizabeth.jpg",
+  },
+
+  {
+    name: "Hiram Nyaburi",
+    role: "CSR Commitee Member",
+    image: "/images/about/team-Hiram.jpg",
   },
 ];
 
